@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd" \
+"../../../../MODS.srcs/sources_1/imports/Desktop/Ps2Interface.vhd" \
+
+# Do not sort compile order
+nosort
