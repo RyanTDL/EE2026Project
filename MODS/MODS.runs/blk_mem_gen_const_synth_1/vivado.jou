@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Mon Mar 11 10:21:30 2024
+# Process ID: 15376
+# Current directory: E:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.runs/blk_mem_gen_const_synth_1
+# Command line: vivado.exe -log blk_mem_gen_const.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source blk_mem_gen_const.tcl
+# Log file: E:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.runs/blk_mem_gen_const_synth_1/blk_mem_gen_const.vds
+# Journal file: E:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.runs/blk_mem_gen_const_synth_1\vivado.jou
+#-----------------------------------------------------------
+source blk_mem_gen_const.tcl -notrace
