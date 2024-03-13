@@ -65,16 +65,15 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7a35tcpg236-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir E:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.cache/wt [current_project]
-  set_property parent.project_path E:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.xpr [current_project]
-  set_property ip_output_repo E:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/user/Documents/GitHub/EE2026Project/MODS/MODS.cache/wt [current_project]
+  set_property parent.project_path C:/Users/user/Documents/GitHub/EE2026Project/MODS/MODS.xpr [current_project]
+  set_property ip_output_repo C:/Users/user/Documents/GitHub/EE2026Project/MODS/MODS.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet E:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.runs/synth_1/Top_Student.dcp
-  read_xdc E:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.srcs/constrs_1/new/my_basys3_constraints.xdc
+  add_files -quiet C:/Users/user/Documents/GitHub/EE2026Project/MODS/MODS.runs/synth_1/Top_Student.dcp
+  read_xdc C:/Users/user/Documents/GitHub/EE2026Project/MODS/MODS.srcs/constrs_1/new/my_basys3_constraints.xdc
   link_design -top Top_Student -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb
 } RESULT]

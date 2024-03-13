@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="38" Path="C:/Users/user/Documents/Uni Stuff/Y1 S2/EE2026/MODS_V1.xpr/MODS/MODS.xpr">
+<Project Version="7" Minor="38" Path="C:/Users/user/Documents/GitHub/EE2026Project/MODS/MODS.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="7ce106d0e6e549c2832813e22c8b35b6"/>

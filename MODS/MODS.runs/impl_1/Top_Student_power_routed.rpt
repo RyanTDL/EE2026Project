@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Tue Mar 12 20:12:46 2024
-| Host             : DESKTOP-CDQO724 running 64-bit major release  (build 9200)
+| Date             : Wed Mar 13 12:30:28 2024
+| Host             : MSI running 64-bit major release  (build 9200)
 | Command          : report_power -file Top_Student_power_routed.rpt -pb Top_Student_power_summary_routed.pb -rpx Top_Student_power_routed.rpx
 | Design           : Top_Student
 | Device           : xc7a35tcpg236-1
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.086        |
+| Total On-Chip Power (W)  | 0.087        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.014        |
+| Dynamic (W)              | 0.015        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.6         |
@@ -52,17 +52,18 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.003 |        3 |       --- |             --- |
-| Slice Logic    |     0.004 |     3803 |       --- |             --- |
-|   LUT as Logic |     0.003 |     2039 |     20800 |            9.80 |
+| Clocks         |     0.002 |        3 |       --- |             --- |
+| Slice Logic    |     0.004 |     3788 |       --- |             --- |
+|   LUT as Logic |     0.003 |     1999 |     20800 |            9.61 |
 |   CARRY4       |    <0.001 |      383 |      8150 |            4.70 |
 |   Register     |    <0.001 |      725 |     41600 |            1.74 |
+|   F7/F8 Muxes  |    <0.001 |        2 |     32600 |           <0.01 |
 |   Others       |     0.000 |       21 |       --- |             --- |
 |   BUFG         |     0.000 |        3 |        32 |            9.38 |
-| Signals        |     0.003 |     2907 |       --- |             --- |
-| I/O            |     0.004 |       49 |       106 |           46.23 |
+| Signals        |     0.003 |     2872 |       --- |             --- |
+| I/O            |     0.006 |       49 |       106 |           46.23 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.086 |          |           |                 |
+| Total          |     0.087 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,9 +73,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.020 |       0.010 |      0.010 |
+| Vccint    |       1.000 |     0.019 |       0.009 |      0.010 |
 | Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |
-| Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
+| Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -141,7 +142,7 @@ Table of Contents
 +-----------------------+-----------+
 | Name                  | Power (W) |
 +-----------------------+-----------+
-| Top_Student           |     0.014 |
+| Top_Student           |     0.015 |
 |   BASIC_TASK_C        |     0.002 |
 |   BASIC_TASK_D        |    <0.001 |
 |   CLK_10KHZ           |    <0.001 |
@@ -150,7 +151,7 @@ Table of Contents
 |   PS2Clk_IOBUF_inst   |     0.000 |
 |   PS2Data_IOBUF_inst  |     0.000 |
 |   TEST_TASK_B         |    <0.001 |
-|   unit_mouse          |     0.003 |
+|   unit_mouse          |     0.002 |
 |     Inst_Ps2Interface |     0.001 |
 |   unit_oled           |    <0.001 |
 +-----------------------+-----------+
