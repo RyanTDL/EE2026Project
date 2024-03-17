@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Wed Mar 13 12:30:28 2024
+| Date             : Mon Mar 18 02:41:46 2024
 | Host             : MSI running 64-bit major release  (build 9200)
 | Command          : report_power -file Top_Student_power_routed.rpt -pb Top_Student_power_summary_routed.pb -rpx Top_Student_power_routed.rpx
 | Design           : Top_Student
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.087        |
+| Total On-Chip Power (W)  | 0.093        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.015        |
-| Device Static (W)        | 0.072        |
+| Dynamic (W)              | 0.020        |
+| Device Static (W)        | 0.073        |
 | Effective TJA (C/W)      | 5.0          |
-| Max Ambient (C)          | 84.6         |
-| Junction Temperature (C) | 25.4         |
+| Max Ambient (C)          | 84.5         |
+| Junction Temperature (C) | 25.5         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,18 +52,20 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.002 |        3 |       --- |             --- |
-| Slice Logic    |     0.004 |     3788 |       --- |             --- |
-|   LUT as Logic |     0.003 |     1999 |     20800 |            9.61 |
-|   CARRY4       |    <0.001 |      383 |      8150 |            4.70 |
-|   Register     |    <0.001 |      725 |     41600 |            1.74 |
-|   F7/F8 Muxes  |    <0.001 |        2 |     32600 |           <0.01 |
-|   Others       |     0.000 |       21 |       --- |             --- |
-|   BUFG         |     0.000 |        3 |        32 |            9.38 |
-| Signals        |     0.003 |     2872 |       --- |             --- |
-| I/O            |     0.006 |       49 |       106 |           46.23 |
-| Static Power   |     0.072 |          |           |                 |
-| Total          |     0.087 |          |           |                 |
+| Clocks         |     0.005 |        3 |       --- |             --- |
+| Slice Logic    |     0.005 |    11475 |       --- |             --- |
+|   LUT as Logic |     0.005 |     6182 |     20800 |           29.72 |
+|   CARRY4       |    <0.001 |      788 |      8150 |            9.67 |
+|   F7/F8 Muxes  |    <0.001 |      385 |     32600 |            1.18 |
+|   Register     |    <0.001 |     2495 |     41600 |            6.00 |
+|   Others       |     0.000 |      149 |       --- |             --- |
+|   BUFG         |     0.000 |        5 |        32 |           15.63 |
+| Signals        |     0.005 |     9444 |       --- |             --- |
+| Block RAM      |     0.002 |     26.5 |        50 |           53.00 |
+| DSPs           |     0.002 |       42 |        90 |           46.67 |
+| I/O            |    <0.001 |       53 |       106 |           50.00 |
+| Static Power   |     0.073 |          |           |                 |
+| Total          |     0.093 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,16 +75,16 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.019 |       0.009 |      0.010 |
+| Vccint    |       1.000 |     0.029 |       0.019 |      0.010 |
 | Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |
-| Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |
+| Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.001 |       0.000 |      0.001 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
@@ -139,21 +141,116 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+-----------------------+-----------+
-| Name                  | Power (W) |
-+-----------------------+-----------+
-| Top_Student           |     0.015 |
-|   BASIC_TASK_C        |     0.002 |
-|   BASIC_TASK_D        |    <0.001 |
-|   CLK_10KHZ           |    <0.001 |
-|   CLK_25MHZ           |    <0.001 |
-|   CLK_6p25MHZ         |    <0.001 |
-|   PS2Clk_IOBUF_inst   |     0.000 |
-|   PS2Data_IOBUF_inst  |     0.000 |
-|   TEST_TASK_B         |    <0.001 |
-|   unit_mouse          |     0.002 |
-|     Inst_Ps2Interface |     0.001 |
-|   unit_oled           |    <0.001 |
-+-----------------------+-----------+
++--------------------------------------------------+-----------+
+| Name                                             | Power (W) |
++--------------------------------------------------+-----------+
+| Top_Student                                      |     0.020 |
+|   BASIC_TASK_A                                   |    <0.001 |
+|   BASIC_TASK_B                                   |    <0.001 |
+|     generate_green_border                        |     0.000 |
+|     generate_white_squares                       |    <0.001 |
+|   BASIC_TASK_C                                   |    <0.001 |
+|   BASIC_TASK_D                                   |    <0.001 |
+|   CELEB_LED                                      |    <0.001 |
+|   CLK_10KHZ                                      |    <0.001 |
+|   CLK_12p5MHZ                                    |    <0.001 |
+|   CLK_1HZ                                        |    <0.001 |
+|   CLK_25MHZ                                      |    <0.001 |
+|   CLK_6p25MHZ                                    |    <0.001 |
+|   GROUP_BASIC_TASK_E                             |    <0.001 |
+|   PS2Clk_IOBUF_inst                              |     0.000 |
+|   PS2Data_IOBUF_inst                             |     0.000 |
+|   unit_mouse                                     |     0.004 |
+|     Inst_Ps2Interface                            |     0.001 |
+|   unit_oled                                      |    <0.001 |
+|   unit_paint                                     |     0.011 |
+|     nn_inst                                      |     0.007 |
+|       blk_mem_gen_0_inst                         |     0.002 |
+|         U0                                       |     0.002 |
+|           inst_blk_mem_gen                       |     0.002 |
+|             gnbram.gnativebmg.native_blk_mem_gen |     0.002 |
+|               valid.cstr                         |     0.002 |
+|                 ramloop[0].ram.r                 |     0.002 |
+|                   prim_noinit.ram                |     0.002 |
+|       blk_mem_gen_const_inst                     |     0.000 |
+|         U0                                       |     0.000 |
+|           inst_blk_mem_gen                       |     0.000 |
+|             gnbram.gnativebmg.native_blk_mem_gen |     0.000 |
+|               valid.cstr                         |     0.000 |
+|                 has_mux_a.A                      |     0.000 |
+|                 ramloop[0].ram.r                 |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[10].ram.r                |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[11].ram.r                |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[12].ram.r                |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[13].ram.r                |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[14].ram.r                |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[15].ram.r                |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[16].ram.r                |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[17].ram.r                |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[18].ram.r                |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[19].ram.r                |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[1].ram.r                 |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[20].ram.r                |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[21].ram.r                |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[22].ram.r                |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[23].ram.r                |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[24].ram.r                |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[25].ram.r                |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[26].ram.r                |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[27].ram.r                |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[2].ram.r                 |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[3].ram.r                 |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[4].ram.r                 |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[5].ram.r                 |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[6].ram.r                 |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[7].ram.r                 |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[8].ram.r                 |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[9].ram.r                 |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|       blk_mem_gen_img_inst                       |    <0.001 |
+|         U0                                       |    <0.001 |
+|           inst_blk_mem_gen                       |    <0.001 |
+|             gnbram.gnativebmg.native_blk_mem_gen |    <0.001 |
+|               valid.cstr                         |    <0.001 |
+|                 ramloop[0].ram.r                 |    <0.001 |
+|                   prim_init.ram                  |    <0.001 |
+|       blk_mem_gen_inter_inst                     |     0.000 |
+|         U0                                       |     0.000 |
+|           inst_blk_mem_gen                       |     0.000 |
+|             gnbram.gnativebmg.native_blk_mem_gen |     0.000 |
+|               valid.cstr                         |     0.000 |
+|                 ramloop[0].ram.r                 |     0.000 |
+|                   prim_noinit.ram                |     0.000 |
+|       ct_inst                                    |    <0.001 |
+|       nn1                                        |     0.003 |
+|     ssd1                                         |    <0.001 |
++--------------------------------------------------+-----------+
 
 

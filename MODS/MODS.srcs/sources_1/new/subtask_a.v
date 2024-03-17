@@ -1,4 +1,24 @@
 `timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 03/13/2024 04:09:50 PM
+// Design Name: 
+// Module Name: subtask_a
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
 
 module subtask_a(input clk25m, input [3:0] state_top, input [12:0] pixel_index, input btnC, btnD, output reg [15:0] oled_data = 16'b0);
     

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1710304016">
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1710700673">
   <File Type="BITSTR-BMM" Name="Top_Student_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="Top_Student_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="Top_Student_timing_summary_init.rpt"/>
@@ -71,6 +71,42 @@
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/ip/blk_mem_gen_inter/blk_mem_gen_inter.xci">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="E:/../MODS.srcs/sources_1/ip/blk_mem_gen_inter/blk_mem_gen_inter.xci"/>
+        <Attr Name="ImportTime" Val="1673495803"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/blk_mem_gen_0_1/blk_mem_gen_0.xci">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="E:/../MODS.srcs/sources_1/ip/blk_mem_gen_0_1/blk_mem_gen_0.xci"/>
+        <Attr Name="ImportTime" Val="1673495799"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Basic_Task_B.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="E:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.srcs/sources_1/new/Basic_Task_B.v"/>
+        <Attr Name="ImportTime" Val="1710347963"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/CanvasTransfer.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="E:/../MODS.srcs/sources_1/new/CanvasTransfer.v"/>
+        <Attr Name="ImportTime" Val="1680151347"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/imports/Desktop/Oled_Display.v">
       <FileInfo>
         <Attr Name="ImportPath" Val="E:/../MODS.srcs/sources_1/imports/Desktop/Oled_Display.v"/>
@@ -89,6 +125,33 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/green_border.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="E:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.srcs/sources_1/new/green_border.v"/>
+        <Attr Name="ImportTime" Val="1710339759"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/module_pack.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="E:/../MODS.srcs/sources_1/new/module_pack.v"/>
+        <Attr Name="ImportTime" Val="1686554360"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/my_7seg_controller.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="E:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.srcs/sources_1/new/my_7seg_controller.v"/>
+        <Attr Name="ImportTime" Val="1710685544"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/my_basic_task_d.v">
       <FileInfo>
         <Attr Name="ImportPath" Val="E:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.srcs/sources_1/new/my_basic_task_d.v"/>
@@ -98,19 +161,46 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/my_test_task_a.v">
+    <File Path="$PSRCDIR/sources_1/new/my_final_oled.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="E:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.srcs/sources_1/new/my_test_task_a.v"/>
-        <Attr Name="ImportTime" Val="1710245275"/>
+        <Attr Name="ImportPath" Val="E:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.srcs/sources_1/new/my_final_oled.v"/>
+        <Attr Name="ImportTime" Val="1710686966"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/my_test_task_b.v">
+    <File Path="$PSRCDIR/sources_1/new/neural_net.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="E:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.srcs/sources_1/new/my_test_task_b.v"/>
-        <Attr Name="ImportTime" Val="1710245275"/>
+        <Attr Name="ImportPath" Val="E:/../MODS.srcs/sources_1/new/neural_net.v"/>
+        <Attr Name="ImportTime" Val="1677159677"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/paint.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="E:/../MODS.srcs/sources_1/new/paint.v"/>
+        <Attr Name="ImportTime" Val="1709183192"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ss_display.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="E:/../MODS.srcs/sources_1/new/ss_display.v"/>
+        <Attr Name="ImportTime" Val="1696226948"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/subtask_a.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="E:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.srcs/sources_1/new/subtask_a.v"/>
+        <Attr Name="ImportTime" Val="1710317484"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -120,6 +210,15 @@
       <FileInfo>
         <Attr Name="ImportPath" Val="E:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.srcs/sources_1/new/subtask_c.v"/>
         <Attr Name="ImportTime" Val="1710245274"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/white_squares.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="E:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.srcs/sources_1/new/white_squares.v"/>
+        <Attr Name="ImportTime" Val="1710340219"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -145,86 +244,6 @@
       <FileInfo>
         <Attr Name="ImportPath" Val="E:/../../../../../SoundDisplay.srcs/sources_1/new/Top_Student.v"/>
         <Attr Name="ImportTime" Val="1570395690"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/my_test_task_c.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="E:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.srcs/sources_1/new/my_test_task_c.v"/>
-        <Attr Name="ImportTime" Val="1710170624"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/ip/blk_mem_gen_inter/blk_mem_gen_inter.xci">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="E:/../MODS.srcs/sources_1/ip/blk_mem_gen_inter/blk_mem_gen_inter.xci"/>
-        <Attr Name="ImportTime" Val="1673495803"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/ip/blk_mem_gen_0_1/blk_mem_gen_0.xci">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="E:/../MODS.srcs/sources_1/ip/blk_mem_gen_0_1/blk_mem_gen_0.xci"/>
-        <Attr Name="ImportTime" Val="1673495799"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/CanvasTransfer.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="E:/../MODS.srcs/sources_1/new/CanvasTransfer.v"/>
-        <Attr Name="ImportTime" Val="1680151347"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/module_pack.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="E:/../MODS.srcs/sources_1/new/module_pack.v"/>
-        <Attr Name="ImportTime" Val="1686554360"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/neural_net.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="E:/../MODS.srcs/sources_1/new/neural_net.v"/>
-        <Attr Name="ImportTime" Val="1677159677"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/paint.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="E:/../MODS.srcs/sources_1/new/paint.v"/>
-        <Attr Name="ImportTime" Val="1709183192"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/ss_display.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="E:/../MODS.srcs/sources_1/new/ss_display.v"/>
-        <Attr Name="ImportTime" Val="1696226948"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -279,7 +298,7 @@
     <File Path="$PSRCDIR/constrs_1/new/my_basys3_constraints.xdc">
       <FileInfo>
         <Attr Name="ImportPath" Val="E:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.srcs/constrs_1/new/my_basys3_constraints.xdc"/>
-        <Attr Name="ImportTime" Val="1710174011"/>
+        <Attr Name="ImportTime" Val="1710319706"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>
@@ -300,4 +319,6 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_img"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_const"/>
 </GenRun>

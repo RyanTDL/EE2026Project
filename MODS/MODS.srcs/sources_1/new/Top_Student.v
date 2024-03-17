@@ -12,7 +12,7 @@
 
 
 module Top_Student (input clk, 
-                    BTNC, BTNU, BTNL, BTNR, BTND,
+                    btnC, btnU, btnL, btnR, btnD,
                     [15:0] sw,
                     output [7:0] JB, 
                     [15:0] led, 
@@ -24,9 +24,7 @@ module Top_Student (input clk,
     wire sending_pix;
     wire sample_pix;
     wire [12:0] pixel_index;
-//    reg [15:0] oled_data = 0;       // For oled testing
-    // For paint testing / group task
-    wire [15:0] oled_data_final, oled_data_a, oled_data_b, oled_data_c, oled_data_d;
+    wire [15:0] oled_data_final, oled_data_a, oled_data_b, oled_data_c, oled_data_d, oled_data_e, oled_data_celeb;
     
     wire clk25m;
     wire clk12p5m;
@@ -80,70 +78,92 @@ module Top_Student (input clk,
                         .ps2_clk(PS2Clk),
                         .ps2_data(PS2Data));
     
-    assign led [15:13] = {left, middle, right};
+//    assign led [15:13] = {left, middle, right};
     
-//    paint unit_paint(.clk_100M(clk),
-//                     .clk_25M(clk25m), 
-//                     .clk_12p5M(clk12p5m), 
-//                     .clk_6p25M(clk6p25m), 
-//                     .slow_clk(clk1),
-//                     .mouse_l(left), 
-//                     .reset(right), 
-//                     .enable(1),  
-//                     .mouse_x(xpos), 
-//                     .mouse_y(ypos),
-//                     .pixel_index(pixel_index),
-//                     .led(led),
-//                     .seg(seg[6:0]), 
-//                     .colour_chooser(oled_data));
+    wire [6:0] seg_paint;
+    wire [15:0] led_paint;
+    wire state_final;
     
-//    assign an = 4'b1010;
+    paint unit_paint(.clk_100M(clk),
+                     .clk_25M(clk25m), 
+                     .clk_12p5M(clk12p5m), 
+                     .clk_6p25M(clk6p25m), 
+                     .slow_clk(clk1),
+                     .mouse_l(left), 
+                     .reset(right), 
+                     .enable(1),  
+                     .mouse_x(xpos), 
+                     .mouse_y(ypos),
+                     .pixel_index(pixel_index),
+                     .led(led_paint),
+                     .seg(seg_paint), 
+                     .colour_chooser(oled_data_e));
     
-    wire [3:0] state_top;       // 0: None,  1: Task A,  2: Task B,  3: Task C,  4: Task D
+    wire [3:0] state_top;       // 0: None,  1: Task A,  2: Task B,  3: Task C,  4: Task D,  5: Group Task E
     
-    assign state_top = (sw[4] ? 4 : 
+    assign state_top = (sw[5] ? 5 : 
+                       (sw[4] ? 4 : 
                        (sw[3] ? 3 : 
                        (sw[2] ? 2 : 
-                       (sw[1] ? 1 : 0))));
+                       (sw[1] ? 1 : 0)))));
     
-    assign led[3:0] = (sw[4] ? 4'b1000 : 
+    assign led[3:0] = (sw[5] ? 0 : 
+                      (sw[4] ? 4'b1000 : 
                       (sw[3] ? 4'b0100 : 
                       (sw[2] ? 4'b0010 : 
-                      (sw[1] ? 4'b0001 : 0))));
+                      (sw[1] ? 4'b0001 : 0)))));
     
-    assign oled_data_final = (sw[4] ? oled_data_d : 
+    assign oled_data_final = (state_final ? oled_data_celeb :
+                             (sw[5] ? oled_data_e : 
+                             (sw[4] ? oled_data_d : 
                              (sw[3] ? oled_data_c : 
                              (sw[2] ? oled_data_b : 
-                             (sw[1] ? oled_data_a : 0))));
+                             (sw[1] ? oled_data_a : 0))))));
     
-    subtask_a BASIC_TASK_A (.clk25m(clk25m), 
-                         .pixel_index(pixel_index), 
-                         .btnC(BTNC), 
-                         .btnD(BTND), 
-                         .oled_data(oled_data_a));
+    subtask_a BASIC_TASK_A (.clk25m(clk25m),
+                            .state_top(state_top), 
+                            .pixel_index(pixel_index), 
+                            .btnC(btnC), 
+                            .btnD(btnD), 
+                            .oled_data(oled_data_a));
     
-    my_test_task_b TEST_TASK_B(.CLK_6p25M(clk6p25m),        // placeholder
-                               .CLK_10K(clk10k),
-                               .STATE_TOP(state_top),
-                               .BTNC(BTNC),
-                               .PIXEL_INDEX(pixel_index),
-                               .PIXEL_DATA(oled_data_b));
+    Basic_Task_B BASIC_TASK_B(.clk_6p25MHz(clk6p25m),
+                              .state_top(state_top),
+                              .sw0(sw[0]),
+                              .btnC(btnC),
+                              .btnL(btnL),
+                              .btnR(btnR),
+                              .pixel_index(pixel_index),
+                              .oled_data(oled_data_b));
     
     subtask_c BASIC_TASK_C(.clk(clk25m), 
-                           .btnD(BTND), 
+                           .btnD(btnD), 
                            .state_top(state_top),
                            .pindex(pixel_index), 
                            .oled_data(oled_data_c));
     
     my_basic_task_d BASIC_TASK_D(.CLK_6p25M(clk6p25m),
                                  .CLK_10K(clk10k),
-                                 .BTNC(BTNC),
-                                 .BTNU(BTNU),
-                                 .BTNL(BTNL),
-                                 .BTNR(BTNR),
+                                 .BTNC(btnC),
+                                 .BTNU(btnU),
+                                 .BTNL(btnL),
+                                 .BTNR(btnR),
                                  .SW0(sw[0]),
                                  .STATE_TOP(state_top),
                                  .PIXEL_INDEX(pixel_index),
                                  .PIXEL_DATA(oled_data_d));
-
+    
+    my_7seg_controller GROUP_BASIC_TASK_E(.CLK_10K(clk10k),
+                                          .SW13(sw[13]),
+                                          .SW14(sw[14]),
+                                          .SW15(sw[15]),
+                                          .BTNC(btnC),
+                                          .STATE_TOP(state_top),
+                                          .SEG_PAINT(seg_paint),
+                                          .SEG_OUT(seg),
+                                          .AN_OUT(an),
+                                          .STATE_FINAL(state_final));
+    my_final_oled CELEB_LED (.clk25m(clk25m),
+                             .pixel_index(pixel_index),
+                             .oled_data(oled_data_celeb));
 endmodule

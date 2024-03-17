@@ -65,6 +65,7 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7a35tcpg236-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
@@ -72,7 +73,12 @@ set rc [catch {
   set_property parent.project_path C:/Users/user/Documents/GitHub/EE2026Project/MODS/MODS.xpr [current_project]
   set_property ip_output_repo C:/Users/user/Documents/GitHub/EE2026Project/MODS/MODS.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
+  set_property XPM_LIBRARIES XPM_MEMORY [current_project]
   add_files -quiet C:/Users/user/Documents/GitHub/EE2026Project/MODS/MODS.runs/synth_1/Top_Student.dcp
+  read_ip -quiet C:/Users/user/Documents/GitHub/EE2026Project/MODS/MODS.srcs/sources_1/ip/blk_mem_gen_inter/blk_mem_gen_inter.xci
+  read_ip -quiet C:/Users/user/Documents/GitHub/EE2026Project/MODS/MODS.srcs/sources_1/ip/blk_mem_gen_0_1/blk_mem_gen_0.xci
+  read_ip -quiet C:/Users/user/Documents/GitHub/EE2026Project/MODS/MODS.srcs/sources_1/ip/blk_mem_gen_const/blk_mem_gen_const.xci
+  read_ip -quiet C:/Users/user/Documents/GitHub/EE2026Project/MODS/MODS.srcs/sources_1/ip/blk_mem_gen_img/blk_mem_gen_img.xci
   read_xdc C:/Users/user/Documents/GitHub/EE2026Project/MODS/MODS.srcs/constrs_1/new/my_basys3_constraints.xdc
   link_design -top Top_Student -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb
@@ -153,6 +159,7 @@ start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
+  set_property XPM_LIBRARIES XPM_MEMORY [current_project]
   catch { write_mem_info -force Top_Student.mmi }
   write_bitstream -force Top_Student.bit 
   catch {write_debug_probes -quiet -force Top_Student}
