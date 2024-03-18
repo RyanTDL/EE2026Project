@@ -92,10 +92,10 @@ Section (3.2) - REMOTE SOURCES
 List of referenced 'remote' design files that were 'imported' into the archived project:-
 
 <blk_mem_gen_const>
-c:/Users/jinzi/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-11776-DESKTOP-CDQO724/PrjAr/_X_/MODS.srcs/sources_1/imports/res/weights.coe
+c:/Users/jinzi/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-1456-DESKTOP-CDQO724/PrjAr/_X_/MODS.srcs/sources_1/imports/res/weights.coe
 
 <blk_mem_gen_img>
-c:/Users/jinzi/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-11776-DESKTOP-CDQO724/PrjAr/_X_/MODS.srcs/sources_1/imports/res/00.coe
+c:/Users/jinzi/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-1456-DESKTOP-CDQO724/PrjAr/_X_/MODS.srcs/sources_1/imports/res/00.coe
 
 <constrs_1>
 None
@@ -153,6 +153,7 @@ List of all the source files present in the archived project:-
 ./MODS.srcs/sources_1/new/module_pack.v
 ./MODS.srcs/sources_1/new/my_7seg_controller.v
 ./MODS.srcs/sources_1/new/my_basic_task_d.v
+./MODS.srcs/sources_1/new/my_final_oled.v
 ./MODS.srcs/sources_1/new/neural_net.v
 ./MODS.srcs/sources_1/new/paint.v
 ./MODS.srcs/sources_1/new/ss_display.v

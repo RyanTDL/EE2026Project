@@ -17,55 +17,54 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/Users/user/Documents/GitHub/EE2026Project/MODS/MODS.cache/wt [current_project]
-set_property parent.project_path C:/Users/user/Documents/GitHub/EE2026Project/MODS/MODS.xpr [current_project]
+set_property webtalk.parent_dir E:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.cache/wt [current_project]
+set_property parent.project_path E:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.xpr [current_project]
 set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo c:/Users/user/Documents/GitHub/EE2026Project/MODS/MODS.cache/ip [current_project]
+set_property ip_output_repo e:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-add_files C:/Users/user/Documents/GitHub/EE2026Project/MODS/MODS.srcs/sources_1/imports/res/weights.coe
-add_files C:/Users/user/Documents/GitHub/EE2026Project/MODS/MODS.srcs/sources_1/imports/res/00.coe
+add_files E:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.srcs/sources_1/imports/res/weights.coe
+add_files E:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.srcs/sources_1/imports/res/00.coe
 read_verilog -library xil_defaultlib {
-  C:/Users/user/Documents/GitHub/EE2026Project/MODS/MODS.srcs/sources_1/new/Basic_Task_B.v
-  C:/Users/user/Documents/GitHub/EE2026Project/MODS/MODS.srcs/sources_1/new/CanvasTransfer.v
-  C:/Users/user/Documents/GitHub/EE2026Project/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v
-  C:/Users/user/Documents/GitHub/EE2026Project/MODS/MODS.srcs/sources_1/new/flexible_clock_module.v
-  C:/Users/user/Documents/GitHub/EE2026Project/MODS/MODS.srcs/sources_1/new/green_border.v
-  C:/Users/user/Documents/GitHub/EE2026Project/MODS/MODS.srcs/sources_1/new/module_pack.v
-  C:/Users/user/Documents/GitHub/EE2026Project/MODS/MODS.srcs/sources_1/new/my_7seg_controller.v
-  C:/Users/user/Documents/GitHub/EE2026Project/MODS/MODS.srcs/sources_1/new/my_basic_task_d.v
-  C:/Users/user/Documents/GitHub/EE2026Project/MODS/MODS.srcs/sources_1/new/my_final_oled.v
-  C:/Users/user/Documents/GitHub/EE2026Project/MODS/MODS.srcs/sources_1/new/neural_net.v
-  C:/Users/user/Documents/GitHub/EE2026Project/MODS/MODS.srcs/sources_1/new/paint.v
-  C:/Users/user/Documents/GitHub/EE2026Project/MODS/MODS.srcs/sources_1/new/ss_display.v
-  C:/Users/user/Documents/GitHub/EE2026Project/MODS/MODS.srcs/sources_1/new/subtask_a.v
-  C:/Users/user/Documents/GitHub/EE2026Project/MODS/MODS.srcs/sources_1/new/subtask_c.v
-  C:/Users/user/Documents/GitHub/EE2026Project/MODS/MODS.srcs/sources_1/new/white_squares.v
-  C:/Users/user/Documents/GitHub/EE2026Project/MODS/MODS.srcs/sources_1/new/Top_Student.v
+  E:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.srcs/sources_1/new/Basic_Task_B.v
+  E:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.srcs/sources_1/new/CanvasTransfer.v
+  E:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v
+  E:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.srcs/sources_1/new/flexible_clock_module.v
+  E:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.srcs/sources_1/new/green_border.v
+  E:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.srcs/sources_1/new/module_pack.v
+  E:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.srcs/sources_1/new/my_7seg_controller.v
+  E:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.srcs/sources_1/new/my_basic_task_d.v
+  E:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.srcs/sources_1/new/my_final_oled.v
+  E:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.srcs/sources_1/new/neural_net.v
+  E:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.srcs/sources_1/new/paint.v
+  E:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.srcs/sources_1/new/ss_display.v
+  E:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.srcs/sources_1/new/subtask_a.v
+  E:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.srcs/sources_1/new/subtask_c.v
+  E:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.srcs/sources_1/new/white_squares.v
+  E:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.srcs/sources_1/new/Top_Student.v
 }
 read_vhdl -library xil_defaultlib {
-  C:/Users/user/Documents/GitHub/EE2026Project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd
-  C:/Users/user/Documents/GitHub/EE2026Project/MODS/MODS.srcs/sources_1/imports/Desktop/Ps2Interface.vhd
+  E:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd
+  E:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.srcs/sources_1/imports/Desktop/Ps2Interface.vhd
 }
-read_ip -quiet C:/Users/user/Documents/GitHub/EE2026Project/MODS/MODS.srcs/sources_1/ip/blk_mem_gen_inter/blk_mem_gen_inter.xci
-set_property used_in_implementation false [get_files -all c:/Users/user/Documents/GitHub/EE2026Project/MODS/MODS.srcs/sources_1/ip/blk_mem_gen_inter/blk_mem_gen_inter_ooc.xdc]
+read_ip -quiet E:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.srcs/sources_1/ip/blk_mem_gen_inter/blk_mem_gen_inter.xci
+set_property used_in_implementation false [get_files -all e:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.srcs/sources_1/ip/blk_mem_gen_inter/blk_mem_gen_inter_ooc.xdc]
 
-read_ip -quiet C:/Users/user/Documents/GitHub/EE2026Project/MODS/MODS.srcs/sources_1/ip/blk_mem_gen_0_1/blk_mem_gen_0.xci
-set_property used_in_implementation false [get_files -all c:/Users/user/Documents/GitHub/EE2026Project/MODS/MODS.srcs/sources_1/ip/blk_mem_gen_0_1/blk_mem_gen_0_ooc.xdc]
+read_ip -quiet E:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.srcs/sources_1/ip/blk_mem_gen_0_1/blk_mem_gen_0.xci
+set_property used_in_implementation false [get_files -all e:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.srcs/sources_1/ip/blk_mem_gen_0_1/blk_mem_gen_0_ooc.xdc]
 
-read_ip -quiet C:/Users/user/Documents/GitHub/EE2026Project/MODS/MODS.srcs/sources_1/ip/blk_mem_gen_const/blk_mem_gen_const.xci
-set_property used_in_implementation false [get_files -all c:/Users/user/Documents/GitHub/EE2026Project/MODS/MODS.srcs/sources_1/ip/blk_mem_gen_const/blk_mem_gen_const_ooc.xdc]
+read_ip -quiet E:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.srcs/sources_1/ip/blk_mem_gen_const/blk_mem_gen_const.xci
+set_property used_in_implementation false [get_files -all e:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.srcs/sources_1/ip/blk_mem_gen_const/blk_mem_gen_const_ooc.xdc]
 
-read_ip -quiet C:/Users/user/Documents/GitHub/EE2026Project/MODS/MODS.srcs/sources_1/ip/blk_mem_gen_img/blk_mem_gen_img.xci
-set_property used_in_implementation false [get_files -all c:/Users/user/Documents/GitHub/EE2026Project/MODS/MODS.srcs/sources_1/ip/blk_mem_gen_img/blk_mem_gen_img_ooc.xdc]
+read_ip -quiet E:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.srcs/sources_1/ip/blk_mem_gen_img/blk_mem_gen_img.xci
+set_property used_in_implementation false [get_files -all e:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.srcs/sources_1/ip/blk_mem_gen_img/blk_mem_gen_img_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -75,8 +74,8 @@ set_property used_in_implementation false [get_files -all c:/Users/user/Document
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/user/Documents/GitHub/EE2026Project/MODS/MODS.srcs/constrs_1/new/my_basys3_constraints.xdc
-set_property used_in_implementation false [get_files C:/Users/user/Documents/GitHub/EE2026Project/MODS/MODS.srcs/constrs_1/new/my_basys3_constraints.xdc]
+read_xdc E:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.srcs/constrs_1/new/my_basys3_constraints.xdc
+set_property used_in_implementation false [get_files E:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.srcs/constrs_1/new/my_basys3_constraints.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]

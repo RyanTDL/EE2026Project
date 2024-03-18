@@ -3,10 +3,10 @@
 <!--                                                         -->
 <!-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="38" Path="C:/Users/user/Documents/GitHub/EE2026Project/MODS/MODS.xpr">
+<Project Version="7" Minor="38" Path="C:/Users/jinzi/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-1456-DESKTOP-CDQO724/PrjAr/_X_/MODS.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="d088263a164e4b26ba231f4869d1f176"/>
+    <Option Name="Id" Val="d2393df9f8dc4083946d8c5525c0205d"/>
     <Option Name="Part" Val="xc7a35tcpg236-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -21,7 +21,6 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
-    <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
     <Option Name="IPCachePermission" Val="read"/>
     <Option Name="IPCachePermission" Val="write"/>
     <Option Name="EnableCoreContainer" Val="FALSE"/>
@@ -152,7 +151,7 @@
       <File Path="$PSRCDIR/sources_1/new/my_final_oled.v">
         <FileInfo>
           <Attr Name="ImportPath" Val="E:/EE2026_Verilog_Projects/MODS.xpr/MODS/MODS.srcs/sources_1/new/my_final_oled.v"/>
-          <Attr Name="ImportTime" Val="1710686966"/>
+          <Attr Name="ImportTime" Val="1710724129"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>

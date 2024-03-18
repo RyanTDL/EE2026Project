@@ -24,7 +24,7 @@ module Top_Student (input clk,
     wire sending_pix;
     wire sample_pix;
     wire [12:0] pixel_index;
-    wire [15:0] oled_data_final, oled_data_a, oled_data_b, oled_data_c, oled_data_d, oled_data_e, oled_data_celeb;
+    wire [15:0] oled_data_final, oled_data_a, oled_data_b, oled_data_c, oled_data_d, oled_data_e, oled_congrats;
     
     wire clk25m;
     wire clk12p5m;
@@ -113,7 +113,7 @@ module Top_Student (input clk,
                       (sw[2] ? 4'b0010 : 
                       (sw[1] ? 4'b0001 : 0)))));
     
-    assign oled_data_final = (state_final ? oled_data_celeb :
+    assign oled_data_final = (state_final ? oled_congrats :
                              (sw[5] ? oled_data_e : 
                              (sw[4] ? oled_data_d : 
                              (sw[3] ? oled_data_c : 
@@ -163,7 +163,9 @@ module Top_Student (input clk,
                                           .SEG_OUT(seg),
                                           .AN_OUT(an),
                                           .STATE_FINAL(state_final));
-    my_final_oled CELEB_LED (.clk25m(clk25m),
-                             .pixel_index(pixel_index),
-                             .oled_data(oled_data_celeb));
+    
+    my_final_oled CONGRATS_OLED(.CLK_6p25M(clk6p25m),
+                                .PIXEL_INDEX(pixel_index),
+                                .PIXEL_DATA(oled_congrats));
+    
 endmodule

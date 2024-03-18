@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Mon Mar 18 02:41:46 2024
-| Host             : MSI running 64-bit major release  (build 9200)
+| Date             : Mon Mar 18 09:13:30 2024
+| Host             : DESKTOP-CDQO724 running 64-bit major release  (build 9200)
 | Command          : report_power -file Top_Student_power_routed.rpt -pb Top_Student_power_summary_routed.pb -rpx Top_Student_power_routed.rpx
 | Design           : Top_Student
 | Device           : xc7a35tcpg236-1
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.093        |
+| Total On-Chip Power (W)  | 0.094        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.020        |
+| Dynamic (W)              | 0.021        |
 | Device Static (W)        | 0.073        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.5         |
@@ -52,20 +52,20 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.005 |        3 |       --- |             --- |
+| Clocks         |     0.006 |        3 |       --- |             --- |
 | Slice Logic    |     0.005 |    11475 |       --- |             --- |
-|   LUT as Logic |     0.005 |     6182 |     20800 |           29.72 |
+|   LUT as Logic |     0.005 |     6183 |     20800 |           29.73 |
 |   CARRY4       |    <0.001 |      788 |      8150 |            9.67 |
 |   F7/F8 Muxes  |    <0.001 |      385 |     32600 |            1.18 |
 |   Register     |    <0.001 |     2495 |     41600 |            6.00 |
 |   Others       |     0.000 |      149 |       --- |             --- |
 |   BUFG         |     0.000 |        5 |        32 |           15.63 |
-| Signals        |     0.005 |     9444 |       --- |             --- |
+| Signals        |     0.005 |     9442 |       --- |             --- |
 | Block RAM      |     0.002 |     26.5 |        50 |           53.00 |
 | DSPs           |     0.002 |       42 |        90 |           46.67 |
 | I/O            |    <0.001 |       53 |       106 |           50.00 |
 | Static Power   |     0.073 |          |           |                 |
-| Total          |     0.093 |          |           |                 |
+| Total          |     0.094 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -75,7 +75,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.029 |       0.019 |      0.010 |
+| Vccint    |       1.000 |     0.030 |       0.020 |      0.010 |
 | Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -144,19 +144,19 @@ Table of Contents
 +--------------------------------------------------+-----------+
 | Name                                             | Power (W) |
 +--------------------------------------------------+-----------+
-| Top_Student                                      |     0.020 |
+| Top_Student                                      |     0.021 |
 |   BASIC_TASK_A                                   |    <0.001 |
 |   BASIC_TASK_B                                   |    <0.001 |
 |     generate_green_border                        |     0.000 |
 |     generate_white_squares                       |    <0.001 |
 |   BASIC_TASK_C                                   |    <0.001 |
 |   BASIC_TASK_D                                   |    <0.001 |
-|   CELEB_LED                                      |    <0.001 |
 |   CLK_10KHZ                                      |    <0.001 |
 |   CLK_12p5MHZ                                    |    <0.001 |
 |   CLK_1HZ                                        |    <0.001 |
 |   CLK_25MHZ                                      |    <0.001 |
 |   CLK_6p25MHZ                                    |    <0.001 |
+|   CONGRATS_OLED                                  |    <0.001 |
 |   GROUP_BASIC_TASK_E                             |    <0.001 |
 |   PS2Clk_IOBUF_inst                              |     0.000 |
 |   PS2Data_IOBUF_inst                             |     0.000 |

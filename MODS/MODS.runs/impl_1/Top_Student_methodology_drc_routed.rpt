@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Mon Mar 18 02:41:43 2024
-| Host         : MSI running 64-bit major release  (build 9200)
+| Date         : Mon Mar 18 09:13:26 2024
+| Host         : DESKTOP-CDQO724 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file Top_Student_methodology_drc_routed.rpt -pb Top_Student_methodology_drc_routed.pb -rpx Top_Student_methodology_drc_routed.rpx
 | Design       : Top_Student
 | Device       : xc7a35tcpg236-1
@@ -104,77 +104,77 @@ Related violations: <none>
 
 SYNTH-10#7 Warning
 Wide multiplier  
-Detected multiplier at CELEB_LED/oled_data4 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at CONGRATS_OLED/PIXEL_DATA4 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#8 Warning
 Wide multiplier  
-Detected multiplier at CELEB_LED/oled_data4__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at CONGRATS_OLED/PIXEL_DATA4__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#9 Warning
 Wide multiplier  
-Detected multiplier at CELEB_LED/oled_data4__1 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at CONGRATS_OLED/PIXEL_DATA4__1 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#10 Warning
 Wide multiplier  
-Detected multiplier at CELEB_LED/oled_data4__10 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at CONGRATS_OLED/PIXEL_DATA4__10 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#11 Warning
 Wide multiplier  
-Detected multiplier at CELEB_LED/oled_data4__11 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at CONGRATS_OLED/PIXEL_DATA4__11 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#12 Warning
 Wide multiplier  
-Detected multiplier at CELEB_LED/oled_data4__12 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at CONGRATS_OLED/PIXEL_DATA4__12 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#13 Warning
 Wide multiplier  
-Detected multiplier at CELEB_LED/oled_data4__13 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at CONGRATS_OLED/PIXEL_DATA4__13 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#14 Warning
 Wide multiplier  
-Detected multiplier at CELEB_LED/oled_data4__2 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at CONGRATS_OLED/PIXEL_DATA4__2 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#15 Warning
 Wide multiplier  
-Detected multiplier at CELEB_LED/oled_data4__3 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at CONGRATS_OLED/PIXEL_DATA4__3 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#16 Warning
 Wide multiplier  
-Detected multiplier at CELEB_LED/oled_data4__4 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at CONGRATS_OLED/PIXEL_DATA4__4 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#17 Warning
 Wide multiplier  
-Detected multiplier at CELEB_LED/oled_data4__5 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at CONGRATS_OLED/PIXEL_DATA4__5 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#18 Warning
 Wide multiplier  
-Detected multiplier at CELEB_LED/oled_data4__6 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at CONGRATS_OLED/PIXEL_DATA4__6 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#19 Warning
 Wide multiplier  
-Detected multiplier at CELEB_LED/oled_data4__7 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at CONGRATS_OLED/PIXEL_DATA4__7 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#20 Warning
 Wide multiplier  
-Detected multiplier at CELEB_LED/oled_data4__8 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at CONGRATS_OLED/PIXEL_DATA4__8 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#21 Warning
 Wide multiplier  
-Detected multiplier at CELEB_LED/oled_data4__9 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at CONGRATS_OLED/PIXEL_DATA4__9 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#22 Warning
@@ -2479,17 +2479,17 @@ Related violations: <none>
 
 TIMING-17#449 Warning
 Non-clocked sequential cell  
-The clock pin CELEB_LED/oled_data_reg[10]/C is not reached by a timing clock
+The clock pin CONGRATS_OLED/PIXEL_DATA_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#450 Warning
 Non-clocked sequential cell  
-The clock pin CELEB_LED/oled_data_reg[15]/C is not reached by a timing clock
+The clock pin CONGRATS_OLED/PIXEL_DATA_reg[15]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#451 Warning
 Non-clocked sequential cell  
-The clock pin CELEB_LED/oled_data_reg[9]/C is not reached by a timing clock
+The clock pin CONGRATS_OLED/PIXEL_DATA_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#452 Warning
