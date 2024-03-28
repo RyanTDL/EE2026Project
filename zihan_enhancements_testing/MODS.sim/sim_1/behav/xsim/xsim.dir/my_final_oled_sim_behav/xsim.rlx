@@ -1,0 +1,12 @@
+
+{ 
+    crc :  2744645912052102499  , 
+    ccp_crc :  0  , 
+    cmdline : " -wto 4c3086506e88427ca6f65a71a9035e44 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot my_final_oled_sim_behav xil_defaultlib.my_final_oled_sim xil_defaultlib.glbl" , 
+    buildDate : "Jun 14 2018" , 
+    buildTime : "20:41:02" , 
+    linkCmd : "C:\\Vivado\\2018.2\\data\\..\\tps\\mingw\\6.2.0\\win64.o\\nt\\bin\\gcc.exe -Wa,-W  -O -Wl,--stack,104857600 -o \"xsim.dir/my_final_oled_sim_behav/xsimk.exe\"   \"xsim.dir/my_final_oled_sim_behav/obj/xsim_0.win64.obj\" \"xsim.dir/my_final_oled_sim_behav/obj/xsim_1.win64.obj\" \"C:\\Vivado\\2018.2\\lib\\win64.o\\\\librdi_simulator_kernel.dll\"  \"C:\\Vivado\\2018.2\\lib\\win64.o\\\\librdi_simbridge_kernel.dll\"" , 
+    aggregate_nets : 
+    [ 
+    ] 
+} 
