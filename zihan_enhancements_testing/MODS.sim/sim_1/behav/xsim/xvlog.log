@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/EE2026_Verilog_Projects/EE2026_Project_Enhance/MODS/MODS.srcs/sources_1/new/my_final_oled.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module my_final_oled
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/EE2026_Verilog_Projects/EE2026_Project_Enhance/MODS/MODS.srcs/sim_1/new/my_final_oled_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module my_final_oled_sim
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/EE2026_Verilog_Projects/EE2026_Project_Enhance/MODS/MODS.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

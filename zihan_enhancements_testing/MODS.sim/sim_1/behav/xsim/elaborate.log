@@ -1,0 +1,14 @@
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 4c3086506e88427ca6f65a71a9035e44 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot my_final_oled_sim_behav xil_defaultlib.my_final_oled_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port CLK [E:/EE2026_Verilog_Projects/EE2026_Project_Enhance/MODS/MODS.srcs/sim_1/new/my_final_oled_sim.v:29]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.my_final_oled
+Compiling module xil_defaultlib.my_final_oled_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot my_final_oled_sim_behav
