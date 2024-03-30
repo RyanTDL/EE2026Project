@@ -1,0 +1,704 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sat Mar 30 12:11:07 2024
+# Process ID: 23444
+# Current directory: C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.runs/synth_1
+# Command line: vivado.exe -log Top_Student.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top_Student.tcl
+# Log file: C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.runs/synth_1/Top_Student.vds
+# Journal file: C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source Top_Student.tcl -notrace
+Command: synth_design -top Top_Student -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 16796 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 356.695 ; gain = 99.445
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Top_Student' [C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.srcs/sources_1/new/Top_Student.v:14]
+INFO: [Synth 8-6157] synthesizing module 'flexible_clock_module' [C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.srcs/sources_1/new/flexible_clock_module.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'flexible_clock_module' (1#1) [C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.srcs/sources_1/new/flexible_clock_module.v:23]
+INFO: [Synth 8-6157] synthesizing module 'timer_module' [C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.srcs/sources_1/new/timer.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'timer_module' (2#1) [C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.srcs/sources_1/new/timer.v:23]
+INFO: [Synth 8-6157] synthesizing module 'top_module' [C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.srcs/sources_1/new/Top_module.v:23]
+	Parameter initial_oled_data bound to: 16'b0000000000000111 
+INFO: [Synth 8-6157] synthesizing module 'home_screen' [C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.srcs/sources_1/new/Home_Screen.v:23]
+	Parameter line_width bound to: 5 - type: integer 
+	Parameter word_width bound to: 15 - type: integer 
+	Parameter word_height bound to: 15 - type: integer 
+	Parameter word_colour bound to: 16'b0000011111100000 
+INFO: [Synth 8-6155] done synthesizing module 'home_screen' (3#1) [C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.srcs/sources_1/new/Home_Screen.v:23]
+INFO: [Synth 8-6157] synthesizing module 'tank_animation' [C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.srcs/sources_1/new/tank_animation.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'tank_animation' (4#1) [C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.srcs/sources_1/new/tank_animation.v:23]
+INFO: [Synth 8-6157] synthesizing module 'select_mode' [C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.srcs/sources_1/new/select_mode.v:23]
+	Parameter line_width bound to: 3 - type: integer 
+	Parameter word_width bound to: 10 - type: integer 
+	Parameter word_height bound to: 10 - type: integer 
+	Parameter word_colour bound to: 16'b1111100000011111 
+INFO: [Synth 8-6155] done synthesizing module 'select_mode' (5#1) [C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.srcs/sources_1/new/select_mode.v:23]
+WARNING: [Synth 8-689] width (1) of port connection 'btnU' does not match port width (13) of module 'select_mode' [C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.srcs/sources_1/new/Top_module.v:43]
+WARNING: [Synth 8-689] width (1) of port connection 'btnD' does not match port width (13) of module 'select_mode' [C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.srcs/sources_1/new/Top_module.v:43]
+WARNING: [Synth 8-689] width (1) of port connection 'btnC' does not match port width (13) of module 'select_mode' [C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.srcs/sources_1/new/Top_module.v:43]
+INFO: [Synth 8-6157] synthesizing module 'battlefield' [C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.srcs/sources_1/new/background.v:23]
+	Parameter DEBOUNCE_TIME bound to: 21'b100110001001011010000 
+INFO: [Synth 8-6155] done synthesizing module 'battlefield' (6#1) [C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.srcs/sources_1/new/background.v:23]
+WARNING: [Synth 8-689] width (1) of port connection 'btnL' does not match port width (13) of module 'battlefield' [C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.srcs/sources_1/new/Top_module.v:45]
+WARNING: [Synth 8-689] width (1) of port connection 'btnR' does not match port width (13) of module 'battlefield' [C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.srcs/sources_1/new/Top_module.v:45]
+WARNING: [Synth 8-689] width (1) of port connection 'btnL' does not match port width (13) of module 'battlefield' [C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.srcs/sources_1/new/Top_module.v:46]
+WARNING: [Synth 8-689] width (1) of port connection 'btnR' does not match port width (13) of module 'battlefield' [C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.srcs/sources_1/new/Top_module.v:46]
+INFO: [Synth 8-6155] done synthesizing module 'top_module' (7#1) [C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.srcs/sources_1/new/Top_module.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Oled_Display' [C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:36]
+	Parameter Width bound to: 96 - type: integer 
+	Parameter Height bound to: 64 - type: integer 
+	Parameter PixelCount bound to: 6144 - type: integer 
+	Parameter PixelCountWidth bound to: 13 - type: integer 
+	Parameter ClkFreq bound to: 6250000 - type: integer 
+	Parameter FrameFreq bound to: 60 - type: integer 
+	Parameter FrameDiv bound to: 104166 - type: integer 
+	Parameter FrameDivWidth bound to: 17 - type: integer 
+	Parameter PowerDelay bound to: 20 - type: integer 
+	Parameter ResetDelay bound to: 3 - type: integer 
+	Parameter VccEnDelay bound to: 20 - type: integer 
+	Parameter StartupCompleteDelay bound to: 100 - type: integer 
+	Parameter MaxDelay bound to: 100 - type: integer 
+	Parameter MaxDelayCount bound to: 625000 - type: integer 
+	Parameter StateCount bound to: 32 - type: integer 
+	Parameter StateWidth bound to: 5 - type: integer 
+	Parameter PowerUp bound to: 5'b00000 
+	Parameter Reset bound to: 5'b00001 
+	Parameter ReleaseReset bound to: 5'b00011 
+	Parameter EnableDriver bound to: 5'b00010 
+	Parameter DisplayOff bound to: 5'b00110 
+	Parameter SetRemapDisplayFormat bound to: 5'b00111 
+	Parameter SetStartLine bound to: 5'b00101 
+	Parameter SetOffset bound to: 5'b00100 
+	Parameter SetNormalDisplay bound to: 5'b01100 
+	Parameter SetMultiplexRatio bound to: 5'b01101 
+	Parameter SetMasterConfiguration bound to: 5'b01111 
+	Parameter DisablePowerSave bound to: 5'b01110 
+	Parameter SetPhaseAdjust bound to: 5'b01010 
+	Parameter SetDisplayClock bound to: 5'b01011 
+	Parameter SetSecondPrechargeA bound to: 5'b01001 
+	Parameter SetSecondPrechargeB bound to: 5'b01000 
+	Parameter SetSecondPrechargeC bound to: 5'b11000 
+	Parameter SetPrechargeLevel bound to: 5'b11001 
+	Parameter SetVCOMH bound to: 5'b11011 
+	Parameter SetMasterCurrent bound to: 5'b11010 
+	Parameter SetContrastA bound to: 5'b11110 
+	Parameter SetContrastB bound to: 5'b11111 
+	Parameter SetContrastC bound to: 5'b11101 
+	Parameter DisableScrolling bound to: 5'b11100 
+	Parameter ClearScreen bound to: 5'b10100 
+	Parameter VccEn bound to: 5'b10101 
+	Parameter DisplayOn bound to: 5'b10111 
+	Parameter PrepareNextFrame bound to: 5'b10110 
+	Parameter SetColAddress bound to: 5'b10010 
+	Parameter SetRowAddress bound to: 5'b10011 
+	Parameter WaitNextFrame bound to: 5'b10001 
+	Parameter SendPixel bound to: 5'b10000 
+	Parameter SpiCommandMaxWidth bound to: 40 - type: integer 
+	Parameter SpiCommandBitCountWidth bound to: 6 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:123]
+INFO: [Synth 8-226] default block is never used [C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:198]
+WARNING: [Synth 8-693] zero replication count - replication ignored [C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:346]
+INFO: [Synth 8-6155] done synthesizing module 'Oled_Display' (8#1) [C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:36]
+WARNING: [Synth 8-3848] Net led in module/entity Top_Student does not have driver. [C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.srcs/sources_1/new/Top_Student.v:19]
+WARNING: [Synth 8-3848] Net seg in module/entity Top_Student does not have driver. [C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.srcs/sources_1/new/Top_Student.v:20]
+WARNING: [Synth 8-3848] Net an in module/entity Top_Student does not have driver. [C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.srcs/sources_1/new/Top_Student.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'Top_Student' (9#1) [C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.srcs/sources_1/new/Top_Student.v:14]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port JC[2]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port led[15]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port led[14]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port led[13]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port led[12]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port led[11]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port led[10]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port led[9]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port led[8]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port led[7]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port led[6]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port led[5]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port led[4]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port led[3]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port led[2]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port led[1]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port led[0]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[6]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[5]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[4]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[3]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[2]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[1]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[0]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port an[3]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port an[2]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port an[1]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port an[0]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port PS2Clk
+WARNING: [Synth 8-3331] design Top_Student has unconnected port PS2Data
+WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[15]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[14]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[13]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[12]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[11]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[10]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[9]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[8]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[7]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[6]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[5]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[4]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[3]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[2]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[1]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 412.102 ; gain = 154.852
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 412.102 ; gain = 154.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 412.102 ; gain = 154.852
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.srcs/constrs_1/new/basys_3.xdc]
+Finished Parsing XDC File [C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.srcs/constrs_1/new/basys_3.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.srcs/constrs_1/new/basys_3.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_Student_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Top_Student_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 758.230 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:15 . Memory (MB): peak = 758.230 ; gain = 500.980
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:15 . Memory (MB): peak = 758.230 ; gain = 500.980
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:15 . Memory (MB): peak = 758.230 ; gain = 500.980
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "FLEX_CLK_OUT0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "select_icon" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "select_icon" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "select_icon" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "select_icon" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.srcs/sources_1/new/background.v:52]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.srcs/sources_1/new/background.v:52]
+INFO: [Synth 8-5546] ROM "tank_leftbound0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tank_leftbound0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Oled_Display'
+INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "fsm_next_state0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 PowerUp | 00000000100000000000000000000000 |                            00000
+                   Reset | 00000000000100000000000000000000 |                            00001
+            ReleaseReset | 00000000000000000000100000000000 |                            00011
+            EnableDriver | 00000000000000000001000000000000 |                            00010
+              DisplayOff | 00000000000000000100000000000000 |                            00110
+   SetRemapDisplayFormat | 00000100000000000000000000000000 |                            00111
+            SetStartLine | 00001000000000000000000000000000 |                            00101
+               SetOffset | 10000000000000000000000000000000 |                            00100
+        SetNormalDisplay | 00000000000000000000000010000000 |                            01100
+       SetMultiplexRatio | 00000000000000000000000000100000 |                            01101
+  SetMasterConfiguration | 00000000000000000000000001000000 |                            01111
+        DisablePowerSave | 00000000000000000000000000000100 |                            01110
+          SetPhaseAdjust | 00000000000000000000000000001000 |                            01010
+         SetDisplayClock | 00000000001000000000000000000000 |                            01011
+     SetSecondPrechargeA | 00000000010000000000000000000000 |                            01001
+     SetSecondPrechargeB | 01000000000000000000000000000000 |                            01000
+     SetSecondPrechargeC | 00000010000000000000000000000000 |                            11000
+       SetPrechargeLevel | 00000001000000000000000000000000 |                            11001
+                SetVCOMH | 00000000000000010000000000000000 |                            11011
+        SetMasterCurrent | 00000000000000100000000000000000 |                            11010
+            SetContrastA | 00000000000001000000000000000000 |                            11110
+            SetContrastB | 00100000000000000000000000000000 |                            11111
+            SetContrastC | 00000000000000000000000000000001 |                            11101
+        DisableScrolling | 00000000000000000000000000000010 |                            11100
+             ClearScreen | 00000000000000000000000000010000 |                            10100
+                   VccEn | 00010000000000000000000000000000 |                            10101
+               DisplayOn | 00000000000010000000000000000000 |                            10111
+        PrepareNextFrame | 00000000000000001000000000000000 |                            10110
+           SetColAddress | 00000000000000000000010000000000 |                            10010
+           SetRowAddress | 00000000000000000000000100000000 |                            10011
+           WaitNextFrame | 00000000000000000000001000000000 |                            10001
+               SendPixel | 00000000000000000010000000000000 |                            10000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'Oled_Display'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 758.230 ; gain = 500.980
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'top_module/single_player' (battlefield) to 'top_module/multi_player'
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     33 Bit       Adders := 8     
+	   2 Input     32 Bit       Adders := 25    
+	   2 Input     17 Bit       Adders := 1     
+	   3 Input     10 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 6     
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	               40 Bit    Registers := 1     
+	               17 Bit    Registers := 1     
+	               16 Bit    Registers := 5     
+	                8 Bit    Registers := 2     
+	                6 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   2 Input     40 Bit        Muxes := 3     
+	  32 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 2     
+	  32 Input     20 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 5     
+	  34 Input     16 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	   3 Input     11 Bit        Muxes := 1     
+	  32 Input      6 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 2     
+	  32 Input      5 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 17    
+	   6 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module flexible_clock_module 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module timer_module 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module home_screen 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     33 Bit       Adders := 4     
+	   2 Input     32 Bit       Adders := 8     
++---Registers : 
+	               16 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      1 Bit        Muxes := 1     
+Module tank_animation 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 2     
+Module select_mode 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     33 Bit       Adders := 4     
+	   2 Input     32 Bit       Adders := 16    
+	   2 Input      8 Bit       Adders := 4     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	  34 Input     16 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module battlefield 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     10 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 2     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     11 Bit        Muxes := 1     
+	   3 Input     11 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 4     
+Module top_module 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 3     
+Module Oled_Display 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	               40 Bit    Registers := 1     
+	               17 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     40 Bit        Muxes := 3     
+	  32 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 2     
+	  32 Input     20 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 1     
+	  32 Input      6 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 2     
+	  32 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-6014] Unused sequential element CLK_25MHZ/FLEX_CLK_OUT_reg was removed.  [C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.srcs/sources_1/new/flexible_clock_module.v:29]
+WARNING: [Synth 8-6014] Unused sequential element CLK_12p5MHZ/FLEX_CLK_OUT_reg was removed.  [C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.srcs/sources_1/new/flexible_clock_module.v:29]
+WARNING: [Synth 8-6014] Unused sequential element CLK_10KHZ/FLEX_CLK_OUT_reg was removed.  [C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.srcs/sources_1/new/flexible_clock_module.v:29]
+WARNING: [Synth 8-6014] Unused sequential element CLK_10HZ/FLEX_CLK_OUT_reg was removed.  [C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.srcs/sources_1/new/flexible_clock_module.v:29]
+INFO: [Synth 8-5545] ROM "CLK_6p25MHZ/FLEX_CLK_OUT0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "CLK_1HZ/FLEX_CLK_OUT0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "select_icon" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "select_icon" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "single_player/tank_leftbound0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "single_player/tank_leftbound0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "CLK_6p25MHZ/FLEX_CLK_OUT0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "CLK_1HZ/FLEX_CLK_OUT0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-3331] design Top_Student has unconnected port JC[2]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port led[15]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port led[14]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port led[13]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port led[12]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port led[11]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port led[10]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port led[9]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port led[8]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port led[7]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port led[6]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port led[5]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port led[4]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port led[3]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port led[2]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port led[1]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port led[0]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[6]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[5]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[4]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[3]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[2]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[1]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[0]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port an[3]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port an[2]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port an[1]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port an[0]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port PS2Clk
+WARNING: [Synth 8-3331] design Top_Student has unconnected port PS2Data
+WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[15]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[14]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[13]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[12]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[11]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[10]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[9]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[8]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[7]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[6]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[5]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[4]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[3]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[2]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[1]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[0]
+INFO: [Synth 8-3886] merging instance 'top_module/home_screen/oled_data_reg[0]' (FDR) to 'top_module/home_screen/oled_data_reg[2]'
+INFO: [Synth 8-3886] merging instance 'top_module/select_mode/oled_data_reg[0]' (FDS) to 'top_module/select_mode/oled_data_reg[1]'
+INFO: [Synth 8-3886] merging instance 'top_module/single_player/oled_data_reg[0]' (FDR) to 'top_module/single_player/oled_data_reg[4]'
+INFO: [Synth 8-3886] merging instance 'top_module/home_screen/oled_data_reg[1]' (FDR) to 'top_module/home_screen/oled_data_reg[2]'
+INFO: [Synth 8-3886] merging instance 'top_module/select_mode/oled_data_reg[1]' (FDS) to 'top_module/select_mode/oled_data_reg[2]'
+INFO: [Synth 8-3886] merging instance 'top_module/single_player/oled_data_reg[1]' (FDR) to 'top_module/single_player/oled_data_reg[4]'
+INFO: [Synth 8-3886] merging instance 'top_module/select_mode/oled_data_reg[2]' (FDS) to 'top_module/select_mode/oled_data_reg[3]'
+INFO: [Synth 8-3886] merging instance 'top_module/single_player/oled_data_reg[2]' (FDR) to 'top_module/single_player/oled_data_reg[4]'
+INFO: [Synth 8-3886] merging instance 'top_module/home_screen/oled_data_reg[3]' (FDR) to 'top_module/home_screen/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'top_module/select_mode/oled_data_reg[3]' (FDS) to 'top_module/select_mode/oled_data_reg[4]'
+INFO: [Synth 8-3886] merging instance 'top_module/single_player/oled_data_reg[3]' (FDR) to 'top_module/single_player/oled_data_reg[4]'
+INFO: [Synth 8-3886] merging instance 'top_module/home_screen/oled_data_reg[4]' (FDR) to 'top_module/home_screen/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'top_module/select_mode/oled_data_reg[4]' (FDS) to 'top_module/select_mode/oled_data_reg[11]'
+INFO: [Synth 8-3886] merging instance 'top_module/home_screen/oled_data_reg[5]' (FDS) to 'top_module/home_screen/oled_data_reg[10]'
+INFO: [Synth 8-3886] merging instance 'top_module/select_mode/oled_data_reg[5]' (FDR) to 'top_module/single_player/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'top_module/single_player/oled_data_reg[5]' (FDS) to 'top_module/single_player/oled_data_reg[6]'
+INFO: [Synth 8-3886] merging instance 'top_module/home_screen/oled_data_reg[6]' (FDS) to 'top_module/home_screen/oled_data_reg[10]'
+INFO: [Synth 8-3886] merging instance 'top_module/select_mode/oled_data_reg[6]' (FDR) to 'top_module/single_player/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'top_module/single_player/oled_data_reg[6]' (FDS) to 'top_module/single_player/oled_data_reg[7]'
+INFO: [Synth 8-3886] merging instance 'top_module/home_screen/oled_data_reg[7]' (FDS) to 'top_module/home_screen/oled_data_reg[10]'
+INFO: [Synth 8-3886] merging instance 'top_module/select_mode/oled_data_reg[7]' (FDR) to 'top_module/single_player/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'top_module/single_player/oled_data_reg[7]' (FDS) to 'top_module/single_player/oled_data_reg[8]'
+INFO: [Synth 8-3886] merging instance 'top_module/home_screen/oled_data_reg[8]' (FDS) to 'top_module/home_screen/oled_data_reg[10]'
+INFO: [Synth 8-3886] merging instance 'top_module/select_mode/oled_data_reg[8]' (FDR) to 'top_module/single_player/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'top_module/single_player/oled_data_reg[8]' (FDS) to 'top_module/single_player/oled_data_reg[9]'
+INFO: [Synth 8-3886] merging instance 'top_module/home_screen/oled_data_reg[9]' (FDS) to 'top_module/home_screen/oled_data_reg[10]'
+INFO: [Synth 8-3886] merging instance 'top_module/select_mode/oled_data_reg[9]' (FDR) to 'top_module/single_player/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'top_module/single_player/oled_data_reg[9]' (FDS) to 'top_module/single_player/oled_data_reg[10]'
+INFO: [Synth 8-3886] merging instance 'top_module/select_mode/oled_data_reg[10]' (FDR) to 'top_module/single_player/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'top_module/home_screen/oled_data_reg[11]' (FDR) to 'top_module/home_screen/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'top_module/select_mode/oled_data_reg[11]' (FDS) to 'top_module/select_mode/oled_data_reg[12]'
+INFO: [Synth 8-3886] merging instance 'top_module/single_player/oled_data_reg[11]' (FDR) to 'top_module/single_player/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'top_module/home_screen/oled_data_reg[12]' (FDR) to 'top_module/home_screen/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'top_module/select_mode/oled_data_reg[12]' (FDS) to 'top_module/select_mode/oled_data_reg[13]'
+INFO: [Synth 8-3886] merging instance 'top_module/single_player/oled_data_reg[12]' (FDR) to 'top_module/single_player/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'top_module/home_screen/oled_data_reg[13]' (FDR) to 'top_module/home_screen/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'top_module/select_mode/oled_data_reg[13]' (FDS) to 'top_module/select_mode/oled_data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'top_module/single_player/oled_data_reg[13]' (FDR) to 'top_module/single_player/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'top_module/home_screen/oled_data_reg[14]' (FDR) to 'top_module/home_screen/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'top_module/select_mode/oled_data_reg[14]' (FDS) to 'top_module/select_mode/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'top_module/single_player/oled_data_reg[14]' (FDR) to 'top_module/single_player/oled_data_reg[15]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (top_module/\home_screen/oled_data_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (top_module/\single_player/oled_data_reg[15] )
+INFO: [Synth 8-3886] merging instance 'top_module/tank_animation/oled_data_reg[0]' (FD) to 'top_module/tank_animation/oled_data_reg[1]'
+INFO: [Synth 8-3886] merging instance 'top_module/tank_animation/oled_data_reg[1]' (FD) to 'top_module/tank_animation/oled_data_reg[2]'
+INFO: [Synth 8-3886] merging instance 'top_module/tank_animation/oled_data_reg[3]' (FD) to 'top_module/tank_animation/oled_data_reg[4]'
+INFO: [Synth 8-3886] merging instance 'top_module/tank_animation/oled_data_reg[5]' (FD) to 'top_module/tank_animation/oled_data_reg[6]'
+INFO: [Synth 8-3886] merging instance 'top_module/tank_animation/oled_data_reg[6]' (FD) to 'top_module/tank_animation/oled_data_reg[7]'
+INFO: [Synth 8-3886] merging instance 'top_module/tank_animation/oled_data_reg[7]' (FD) to 'top_module/tank_animation/oled_data_reg[8]'
+INFO: [Synth 8-3886] merging instance 'top_module/tank_animation/oled_data_reg[8]' (FD) to 'top_module/tank_animation/oled_data_reg[9]'
+INFO: [Synth 8-3886] merging instance 'top_module/tank_animation/oled_data_reg[9]' (FD) to 'top_module/tank_animation/oled_data_reg[10]'
+INFO: [Synth 8-3886] merging instance 'top_module/tank_animation/oled_data_reg[11]' (FD) to 'top_module/tank_animation/oled_data_reg[12]'
+INFO: [Synth 8-3886] merging instance 'top_module/tank_animation/oled_data_reg[12]' (FD) to 'top_module/tank_animation/oled_data_reg[13]'
+INFO: [Synth 8-3886] merging instance 'top_module/tank_animation/oled_data_reg[13]' (FD) to 'top_module/tank_animation/oled_data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'top_module/tank_animation/oled_data_reg[14]' (FD) to 'top_module/tank_animation/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'top_module/oled_data_reg[0]' (FDE) to 'top_module/oled_data_reg[2]'
+INFO: [Synth 8-3886] merging instance 'top_module/oled_data_reg[1]' (FDE) to 'top_module/oled_data_reg[2]'
+INFO: [Synth 8-3886] merging instance 'top_module/oled_data_reg[3]' (FDE) to 'top_module/oled_data_reg[4]'
+INFO: [Synth 8-3886] merging instance 'top_module/oled_data_reg[5]' (FDE) to 'top_module/oled_data_reg[10]'
+INFO: [Synth 8-3886] merging instance 'top_module/oled_data_reg[6]' (FDE) to 'top_module/oled_data_reg[10]'
+INFO: [Synth 8-3886] merging instance 'top_module/oled_data_reg[7]' (FDE) to 'top_module/oled_data_reg[10]'
+INFO: [Synth 8-3886] merging instance 'top_module/oled_data_reg[8]' (FDE) to 'top_module/oled_data_reg[10]'
+INFO: [Synth 8-3886] merging instance 'top_module/oled_data_reg[9]' (FDE) to 'top_module/oled_data_reg[10]'
+INFO: [Synth 8-3886] merging instance 'top_module/oled_data_reg[11]' (FDE) to 'top_module/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'top_module/oled_data_reg[12]' (FDE) to 'top_module/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'top_module/oled_data_reg[13]' (FDE) to 'top_module/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'top_module/oled_data_reg[14]' (FDE) to 'top_module/oled_data_reg[15]'
+WARNING: [Synth 8-3332] Sequential element (home_screen/oled_data_reg[15]) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (single_player/oled_data_reg[15]) is unused and will be removed from module top_module.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:22 . Memory (MB): peak = 758.230 ; gain = 500.980
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:32 . Memory (MB): peak = 758.230 ; gain = 500.980
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:33 . Memory (MB): peak = 763.059 ; gain = 505.809
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:33 . Memory (MB): peak = 801.105 ; gain = 543.855
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:13 ; elapsed = 00:00:34 . Memory (MB): peak = 801.105 ; gain = 543.855
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:13 ; elapsed = 00:00:34 . Memory (MB): peak = 801.105 ; gain = 543.855
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:13 ; elapsed = 00:00:35 . Memory (MB): peak = 801.105 ; gain = 543.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:13 ; elapsed = 00:00:35 . Memory (MB): peak = 801.105 ; gain = 543.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:35 . Memory (MB): peak = 801.105 ; gain = 543.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:13 ; elapsed = 00:00:35 . Memory (MB): peak = 801.105 ; gain = 543.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     3|
+|2     |CARRY4 |   264|
+|3     |LUT1   |   179|
+|4     |LUT2   |   285|
+|5     |LUT3   |   167|
+|6     |LUT4   |   110|
+|7     |LUT5   |   142|
+|8     |LUT6   |   706|
+|9     |FDE_1  |    32|
+|10    |FDRE   |   227|
+|11    |FDSE   |     8|
+|12    |IBUF   |     6|
+|13    |OBUF   |     7|
+|14    |OBUFT  |    28|
++------+-------+------+
+
+Report Instance Areas: 
++------+-------------------+------------------------+------+
+|      |Instance           |Module                  |Cells |
++------+-------------------+------------------------+------+
+|1     |top                |                        |  2164|
+|2     |  CLK_1HZ          |flexible_clock_module   |    54|
+|3     |  CLK_6p25MHZ      |flexible_clock_module_0 |    52|
+|4     |  Timer_6sec       |timer_module            |    56|
+|5     |  top_module       |top_module              |   932|
+|6     |    home_screen    |home_screen             |   374|
+|7     |    select_mode    |select_mode             |   403|
+|8     |    single_player  |battlefield             |   147|
+|9     |    tank_animation |tank_animation          |     4|
+|10    |  unit_oled        |Oled_Display            |  1025|
++------+-------------------+------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:13 ; elapsed = 00:00:35 . Memory (MB): peak = 801.105 ; gain = 543.855
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 52 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:26 . Memory (MB): peak = 801.105 ; gain = 197.727
+Synthesis Optimization Complete : Time (s): cpu = 00:00:13 ; elapsed = 00:00:35 . Memory (MB): peak = 801.105 ; gain = 543.855
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 302 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 32 instances were transformed.
+  FDE_1 => FDRE (inverted pins: C): 32 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+124 Infos, 109 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:38 . Memory (MB): peak = 801.105 ; gain = 556.594
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.runs/synth_1/Top_Student.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Top_Student_utilization_synth.rpt -pb Top_Student_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 801.105 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Mar 30 12:11:49 2024...
