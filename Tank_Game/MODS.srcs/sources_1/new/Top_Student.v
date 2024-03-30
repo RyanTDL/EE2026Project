@@ -26,12 +26,13 @@ module Top_Student (
     wire sending_pix;
     wire sample_pix;
     wire [12:0] pixel_index;
-    wire [15:0] oled_data;
+    wire [15:0] oled_data_final;
     
     wire clk25m;
     wire clk12p5m;
     wire clk6p25m;
     wire clk10k;
+    wire clk1k;
     wire clk10;
     wire clk1;
     
@@ -40,40 +41,55 @@ module Top_Student (
     flexible_clock_module CLK_6p25MHZ(.CLK_100MHZ(clk), .COUNT_M(7), .FLEX_CLK_OUT(clk6p25m));
     flexible_clock_module CLK_10KHZ(.CLK_100MHZ(clk), .COUNT_M(4999), .FLEX_CLK_OUT(clk10k));
     flexible_clock_module CLK_10HZ(.CLK_100MHZ(clk), .COUNT_M(4999999), .FLEX_CLK_OUT(clk10));
+    flexible_clock_module CLK_1KHZ(.CLK_100MHZ(clk), .COUNT_M(49999), .FLEX_CLK_OUT(clk1k));
     flexible_clock_module CLK_1HZ(.CLK_100MHZ(clk), .COUNT_M(49999999), .FLEX_CLK_OUT(clk1));
     
     
-    wire timer_6sec;
-    timer_module Timer_6sec(.CLK_1Hz(clk1), .COUNT_M(6), .FLEX_CLK_OUT(timer_6sec));
-    
-    
-    top_module top_module(
-        .CLK_6p25MHz(clk6p25m), 
-        .pixel_data(pixel_index),
-        .timer_6sec(timer_6sec), 
-        .btnU(btnU),
-        .btnD(btnD),
-        .btnC(btnC),
-        .btnL(btnL), 
-        .btnR(btnR),
-        .oled_data(oled_data)
-    );    
-    
-                
+    // Set up OLED display
     Oled_Display unit_oled(.clk(clk6p25m), 
-                       .reset(0), 
-                       .frame_begin(fb), 
-                       .sending_pixels(sending_pix),
-                       .sample_pixel(sample_pix), 
-                       .pixel_index(pixel_index), 
-                       .pixel_data(oled_data), 
-                       .cs(JC[0]), 
-                       .sdin(JC[1]), 
-                       .sclk(JC[3]), 
-                       .d_cn(JC[4]), 
-                       .resn(JC[5]), 
-                       .vccen(JC[6]),
-                       .pmoden(JC[7]));
-
+                   .reset(0), 
+                   .frame_begin(fb), 
+                   .sending_pixels(sending_pix),
+                   .sample_pixel(sample_pix), 
+                   .pixel_index(pixel_index), 
+                   .pixel_data(oled_data_final), 
+                   .cs(JC[0]), 
+                   .sdin(JC[1]), 
+                   .sclk(JC[3]), 
+                   .d_cn(JC[4]), 
+                   .resn(JC[5]), 
+                   .vccen(JC[6]),
+                   .pmoden(JC[7]));
+    
+//    // Set up loading screen and battlefield     
+//    wire timer_6sec;
+//    timer_module Timer_6sec(.CLK_1Hz(clk1), .COUNT_M(6), .FLEX_CLK_OUT(timer_6sec));              
+//    load_game load_game(
+//        .CLK_6p25MHz(clk6p25m), 
+//        .pixel_data(pixel_index),
+//        .timer_6sec(timer_6sec), 
+//        .btnU(btnU),
+//        .btnD(btnD),
+//        .btnC(btnC),
+//        .btnL(btnL), 
+//        .btnR(btnR),
+//        .oled_data(oled_data_final)
+//    );    
+    
+    // Set up firing trajectory & display
+    wire [7:0] xpos;
+    wire [7:0] ypos;
+    assign xpos = 15;
+    assign ypos = 15;
+    my_test_ballistic TEST_BALLISTIC(.CLK_6p25M(clk6p25m),
+                                     .CLK_1K(clk1k),
+                                     .BTNC(btnC),
+                                     .BTNU(btnU),
+                                     .BTND(btnD),
+                                     .XPOS(xpos),
+                                     .YPOS(ypos),
+                                     .PIXEL_INDEX(pixel_index), 
+                                     .PIXEL_DATA(oled_data_final),
+                                     .LD0(led[0]));
 
 endmodule

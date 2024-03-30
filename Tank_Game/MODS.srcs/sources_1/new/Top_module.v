@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module top_module(
+module load_game(
     input CLK_6p25MHz,
     input [12:0] pixel_data,
     input timer_6sec,

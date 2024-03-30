@@ -1,4 +1,0 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/Project/MODS.xpr/MODS/MODS.srcs/sources_1/new/flexible_clock.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module flexible_clock
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/Project/MODS.xpr/MODS/MODS.srcs/sim_1/new/simulation.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module subtask_A_simulation
