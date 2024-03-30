@@ -25,7 +25,8 @@ module select_mode(
     [12:0] pixel_index,
     btnU, btnD, btnC, 
     output reg [15:0] oled_data,
-    output reg [1:0] start_game=0
+    output reg start_game=0,
+    output reg battlefield_number
 );    
     
     // For the OLED display
@@ -290,8 +291,10 @@ module select_mode(
         end 
         if (btnC==1 && select_icon==0) begin
             start_game <= 1;
+            battlefield_number <= 0;
         end else if (btnC==1 && select_icon==1) begin
-            start_game <= 2;
+            start_game <= 1;
+            battlefield_number <= 1;
         end
     end
 endmodule

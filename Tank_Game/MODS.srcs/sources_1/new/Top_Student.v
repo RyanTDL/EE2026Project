@@ -26,7 +26,7 @@ module Top_Student (
     wire sending_pix;
     wire sample_pix;
     wire [12:0] pixel_index;
-    wire [15:0] oled_data_final;
+    wire [15:0] oled_data_final, oled_data_loading_screen, oled_data_battlefield;
     
     wire clk25m;
     wire clk12p5m;
@@ -60,36 +60,47 @@ module Top_Student (
                    .resn(JC[5]), 
                    .vccen(JC[6]),
                    .pmoden(JC[7]));
+   
+   /////////////////////////////////////////////////////////// 
+   ///////////   Start up the tank game   //////////////////// 
+   /////////////////////////////////////////////////////////// 
+    wire start_game;
+    wire battlefield_number;   
     
-//    // Set up loading screen and battlefield     
-//    wire timer_6sec;
-//    timer_module Timer_6sec(.CLK_1Hz(clk1), .COUNT_M(6), .FLEX_CLK_OUT(timer_6sec));              
-//    load_game load_game(
-//        .CLK_6p25MHz(clk6p25m), 
-//        .pixel_data(pixel_index),
-//        .timer_6sec(timer_6sec), 
-//        .btnU(btnU),
-//        .btnD(btnD),
-//        .btnC(btnC),
-//        .btnL(btnL), 
-//        .btnR(btnR),
-//        .oled_data(oled_data_final)
-//    );    
+    // Set up loading screen
+    wire timer_6sec;
+    timer_module Timer_6sec(.CLK_1Hz(clk1), .COUNT_M(6), .FLEX_CLK_OUT(timer_6sec));  
+                
+    load_game load_game(
+        .CLK_6p25MHz(clk6p25m), 
+        .pixel_index(pixel_index),
+        .timer_6sec(timer_6sec), 
+        .btnU(btnU),
+        .btnD(btnD),
+        .btnC(btnC),
+        .oled_data(oled_data_loading_screen),
+        .start_game(start_game),
+        .battlefield_number(battlefield_number)
+    );    
     
-    // Set up firing trajectory & display
-    wire [7:0] xpos;
-    wire [7:0] ypos;
-    assign xpos = 15;
-    assign ypos = 15;
-    my_test_ballistic TEST_BALLISTIC(.CLK_6p25M(clk6p25m),
-                                     .CLK_1K(clk1k),
-                                     .BTNC(btnC),
-                                     .BTNU(btnU),
-                                     .BTND(btnD),
-                                     .XPOS(xpos),
-                                     .YPOS(ypos),
-                                     .PIXEL_INDEX(pixel_index), 
-                                     .PIXEL_DATA(oled_data_final),
-                                     .LD0(led[0]));
+    // Set up battlefield
+    wire [15:0] oled_data_singleplayer_battlefield;
+    wire [15:0] oled_data_multiplayer_battlefield;
+    battlefield single_player (.clk_6p25MHz(clk6p25m), 
+                               .pixel_index(pixel_index), 
+                               .btnL(btnL), .btnR(btnR), .btnC(btnC), .btnU(btnU), .btnD(btnD),
+                               .oled_data(oled_data_singleplayer_battlefield),
+                               .LD0(led[0])); 
+                               
+    battlefield multi_player (.clk_6p25MHz(clk6p25m), 
+                              .pixel_index(pixel_index), 
+                              .btnL(btnL), .btnR(btnR), .btnC(btnC), .btnU(btnU), .btnD(btnD), 
+                              .oled_data(oled_data_multiplayer_battlefield),
+                              .LD0(led[0])); 
+                              
+    assign oled_data_battlefield = (battlefield_number ? oled_data_multiplayer_battlefield : oled_data_singleplayer_battlefield);
+       
+    // Displays either loading screen or battlefield screen
+    assign oled_data_final = (start_game ? oled_data_battlefield : oled_data_loading_screen);                                     
 
 endmodule

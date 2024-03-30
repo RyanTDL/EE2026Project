@@ -23,10 +23,12 @@
 module battlefield(
     input clk_6p25MHz,
     [12:0] pixel_index,
-    btnL, btnR,
-    output reg [15:0] oled_data
+    btnL, btnR, btnC, btnU, btnD,
+    output reg [15:0] oled_data,
+    output reg LD0
 );    
 
+                                                                         
     // For the OLED display
     wire [7:0] x_coord = pixel_index%96;
     wire [6:0] y_coord = pixel_index/96;
@@ -40,10 +42,12 @@ module battlefield(
     reg [7:0] tank_rightbound = 30;
     reg [7:0] wall_leftbound = 46;
     reg [7:0] wall_rightbound = 50;
+    
 
     always @(posedge clk_6p25MHz) begin   
     
-        // Creating the debouncer for btnL and btnR. Use debounced signals instead of raw button presses
+    
+        // Creating the debouncer. Use debounced signals instead of raw button presses
         if (btnL && debouncer_timer==0) begin
             tank_leftbound <= (tank_leftbound == 0) ? tank_leftbound : (tank_leftbound - 1);
             tank_rightbound <= (tank_leftbound == 0) ? tank_rightbound : (tank_rightbound - 1);
@@ -54,6 +58,7 @@ module battlefield(
             tank_leftbound <= (tank_rightbound == wall_leftbound) ? tank_leftbound : (tank_leftbound + 1);
             debouncer_timer <= DEBOUNCE_TIME; // Reset debouncer timer
         end        
+      
         // This block can reset the debouncer timer after its duration expires
         if (debouncer_timer > 0) begin
             debouncer_timer <= debouncer_timer - 1;
@@ -71,13 +76,13 @@ module battlefield(
             (x_coord>tank_leftbound && x_coord<tank_rightbound && y_coord>55 && y_coord<59) ||
             (x_coord>tank_leftbound+2 && x_coord<tank_rightbound-2 && y_coord>53 && y_coord<56)
         ) begin
-            oled_data <= 16'b00000_000000_11111;
-        // Creates player 1 tank                    
+            oled_data <= 16'b00000_111111_11111;
+        // Creates player 2 tank                    
         end else if (
             (x_coord>70 && x_coord<80 && y_coord>55 && y_coord<59) ||
             (x_coord>72 && x_coord<78 && y_coord>53 && y_coord<56)
         ) begin
-            oled_data <= 16'b00000_000000_11111;
+            oled_data <= 16'b00000_000000_11111;     
         end else begin
             oled_data <= 16'b00000_000000_00000;
         end        

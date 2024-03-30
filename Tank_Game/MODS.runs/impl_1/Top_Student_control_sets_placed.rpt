@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Sat Mar 30 18:01:28 2024
+| Date         : Sat Mar 30 20:21:36 2024
 | Host         : DESKTOP-J5V27MI running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Top_Student_control_sets_placed.rpt
 | Design       : Top_Student
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    15 |
-| Unused register locations in slices containing registers |    34 |
+| Number of unique control sets                            |    14 |
+| Unused register locations in slices containing registers |    44 |
 +----------------------------------------------------------+-------+
 
 
@@ -34,9 +34,8 @@ Table of Contents
 +--------+--------------+
 | Fanout | Control Sets |
 +--------+--------------+
-|      2 |            2 |
-|      4 |            2 |
-|      8 |            1 |
+|      2 |            3 |
+|      4 |            1 |
 |    16+ |           10 |
 +--------+--------------+
 
@@ -47,36 +46,35 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              18 |            6 |
+| No           | No                    | No                     |              36 |           11 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |             268 |           42 |
-| Yes          | No                    | No                     |             120 |           18 |
+| No           | Yes                   | No                     |             254 |           38 |
+| Yes          | No                    | No                     |             200 |           30 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              64 |           11 |
+| Yes          | Yes                   | No                     |              42 |            6 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+----------------+----------------------------------------+-----------------------------------------+------------------+----------------+
-|  Clock Signal  |              Enable Signal             |             Set/Reset Signal            | Slice Load Count | Bel Load Count |
-+----------------+----------------------------------------+-----------------------------------------+------------------+----------------+
-|  clk1k_BUFG    | TEST_BALLISTIC/STATE_INT[2]            | TEST_BALLISTIC/STATE_INT[0]             |                1 |              2 |
-| ~clk6p25m_BUFG |                                        |                                         |                1 |              2 |
-|  clk_IBUF_BUFG |                                        |                                         |                2 |              4 |
-|  clk6p25m_BUFG |                                        |                                         |                1 |              4 |
-|  clk1k_BUFG    |                                        |                                         |                2 |              8 |
-|  clk1k_BUFG    |                                        | TEST_BALLISTIC/debouncecount[7]_i_1_n_0 |                4 |             16 |
-|  clk1k_BUFG    | TEST_BALLISTIC/sel                     |                                         |                3 |             16 |
-|  clk1k_BUFG    | TEST_BALLISTIC/bullet_xpos[6]_i_1_n_0  | TEST_BALLISTIC/bullet_xpos2_i_1_n_0     |                6 |             30 |
-|  clk1k_BUFG    | TEST_BALLISTIC/STATE_INT[0]            | TEST_BALLISTIC/bullet_xpos2_i_1_n_0     |                4 |             32 |
-| ~clk6p25m_BUFG |                                        | unit_oled/frame_counter[16]_i_1_n_0     |                5 |             34 |
-| ~clk6p25m_BUFG | unit_oled/delay[0]_i_1_n_0             |                                         |                5 |             40 |
-|  clk_IBUF_BUFG |                                        | CLK_1KHZ/COUNT[0]_i_1__0_n_0            |                8 |             64 |
-|  clk_IBUF_BUFG |                                        | CLK_6p25MHZ/clear                       |                8 |             64 |
-| ~clk6p25m_BUFG | unit_oled/FSM_onehot_state[31]_i_1_n_0 |                                         |               10 |             64 |
-| ~clk6p25m_BUFG |                                        | unit_oled/spi_word[39]_i_1_n_0          |               17 |             90 |
-+----------------+----------------------------------------+-----------------------------------------+------------------+----------------+
++----------------+------------------------------------------+----------------------------------------+------------------+----------------+
+|  Clock Signal  |               Enable Signal              |            Set/Reset Signal            | Slice Load Count | Bel Load Count |
++----------------+------------------------------------------+----------------------------------------+------------------+----------------+
+|  clk6p25m_BUFG |                                          | load_game/select_mode/start_game_reg_0 |                1 |              2 |
+| ~clk6p25m_BUFG |                                          |                                        |                1 |              2 |
+|  clk1_BUFG     |                                          |                                        |                1 |              2 |
+|  clk_IBUF_BUFG |                                          |                                        |                2 |              4 |
+|  clk6p25m_BUFG |                                          |                                        |                7 |             28 |
+|  clk6p25m_BUFG | single_player/tank_rightbound            |                                        |                6 |             32 |
+| ~clk6p25m_BUFG |                                          | unit_oled/frame_counter[16]_i_1_n_0    |                5 |             34 |
+| ~clk6p25m_BUFG | unit_oled/delay[0]_i_1_n_0               |                                        |                5 |             40 |
+|  clk6p25m_BUFG | single_player/debouncer_timer[0]_i_2_n_0 | single_player/debouncer_timer          |                6 |             42 |
+| ~clk6p25m_BUFG | unit_oled/state                          |                                        |               11 |             64 |
+|  clk_IBUF_BUFG |                                          | CLK_1HZ/COUNT[0]_i_1__0_n_0            |                8 |             64 |
+|  clk_IBUF_BUFG |                                          | CLK_6p25MHZ/clear                      |                8 |             64 |
+|  clk1_BUFG     | Timer_6sec/sel                           |                                        |                8 |             64 |
+| ~clk6p25m_BUFG |                                          | unit_oled/spi_word[39]_i_1_n_0         |               16 |             90 |
++----------------+------------------------------------------+----------------------------------------+------------------+----------------+
 
 
