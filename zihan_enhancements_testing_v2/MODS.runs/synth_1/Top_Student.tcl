@@ -23,21 +23,21 @@ create_project -in_memory -part xc7a35tcpg236-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir E:/EE2026_Verilog_Projects/EE2026_Project_Enhance/zihan_enhancements_testing/MODS.cache/wt [current_project]
-set_property parent.project_path E:/EE2026_Verilog_Projects/EE2026_Project_Enhance/zihan_enhancements_testing/MODS.xpr [current_project]
+set_property webtalk.parent_dir E:/EE2026_Verilog_Projects/EE2026Project/zihan_enhancements_testing_v2/MODS.cache/wt [current_project]
+set_property parent.project_path E:/EE2026_Verilog_Projects/EE2026Project/zihan_enhancements_testing_v2/MODS.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo e:/EE2026_Verilog_Projects/EE2026_Project_Enhance/zihan_enhancements_testing/MODS.cache/ip [current_project]
+set_property ip_output_repo e:/EE2026_Verilog_Projects/EE2026Project/zihan_enhancements_testing_v2/MODS.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-add_files E:/EE2026_Verilog_Projects/EE2026_Project_Enhance/zihan_enhancements_testing/MODS.srcs/sources_1/imports/res/weights.coe
-add_files E:/EE2026_Verilog_Projects/EE2026_Project_Enhance/zihan_enhancements_testing/MODS.srcs/sources_1/imports/res/00.coe
+add_files E:/EE2026_Verilog_Projects/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/imports/res/weights.coe
+add_files E:/EE2026_Verilog_Projects/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/imports/res/00.coe
 read_verilog -library xil_defaultlib {
-  E:/EE2026_Verilog_Projects/EE2026_Project_Enhance/zihan_enhancements_testing/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v
-  E:/EE2026_Verilog_Projects/EE2026_Project_Enhance/zihan_enhancements_testing/MODS.srcs/sources_1/new/flexible_clock_module.v
-  E:/EE2026_Verilog_Projects/EE2026_Project_Enhance/zihan_enhancements_testing/MODS.srcs/sources_1/new/my_test_background.v
-  E:/EE2026_Verilog_Projects/EE2026_Project_Enhance/zihan_enhancements_testing/MODS.srcs/sources_1/new/my_test_ballistic.v
-  E:/EE2026_Verilog_Projects/EE2026_Project_Enhance/zihan_enhancements_testing/MODS.srcs/sources_1/new/my_test_trig.v
-  E:/EE2026_Verilog_Projects/EE2026_Project_Enhance/zihan_enhancements_testing/MODS.srcs/sources_1/new/Top_Student.v
+  E:/EE2026_Verilog_Projects/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v
+  E:/EE2026_Verilog_Projects/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/flexible_clock_module.v
+  E:/EE2026_Verilog_Projects/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/my_test_background.v
+  E:/EE2026_Verilog_Projects/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/my_test_ballistic.v
+  E:/EE2026_Verilog_Projects/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/my_test_trig.v
+  E:/EE2026_Verilog_Projects/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/Top_Student.v
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -47,8 +47,8 @@ read_verilog -library xil_defaultlib {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc E:/EE2026_Verilog_Projects/EE2026_Project_Enhance/zihan_enhancements_testing/MODS.srcs/constrs_1/new/my_basys3_constraints.xdc
-set_property used_in_implementation false [get_files E:/EE2026_Verilog_Projects/EE2026_Project_Enhance/zihan_enhancements_testing/MODS.srcs/constrs_1/new/my_basys3_constraints.xdc]
+read_xdc E:/EE2026_Verilog_Projects/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/constrs_1/new/my_basys3_constraints.xdc
+set_property used_in_implementation false [get_files E:/EE2026_Verilog_Projects/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/constrs_1/new/my_basys3_constraints.xdc]
 
 set_param ips.enableIPCacheLiteLoad 0
 close [open __synthesis_is_running__ w]

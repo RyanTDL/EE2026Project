@@ -22,11 +22,14 @@
 
 module my_test_ballistic(input CLK_6p25M, CLK_1K, 
                          BTNC, BTNU, BTND,
+                         PLAYER,
                          [7:0] P1_XPOS, P1_YPOS,
+                         [7:0] P2_XPOS, P2_YPOS,
                          [12:0] PIXEL_INDEX, 
                          [15:0] PIXEL_DATA_INPUT,
                          output reg [15:0] PIXEL_DATA,
-                         output reg [15:0] LD);
+                         output reg [15:0] LD,
+                         output reg PLAYER_NEW);
     
     parameter G = 100;
     
@@ -35,11 +38,22 @@ module my_test_ballistic(input CLK_6p25M, CLK_1K,
     
     reg [2:0] STATE_INT = 0;
     
-    reg [7:0] THETA = 32;
-    wire [15:0] SIN_THETA;
-    wire [15:0] COS_THETA;
-    my_test_trig sin_1(.angle_in(THETA), .s_c(0), .trig_out(SIN_THETA));
-    my_test_trig cos_1(.angle_in(THETA), .s_c(1), .trig_out(COS_THETA));
+//    reg PLAYER = 0;
+//    assign PLAYER_NEW = PLAYER;
+    
+    // For angles for P1
+    reg [7:0] THETA1 = 32;
+    wire [15:0] SIN_THETA1;
+    wire [15:0] COS_THETA1;
+    my_test_trig sin_1(.angle_in(THETA1), .s_c(0), .trig_out(SIN_THETA1));
+    my_test_trig cos_1(.angle_in(THETA1), .s_c(1), .trig_out(COS_THETA1));
+    
+    // For anles for P2
+    reg [7:0] THETA2 = 32;
+    wire [15:0] SIN_THETA2;
+    wire [15:0] COS_THETA2;
+    my_test_trig sin_2(.angle_in(THETA2), .s_c(0), .trig_out(SIN_THETA2));
+    my_test_trig cos_2(.angle_in(THETA2), .s_c(1), .trig_out(COS_THETA2));
     
     reg [15:0] flight_time_ms = 0;     //in 1ms
     //reg [31:0] flight_time_squared = 0;
@@ -50,7 +64,7 @@ module my_test_ballistic(input CLK_6p25M, CLK_1K,
     reg [7:0] bullet_ypos = 0;
     
     
-    parameter POWER = 150;
+//    parameter POWER = 150;
     
     reg [7:0] POWER_INPUT = 30;
     reg POWER_COUNT_UP = 1;
@@ -59,8 +73,8 @@ module my_test_ballistic(input CLK_6p25M, CLK_1K,
 //    reg [7:0] POWER_Y = 0;
     wire [23:0] POWER_X;
     wire [23:0] POWER_Y;
-    assign POWER_X = ((POWER_INPUT * COS_THETA) >> 14);
-    assign POWER_Y = ((POWER_INPUT * SIN_THETA) >> 14);
+    assign POWER_X = PLAYER ? ((POWER_INPUT * COS_THETA2) >> 14) : ((POWER_INPUT * COS_THETA1) >> 14);
+    assign POWER_Y = PLAYER ? ((POWER_INPUT * SIN_THETA2) >> 14) : ((POWER_INPUT * SIN_THETA1) >> 14);
 //    assign POWER_X = 50;
 //    assign POWER_Y = POWER;
     wire [31:0] DIST_X;
@@ -71,17 +85,23 @@ module my_test_ballistic(input CLK_6p25M, CLK_1K,
     assign GRAVITY_COMP = ((G * flight_time_squared) >> 20);
     
     
-    reg [7:0] debouncecount = 0;   // count up to 19
+    reg [7:0] debouncecount = 0;   // count for debouncing barrel position
     reg debounceactive = 0;
     
-    reg [9:0] debouncecount_updown = 0;   // count up to 199
+    reg [9:0] debouncecount_updown = 0;   // count for debouncing power
     reg debounceactive_updown = 0;
     
     parameter BARREL = 6;
-    wire [7:0] BARREL_X;
-    wire [7:0] BARREL_Y;
-    assign BARREL_X = P1_XPOS + ((BARREL * COS_THETA) >> 14);
-    assign BARREL_Y = P1_YPOS + ((BARREL * SIN_THETA) >> 14);
+    // P1 barrel
+    wire [7:0] P1_BARREL_X;
+    wire [7:0] P1_BARREL_Y;
+    assign P1_BARREL_X = P1_XPOS + ((BARREL * COS_THETA1) >> 14);
+    assign P1_BARREL_Y = P1_YPOS + ((BARREL * SIN_THETA1) >> 14);
+    // P2 barrel
+    wire [7:0] P2_BARREL_X;
+    wire [7:0] P2_BARREL_Y;
+    assign P2_BARREL_X = P2_XPOS - ((BARREL * COS_THETA2) >> 14);
+    assign P2_BARREL_Y = P2_YPOS + ((BARREL * SIN_THETA2) >> 14);
     
     always @ (posedge CLK_1K) begin
         
@@ -101,53 +121,60 @@ module my_test_ballistic(input CLK_6p25M, CLK_1K,
             debounceactive_updown <= 1;
             debouncecount_updown <= 0;
         end
-        if (debouncecount_updown >= 332 && debounceactive_updown) begin
+        if (debouncecount_updown >= 399 && debounceactive_updown) begin
             debounceactive_updown <= 0;
             debouncecount_updown <= 0;
         end
         else debouncecount_updown <= debouncecount_updown + 1;
         
         if (STATE_INT == 0) begin
-            bullet_xpos <= P1_XPOS;
-            bullet_ypos <= P1_YPOS;
+            bullet_xpos <= PLAYER ? P2_XPOS : P1_XPOS;
+            bullet_ypos <= PLAYER ? P2_YPOS : P1_YPOS;
             flight_time_ms <= 0;
             //flight_time_squared <= 0;
             POWER_COUNT_UP <= 1;
-            POWER_INPUT <= 30;
+            POWER_INPUT <= 50;
             LD <= 0;
         end
         
         if (STATE_INT != 2 && ~debounceactive) begin
-            if (BTNU && THETA < 64)
-                THETA <= THETA + 1;
-            else if (BTND && THETA > 0)
-                THETA <= THETA - 1;
+            if (!PLAYER) begin
+                if (BTNU && THETA1 < 64)
+                    THETA1 <= THETA1 + 1;
+                else if (BTND && THETA1 > 0)
+                    THETA1 <= THETA1 - 1;
+            end else begin
+                if (BTNU && THETA2 < 64)
+                    THETA2 <= THETA2 + 1;
+                else if (BTND && THETA2 > 0)
+                    THETA2 <= THETA2 - 1;
+            end
         end
         
         if (STATE_INT == 0 && BTNC) STATE_INT <= 1;
         
         if (STATE_INT == 1 && BTNC && ~debounceactive_updown) begin
             if (POWER_COUNT_UP && POWER_INPUT < 150)
-                POWER_INPUT <= POWER_INPUT + 30;
-            else if (~POWER_COUNT_UP && POWER_INPUT > 30)
-                POWER_INPUT <= POWER_INPUT - 30;
+                POWER_INPUT <= POWER_INPUT + 20;
+            else if (~POWER_COUNT_UP && POWER_INPUT > 70)
+                POWER_INPUT <= POWER_INPUT - 20;
             else if (POWER_INPUT >= 150) begin
                 POWER_COUNT_UP <= 0;
-                POWER_INPUT <= POWER_INPUT - 30;
+                POWER_INPUT <= POWER_INPUT - 20;
             end
-            else if (POWER_INPUT <= 30) begin
+            else if (POWER_INPUT <= 70) begin
                 POWER_COUNT_UP <= 1;
-                POWER_INPUT <= POWER_INPUT + 30;
+                POWER_INPUT <= POWER_INPUT + 20;
             end
         end
         
         if (STATE_INT == 1 || STATE_INT == 2) begin
             case (POWER_INPUT)
-                30 : LD <= 16'b1000_0000_0000_0000;
-                60 : LD <= 16'b1100_0000_0000_0000;
-                90 : LD <= 16'b1110_0000_0000_0000;
-                120 : LD <= 16'b1111_0000_0000_0000;
-                150 : LD <= 16'b1111_1000_0000_0000;
+                70 : LD <= PLAYER ? 16'b0000_0000_0000_0001 : 16'b1000_0000_0000_0000;
+                90 : LD <= PLAYER ? 16'b0000_0000_0000_0011 : 16'b1100_0000_0000_0000;
+                110 : LD <= PLAYER ? 16'b0000_0000_0000_0111 : 16'b1110_0000_0000_0000;
+                130 : LD <= PLAYER ? 16'b0000_0000_0000_1111 : 16'b1111_0000_0000_0000;
+                150 : LD <= PLAYER ? 16'b0000_0000_0001_1111 : 16'b1111_1000_0000_0000;
             endcase
         end
         
@@ -159,14 +186,16 @@ module my_test_ballistic(input CLK_6p25M, CLK_1K,
             
             flight_time_ms <= flight_time_ms + 1;
             //flight_time_squared <= ((flight_time_ms * flight_time_ms));
-            bullet_ypos <= BARREL_Y + DIST_Y - GRAVITY_COMP;
-            bullet_xpos <= BARREL_X + DIST_X;
+            bullet_ypos <= PLAYER ? (P2_BARREL_Y + DIST_Y - GRAVITY_COMP) : (P1_BARREL_Y + DIST_Y - GRAVITY_COMP);
+            bullet_xpos <= PLAYER ? (P2_BARREL_X - DIST_X) : (P1_BARREL_X + DIST_X);
             
             //LD[0] <= 1;
             
             //if (bullet_xpos <= 0 || bullet_xpos >= 95 || bullet_ypos <= 0 || bullet_ypos >= 63) STATE_INT <= 0;
-            if (bullet_xpos <= 0 || bullet_xpos >= 95 || bullet_ypos <= 5)
+            if (bullet_xpos <= 0 || bullet_xpos >= 95 || bullet_ypos <= 5) begin
                 STATE_INT <= 0;
+                PLAYER_NEW <= ~PLAYER;
+            end
         end
         
     end
@@ -176,11 +205,15 @@ module my_test_ballistic(input CLK_6p25M, CLK_1K,
             && ((x_coord >= bullet_xpos - 1 && x_coord <= bullet_xpos + 1 && y_coord == bullet_ypos) 
             || (y_coord >= bullet_ypos - 1 && y_coord <= bullet_ypos + 1 && x_coord == bullet_xpos))
             ) begin 
+            PIXEL_DATA <= PLAYER ? 16'b00000_000000_11111 : 16'b11111_000000_00000;
+        end else if (x_coord == P1_BARREL_X && y_coord == P1_BARREL_Y)
             PIXEL_DATA <= 16'b11111_000000_00000;
-        end else if (x_coord == BARREL_X && y_coord == BARREL_Y)
-            PIXEL_DATA <= 16'hffff;
+        else if (x_coord == P2_BARREL_X && y_coord == P2_BARREL_Y)
+            PIXEL_DATA <= 16'b00000_000000_11111;
         else if (x_coord >= P1_XPOS - 2 && x_coord <= P1_XPOS + 2 && y_coord >= P1_YPOS - 2 && y_coord <= P1_YPOS + 2)
-            PIXEL_DATA <= 16'hffff;
+            PIXEL_DATA <= 16'b11111_000000_00000;
+        else if (x_coord >= P2_XPOS - 2 && x_coord <= P2_XPOS + 2 && y_coord >= P2_YPOS - 2 && y_coord <= P2_YPOS + 2)
+            PIXEL_DATA <= 16'b00000_000000_11111;
         else
             PIXEL_DATA <= PIXEL_DATA_INPUT;
     end    

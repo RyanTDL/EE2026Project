@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='E:/EE2026_Verilog_Projects/EE2026_Project_Enhance/zihan_enhancements_testing/MODS.runs/impl_1'
+HD_PWD='E:/EE2026_Verilog_Projects/EE2026Project/zihan_enhancements_testing_v2/MODS.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

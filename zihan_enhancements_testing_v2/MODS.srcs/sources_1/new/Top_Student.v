@@ -60,21 +60,34 @@ module Top_Student (input clk,
                                        .PIXEL_INDEX(pixel_index), 
                                        .PIXEL_DATA(oled_data_background));
     
-    wire [7:0] xpos;
-    wire [7:0] ypos;
-    assign xpos = 10;
-    assign ypos = 7;
+    // 0 for P1, 1 for P2
+    wire player;
+    
+    wire [7:0] p1_xpos;
+    wire [7:0] p1_ypos;
+    assign p1_xpos = 9;
+    assign p1_ypos = 7;
+    
+    wire [7:0] p2_xpos;
+    wire [7:0] p2_ypos;
+    assign p2_xpos = 86;
+    assign p2_ypos = 7;
+    
     my_test_ballistic TEST_BALLISTIC(.CLK_6p25M(clk6p25m),
                                      .CLK_1K(clk1k),
                                      .BTNC(btnC),
                                      .BTNU(btnU),
                                      .BTND(btnD),
-                                     .P1_XPOS(xpos),
-                                     .P1_YPOS(ypos),
+                                     .PLAYER(player),
+                                     .P1_XPOS(p1_xpos),
+                                     .P1_YPOS(p1_ypos),
+                                     .P2_XPOS(p2_xpos),
+                                     .P2_YPOS(p2_ypos),
                                      .PIXEL_INDEX(pixel_index), 
                                      .PIXEL_DATA_INPUT(oled_data_background),
                                      .PIXEL_DATA(oled_data_final),
-                                     .LD(led));
+                                     .LD(led),
+                                     .PLAYER_NEW(player));
     
 //    wire [3:0] outer_count_out;
 //    wire [3:0] inner_count_out;
@@ -136,22 +149,5 @@ module Top_Student (input clk,
 //                     .colour_chooser(oled_data));
     
 //    assign an = 4'b1000;
-    
-//    wire [3:0] state_top;       // 0: None,  1: Task A,  2: Task B,  3: Task C,  4: Task D
-    
-//    assign state_top = (sw[4] ? 4 : 
-//                       (sw[3] ? 3 : 
-//                       (sw[2] ? 2 : 
-//                       (sw[1] ? 1 : 0))));
-    
-//    assign led[3:0] = (sw[4] ? 4'b1000 : 
-//                      (sw[3] ? 4'b0100 : 
-//                      (sw[2] ? 4'b0010 : 
-//                      (sw[1] ? 4'b0001 : 0))));
-    
-//    assign oled_data_final = (sw[4] ? oled_data_d : 
-//                             (sw[3] ? oled_data_c : 
-//                             (sw[2] ? oled_data_b : 
-//                             (sw[1] ? oled_data_a : 0))));
 
 endmodule
