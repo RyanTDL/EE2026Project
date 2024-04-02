@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1710726757">
-  <File Type="BITSTR-BMM" Name="Top_Student_bd.bmm"/>
   <File Type="ROUTE-PWR" Name="Top_Student_power_routed.rpt"/>
   <File Type="PA-TCL" Name="Top_Student.tcl"/>
-  <File Type="OPT-DCP" Name="Top_Student_opt.dcp"/>
+  <File Type="BITSTR-BMM" Name="Top_Student_bd.bmm"/>
   <File Type="ROUTE-PWR-SUM" Name="Top_Student_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="Top_Student_reports.tcl"/>
+  <File Type="OPT-DCP" Name="Top_Student_opt.dcp"/>
   <File Type="OPT-DRC" Name="Top_Student_drc_opted.rpt"/>
   <File Type="OPT-HWDEF" Name="Top_Student.hwdef"/>
   <File Type="PWROPT-DCP" Name="Top_Student_pwropt.dcp"/>
@@ -25,21 +25,21 @@
   <File Type="ROUTE-BLACKBOX-DCP" Name="Top_Student_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="Top_Student_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="Top_Student_drc_routed.pb"/>
-  <File Type="BITSTR-LTX" Name="Top_Student.ltx"/>
   <File Type="ROUTE-DRC-RPX" Name="Top_Student_drc_routed.rpx"/>
-  <File Type="BITSTR-MMI" Name="Top_Student.mmi"/>
+  <File Type="BITSTR-LTX" Name="Top_Student.ltx"/>
   <File Type="ROUTE-METHODOLOGY-DRC" Name="Top_Student_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-MMI" Name="Top_Student.mmi"/>
   <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="Top_Student_methodology_drc_routed.rpx"/>
-  <File Type="BITSTR-SYSDEF" Name="Top_Student.sysdef"/>
   <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="Top_Student_methodology_drc_routed.pb"/>
+  <File Type="BITSTR-SYSDEF" Name="Top_Student.sysdef"/>
   <File Type="ROUTE-PWR-RPX" Name="Top_Student_power_routed.rpx"/>
   <File Type="ROUTE-STATUS" Name="Top_Student_route_status.rpt"/>
   <File Type="ROUTE-STATUS-PB" Name="Top_Student_route_status.pb"/>
   <File Type="ROUTE-TIMINGSUMMARY" Name="Top_Student_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="Top_Student_timing_summary_routed.pb"/>
   <File Type="ROUTE-TIMING-RPX" Name="Top_Student_timing_summary_routed.rpx"/>
-  <File Type="RDI-RDI" Name="Top_Student.vdi"/>
   <File Type="ROUTE-CLK" Name="Top_Student_clock_utilization_routed.rpt"/>
+  <File Type="RDI-RDI" Name="Top_Student.vdi"/>
   <File Type="ROUTE-BUS-SKEW" Name="Top_Student_bus_skew_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="Top_Student_bus_skew_routed.pb"/>
   <File Type="ROUTE-BUS-SKEW-RPX" Name="Top_Student_bus_skew_routed.rpx"/>
@@ -299,6 +299,6 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_const"/>
   <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_img"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_const"/>
 </GenRun>

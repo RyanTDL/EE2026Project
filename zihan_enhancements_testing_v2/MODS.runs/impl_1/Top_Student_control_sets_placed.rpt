@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Tue Apr  2 09:46:19 2024
-| Host         : DESKTOP-CDQO724 running 64-bit major release  (build 9200)
+| Date         : Wed Apr  3 01:01:04 2024
+| Host         : MSI running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Top_Student_control_sets_placed.rpt
 | Design       : Top_Student
 | Device       : xc7a35t
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    19 |
-| Unused register locations in slices containing registers |    42 |
+| Number of unique control sets                            |    20 |
+| Unused register locations in slices containing registers |    44 |
 +----------------------------------------------------------+-------+
 
 
@@ -37,7 +37,9 @@ Table of Contents
 |      2 |            1 |
 |      4 |            1 |
 |      8 |            3 |
-|    16+ |           14 |
+|     12 |            2 |
+|     14 |            1 |
+|    16+ |           12 |
 +--------+--------------+
 
 
@@ -47,12 +49,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              34 |           12 |
+| No           | No                    | No                     |              28 |           10 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |             292 |           43 |
-| Yes          | No                    | No                     |             164 |           28 |
+| No           | Yes                   | No                     |             292 |           41 |
+| Yes          | No                    | No                     |             156 |           22 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              60 |            9 |
+| Yes          | Yes                   | No                     |              72 |           11 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -64,23 +66,24 @@ Table of Contents
 +----------------+----------------------------------------+---------------------------------------------+------------------+----------------+
 | ~clk6p25m_BUFG |                                        |                                             |                1 |              2 |
 |  clk_IBUF_BUFG |                                        |                                             |                2 |              4 |
-|  clk1k_BUFG    | TEST_BALLISTIC/POWER_INPUT[5]_i_1_n_0  |                                             |                2 |              8 |
-|  clk1k_BUFG    | TEST_BALLISTIC/bullet_xpos[7]_i_1_n_0  | TEST_BALLISTIC/bullet_xpos[6]_i_1_n_0       |                2 |              8 |
 |  clk6p25m_BUFG |                                        |                                             |                2 |              8 |
+|  clk1k_BUFG    | TEST_BALLISTIC/LD[12]_i_1_n_0          |                                             |                1 |              8 |
+|  clk1k_BUFG    | TEST_BALLISTIC/POWER_INPUT[7]_i_2_n_0  | TEST_BALLISTIC/POWER_INPUT[7]_i_1_n_0       |                1 |              8 |
+|  clk1k_BUFG    | TEST_BALLISTIC/LD[12]_i_1_n_0          | TEST_BALLISTIC/LD[15]_i_1_n_0               |                3 |             12 |
+|  clk1k_BUFG    | TEST_BALLISTIC/bullet_xpos[6]_i_1_n_0  |                                             |                2 |             12 |
+|  clk1k_BUFG    |                                        |                                             |                5 |             14 |
 |  clk1k_BUFG    | TEST_BALLISTIC/THETA1                  |                                             |                3 |             16 |
 |  clk1k_BUFG    | TEST_BALLISTIC/THETA2                  |                                             |                3 |             16 |
-|  clk1k_BUFG    |                                        | TEST_BALLISTIC/debounceactive033_out        |                3 |             18 |
-|  clk1k_BUFG    |                                        |                                             |                7 |             20 |
-|  clk1k_BUFG    | TEST_BALLISTIC/LD[15]_i_1_n_0          |                                             |                7 |             20 |
-|  clk1k_BUFG    | TEST_BALLISTIC/bullet_xpos[7]_i_1_n_0  | TEST_BALLISTIC/DIST_X0_i_1_n_0              |                3 |             20 |
-|  clk1k_BUFG    |                                        | TEST_BALLISTIC/debounceactive_updown030_out |                3 |             22 |
+|  clk1k_BUFG    |                                        | TEST_BALLISTIC/debounceactive034_out        |                4 |             18 |
+|  clk1k_BUFG    | TEST_BALLISTIC/bullet_xpos[6]_i_1_n_0  | TEST_BALLISTIC/DIST_X0_i_1_n_0              |                3 |             20 |
+|  clk1k_BUFG    |                                        | TEST_BALLISTIC/debounceactive_updown031_out |                3 |             22 |
 |  clk1k_BUFG    | TEST_BALLISTIC/p_4_in                  | TEST_BALLISTIC/DIST_X0_i_1_n_0              |                4 |             32 |
 | ~clk6p25m_BUFG |                                        | unit_oled/frame_counter[16]_i_1_n_0         |                5 |             34 |
 | ~clk6p25m_BUFG | unit_oled/delay[0]_i_1_n_0             |                                             |                5 |             40 |
 | ~clk6p25m_BUFG | unit_oled/FSM_onehot_state[31]_i_1_n_0 |                                             |                8 |             64 |
-|  clk_IBUF_BUFG |                                        | CLK_1KHZ/COUNT[0]_i_1__0_n_0                |                8 |             64 |
 |  clk_IBUF_BUFG |                                        | CLK_6p25MHZ/clear                           |                8 |             64 |
-| ~clk6p25m_BUFG |                                        | unit_oled/spi_word[39]_i_1_n_0              |               16 |             90 |
+|  clk_IBUF_BUFG |                                        | CLK_1KHZ/COUNT[0]_i_1__0_n_0                |                8 |             64 |
+| ~clk6p25m_BUFG |                                        | unit_oled/spi_word[39]_i_1_n_0              |               13 |             90 |
 +----------------+----------------------------------------+---------------------------------------------+------------------+----------------+
 
 

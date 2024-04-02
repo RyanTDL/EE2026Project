@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="38" Path="E:/EE2026_Verilog_Projects/EE2026Project/zihan_enhancements_testing_v2/MODS.xpr">
+<Project Version="7" Minor="38" Path="C:/Users/user/Documents/GitHub/EE2026Project/zihan_enhancements_testing_v2/MODS.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="4c3086506e88427ca6f65a71a9035e44"/>
@@ -69,6 +69,13 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/flexible_clock_module.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/hitbox_check.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>

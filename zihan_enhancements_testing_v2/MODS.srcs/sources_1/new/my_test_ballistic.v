@@ -29,7 +29,8 @@ module my_test_ballistic(input CLK_6p25M, CLK_1K,
                          [15:0] PIXEL_DATA_INPUT,
                          output reg [15:0] PIXEL_DATA,
                          output reg [15:0] LD,
-                         output reg PLAYER_NEW);
+                         output reg PLAYER_NEW,
+                         output reg [2:0]hit_player = 0);
     
     parameter G = 100;
     
@@ -103,6 +104,11 @@ module my_test_ballistic(input CLK_6p25M, CLK_1K,
     assign P2_BARREL_X = P2_XPOS - ((BARREL * COS_THETA2) >> 14);
     assign P2_BARREL_Y = P2_YPOS + ((BARREL * SIN_THETA2) >> 14);
     
+    wire hit1;
+    wire hit2;
+    hitbox_check check1(.bullet_xpos(bullet_xpos), .bullet_ypos(bullet_ypos), .player_xpos(P1_XPOS), .player_ypos(P1_YPOS), .hit(hit1));
+    hitbox_check check2(.bullet_xpos(bullet_xpos), .bullet_ypos(bullet_ypos), .player_xpos(P2_XPOS), .player_ypos(P2_YPOS), .hit(hit2));
+    
     always @ (posedge CLK_1K) begin
         
         // Debounce up and down
@@ -135,6 +141,7 @@ module my_test_ballistic(input CLK_6p25M, CLK_1K,
             POWER_COUNT_UP <= 1;
             POWER_INPUT <= 50;
             LD <= 0;
+            hit_player <= 0;
         end
         
         if (STATE_INT != 2 && ~debounceactive) begin
@@ -179,6 +186,7 @@ module my_test_ballistic(input CLK_6p25M, CLK_1K,
         end
         
         if (STATE_INT == 1 && !BTNC) STATE_INT <= 2;
+
         
         if (STATE_INT == 2) begin
 //            POWER_X <= ((POWER_INPUT * COS_THETA) >> 14);
@@ -191,11 +199,25 @@ module my_test_ballistic(input CLK_6p25M, CLK_1K,
             
             //LD[0] <= 1;
             
+                        
             //if (bullet_xpos <= 0 || bullet_xpos >= 95 || bullet_ypos <= 0 || bullet_ypos >= 63) STATE_INT <= 0;
+            //If hit terrain
             if (bullet_xpos <= 0 || bullet_xpos >= 95 || bullet_ypos <= 5) begin
                 STATE_INT <= 0;
                 PLAYER_NEW <= ~PLAYER;
             end
+            
+            //check if bullet in hit box of player 1
+            if (hit1 && flight_time_ms > 500)begin
+                STATE_INT <= 0;
+                hit_player <= 1;
+                PLAYER_NEW <= ~PLAYER;
+            end
+            if (hit2 && flight_time_ms > 500)begin
+                STATE_INT <= 0;
+                hit_player <= 2;
+                PLAYER_NEW <= ~PLAYER;
+            end            
         end
         
     end

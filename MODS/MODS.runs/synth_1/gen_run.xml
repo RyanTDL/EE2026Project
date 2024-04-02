@@ -247,6 +247,6 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_const"/>
   <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_img"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_const"/>
 </GenRun>
