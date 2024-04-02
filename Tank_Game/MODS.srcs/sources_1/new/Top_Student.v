@@ -46,7 +46,8 @@ module Top_Student (
     
     
     // Set up OLED display
-    Oled_Display unit_oled(.clk(clk6p25m), 
+    Oled_Display unit_oled(
+                   .clk(clk6p25m), 
                    .reset(0), 
                    .frame_begin(fb), 
                    .sending_pixels(sending_pix),
@@ -73,6 +74,7 @@ module Top_Student (
                 
     load_game load_game(
         .CLK_6p25MHz(clk6p25m), 
+        .CLK_10KHz(clk10k),
         .pixel_index(pixel_index),
         .timer_6sec(timer_6sec), 
         .btnU(btnU),
