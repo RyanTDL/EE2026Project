@@ -17,6 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -34,6 +35,7 @@ read_verilog -library xil_defaultlib {
   {C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.srcs/sources_1/new/Home_Screen.v}
   {C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v}
   {C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.srcs/sources_1/new/Top_module.v}
+  {C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.srcs/sources_1/new/animated_background.v}
   {C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.srcs/sources_1/new/background.v}
   {C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.srcs/sources_1/new/flexible_clock_module.v}
   {C:/Users/teode/OneDrive/Documents/NUS Modules/Y2S2 Modules/EE2026/EE2026Project/Tank_Game/MODS.srcs/sources_1/new/select_mode.v}

@@ -56,7 +56,8 @@ module home_screen(
         end else if ((x_coord>72 && x_coord<72+word_width && y_coord>9 && y_coord<9+line_width) 
                      || (x_coord>72 && x_coord<72+word_width && y_coord>12+word_height-line_width && y_coord<12+word_height) 
                      || (x_coord>77 && x_coord<77+line_width && y_coord>12 && y_coord<12+word_height)) begin
-            oled_data <= word_colour;    
+            oled_data <= word_colour;  
+        // Creating the grass patch  
         end else if (y_coord>58) begin   
             oled_data <= 16'b00000_111111_00000;                
         end 
