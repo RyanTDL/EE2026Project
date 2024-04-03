@@ -43,18 +43,18 @@ module my_test_ballistic(input CLK_6p25M, CLK_1K,
 //    assign PLAYER_NEW = PLAYER;
     
     // For angles for P1
-    reg [7:0] THETA1 = 32;
+    reg [5:0] THETA1 = 31;
     wire [15:0] SIN_THETA1;
     wire [15:0] COS_THETA1;
-    my_test_trig sin_1(.angle_in(THETA1), .s_c(0), .trig_out(SIN_THETA1));
-    my_test_trig cos_1(.angle_in(THETA1), .s_c(1), .trig_out(COS_THETA1));
+    my_test_trig sin_1(.angle_in(THETA1+1), .s_c(0), .trig_out(SIN_THETA1));
+    my_test_trig cos_1(.angle_in(THETA1+1), .s_c(1), .trig_out(COS_THETA1));
     
     // For anles for P2
-    reg [7:0] THETA2 = 32;
+    reg [5:0] THETA2 = 31;
     wire [15:0] SIN_THETA2;
     wire [15:0] COS_THETA2;
-    my_test_trig sin_2(.angle_in(THETA2), .s_c(0), .trig_out(SIN_THETA2));
-    my_test_trig cos_2(.angle_in(THETA2), .s_c(1), .trig_out(COS_THETA2));
+    my_test_trig sin_2(.angle_in(THETA2+1), .s_c(0), .trig_out(SIN_THETA2));
+    my_test_trig cos_2(.angle_in(THETA2+1), .s_c(1), .trig_out(COS_THETA2));
     
     reg [15:0] flight_time_ms = 0;     //in 1ms
     //reg [31:0] flight_time_squared = 0;
@@ -146,12 +146,12 @@ module my_test_ballistic(input CLK_6p25M, CLK_1K,
         
         if (STATE_INT != 2 && ~debounceactive) begin
             if (!PLAYER) begin
-                if (BTNU && THETA1 < 64)
+                if (BTNU && THETA1 < 63)
                     THETA1 <= THETA1 + 1;
                 else if (BTND && THETA1 > 0)
                     THETA1 <= THETA1 - 1;
             end else begin
-                if (BTNU && THETA2 < 64)
+                if (BTNU && THETA2 < 63)
                     THETA2 <= THETA2 + 1;
                 else if (BTND && THETA2 > 0)
                     THETA2 <= THETA2 - 1;
