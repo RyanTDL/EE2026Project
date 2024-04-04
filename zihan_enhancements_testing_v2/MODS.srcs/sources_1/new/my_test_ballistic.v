@@ -30,6 +30,9 @@ module my_test_ballistic(input CLK_6p25M, CLK_1K,
                          output reg [15:0] PIXEL_DATA,
                          output reg [15:0] LD,
                          output reg PLAYER_NEW,
+                         output [5:0] THETA1_EXT, THETA2_EXT,
+                         output [7:0] GRAVITY_EXT,
+                         output [2:0] POWER_EXT,
                          output reg [2:0]hit_player = 0);
     
     parameter G = 100;
@@ -48,6 +51,7 @@ module my_test_ballistic(input CLK_6p25M, CLK_1K,
     wire [15:0] COS_THETA1;
     my_test_trig sin_1(.angle_in(THETA1+1), .s_c(0), .trig_out(SIN_THETA1));
     my_test_trig cos_1(.angle_in(THETA1+1), .s_c(1), .trig_out(COS_THETA1));
+    assign THETA1_EXT = THETA1;
     
     // For anles for P2
     reg [5:0] THETA2 = 31;
@@ -55,6 +59,7 @@ module my_test_ballistic(input CLK_6p25M, CLK_1K,
     wire [15:0] COS_THETA2;
     my_test_trig sin_2(.angle_in(THETA2+1), .s_c(0), .trig_out(SIN_THETA2));
     my_test_trig cos_2(.angle_in(THETA2+1), .s_c(1), .trig_out(COS_THETA2));
+    assign THETA2_EXT = THETA2;
     
     reg [15:0] flight_time_ms = 0;     //in 1ms
     //reg [31:0] flight_time_squared = 0;
@@ -67,30 +72,34 @@ module my_test_ballistic(input CLK_6p25M, CLK_1K,
     
 //    parameter POWER = 150;
     
-    reg [7:0] POWER_INPUT = 30;
+    reg [7:0] POWER_INPUT = 50;
     reg POWER_COUNT_UP = 1;
     
-//    reg [7:0] POWER_X = 0;
-//    reg [7:0] POWER_Y = 0;
+    assign POWER_EXT = (POWER_INPUT == 150 ? 5 : 
+                       (POWER_INPUT == 130 ? 4 : 
+                       (POWER_INPUT == 110 ? 3 : 
+                       (POWER_INPUT == 90 ? 2 : 
+                       (POWER_INPUT == 70 ? 1 : 0)))));
+    
     wire [23:0] POWER_X;
     wire [23:0] POWER_Y;
     assign POWER_X = PLAYER ? ((POWER_INPUT * COS_THETA2) >> 14) : ((POWER_INPUT * COS_THETA1) >> 14);
     assign POWER_Y = PLAYER ? ((POWER_INPUT * SIN_THETA2) >> 14) : ((POWER_INPUT * SIN_THETA1) >> 14);
-//    assign POWER_X = 50;
-//    assign POWER_Y = POWER;
+
     wire [31:0] DIST_X;
     wire [31:0] DIST_Y;
     wire [35:0] GRAVITY_COMP;
     assign DIST_X = ((POWER_X[16:0] * flight_time_ms) >> 10);
     assign DIST_Y = ((POWER_Y[16:0] * flight_time_ms) >> 10);
     assign GRAVITY_COMP = ((G * flight_time_squared) >> 20);
+    assign GRAVITY_EXT = GRAVITY_COMP[7:0];
     
     
     reg [7:0] debouncecount = 0;   // count for debouncing barrel position
     reg debounceactive = 0;
     
-    reg [9:0] debouncecount_updown = 0;   // count for debouncing power
-    reg debounceactive_updown = 0;
+    reg [9:0] debouncecount_centre = 0;   // count for debouncing power
+    reg debounceactive_centre = 0;
     
     parameter BARREL = 6;
     // P1 barrel
@@ -123,21 +132,20 @@ module my_test_ballistic(input CLK_6p25M, CLK_1K,
         else debouncecount <= debouncecount + 1;
         
         // Debounce centre
-        if (BTNC && ~debounceactive_updown) begin
-            debounceactive_updown <= 1;
-            debouncecount_updown <= 0;
+        if (BTNC && ~debounceactive_centre) begin
+            debounceactive_centre <= 1;
+            debouncecount_centre <= 0;
         end
-        if (debouncecount_updown >= 399 && debounceactive_updown) begin
-            debounceactive_updown <= 0;
-            debouncecount_updown <= 0;
+        if (debouncecount_centre >= 399 && debounceactive_centre) begin
+            debounceactive_centre <= 0;
+            debouncecount_centre <= 0;
         end
-        else debouncecount_updown <= debouncecount_updown + 1;
+        else debouncecount_centre <= debouncecount_centre + 1;
         
         if (STATE_INT == 0) begin
             bullet_xpos <= PLAYER ? P2_XPOS : P1_XPOS;
             bullet_ypos <= PLAYER ? P2_YPOS : P1_YPOS;
             flight_time_ms <= 0;
-            //flight_time_squared <= 0;
             POWER_COUNT_UP <= 1;
             POWER_INPUT <= 50;
             LD <= 0;
@@ -160,7 +168,7 @@ module my_test_ballistic(input CLK_6p25M, CLK_1K,
         
         if (STATE_INT == 0 && BTNC) STATE_INT <= 1;
         
-        if (STATE_INT == 1 && BTNC && ~debounceactive_updown) begin
+        if (STATE_INT == 1 && BTNC && ~debounceactive_centre) begin
             if (POWER_COUNT_UP && POWER_INPUT < 150)
                 POWER_INPUT <= POWER_INPUT + 20;
             else if (~POWER_COUNT_UP && POWER_INPUT > 70)
@@ -189,18 +197,12 @@ module my_test_ballistic(input CLK_6p25M, CLK_1K,
 
         
         if (STATE_INT == 2) begin
-//            POWER_X <= ((POWER_INPUT * COS_THETA) >> 14);
-//            POWER_Y <= ((POWER_INPUT * SIN_THETA) >> 14);
             
             flight_time_ms <= flight_time_ms + 1;
-            //flight_time_squared <= ((flight_time_ms * flight_time_ms));
-            bullet_ypos <= PLAYER ? (P2_BARREL_Y + DIST_Y - GRAVITY_COMP) : (P1_BARREL_Y + DIST_Y - GRAVITY_COMP);
-            bullet_xpos <= PLAYER ? (P2_BARREL_X - DIST_X) : (P1_BARREL_X + DIST_X);
+            bullet_ypos <= PLAYER ? (P2_BARREL_Y + DIST_Y[7:0] - GRAVITY_COMP[7:0]) : (P1_BARREL_Y + DIST_Y[7:0] - GRAVITY_COMP[7:0]);
+            bullet_xpos <= PLAYER ? (P2_BARREL_X - DIST_X[7:0]) : (P1_BARREL_X + DIST_X[7:0]);
             
-            //LD[0] <= 1;
             
-                        
-            //if (bullet_xpos <= 0 || bullet_xpos >= 95 || bullet_ypos <= 0 || bullet_ypos >= 63) STATE_INT <= 0;
             //If hit terrain
             if (bullet_xpos <= 0 || bullet_xpos >= 95 || bullet_ypos <= 5) begin
                 STATE_INT <= 0;

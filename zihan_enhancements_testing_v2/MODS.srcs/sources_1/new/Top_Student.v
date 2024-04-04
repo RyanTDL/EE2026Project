@@ -73,6 +73,10 @@ module Top_Student (input clk,
     assign p2_xpos = 86;
     assign p2_ypos = 7;
     
+    wire [2:0] power_ext;
+    wire [5:0] theta1_ext;
+    wire [5:0] theta2_ext; 
+    
     my_test_ballistic TEST_BALLISTIC(.CLK_6p25M(clk6p25m),
                                      .CLK_1K(clk1k),
                                      .BTNC(btnC),
@@ -87,7 +91,10 @@ module Top_Student (input clk,
                                      .PIXEL_DATA_INPUT(oled_data_background),
                                      .PIXEL_DATA(oled_data_final),
                                      .LD(led),
-                                     .PLAYER_NEW(player));
+                                     .PLAYER_NEW(player),
+                                     .THETA1_EXT(theta1_ext), 
+                                     .THETA2_EXT(theta2_ext),
+                                     .POWER_EXT(power_ext));
     
 //    wire [3:0] outer_count_out;
 //    wire [3:0] inner_count_out;
