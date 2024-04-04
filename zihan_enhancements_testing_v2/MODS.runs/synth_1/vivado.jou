@@ -2,11 +2,11 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Wed Apr  3 00:59:24 2024
-# Process ID: 27752
-# Current directory: C:/Users/user/Documents/GitHub/EE2026Project/zihan_enhancements_testing_v2/MODS.runs/synth_1
+# Start of session at: Thu Apr  4 23:25:35 2024
+# Process ID: 4604
+# Current directory: C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.runs/synth_1
 # Command line: vivado.exe -log Top_Student.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top_Student.tcl
-# Log file: C:/Users/user/Documents/GitHub/EE2026Project/zihan_enhancements_testing_v2/MODS.runs/synth_1/Top_Student.vds
-# Journal file: C:/Users/user/Documents/GitHub/EE2026Project/zihan_enhancements_testing_v2/MODS.runs/synth_1\vivado.jou
+# Log file: C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.runs/synth_1/Top_Student.vds
+# Journal file: C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source Top_Student.tcl -notrace

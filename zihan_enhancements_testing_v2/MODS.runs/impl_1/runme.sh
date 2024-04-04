@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/user/Documents/GitHub/EE2026Project/zihan_enhancements_testing_v2/MODS.runs/impl_1'
+HD_PWD='C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

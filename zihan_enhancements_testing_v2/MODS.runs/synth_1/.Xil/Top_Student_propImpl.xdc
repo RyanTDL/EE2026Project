@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/user/Documents/GitHub/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/constrs_1/new/my_basys3_constraints.xdc rfile:../../../MODS.srcs/constrs_1/new/my_basys3_constraints.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/constrs_1/new/my_basys3_constraints.xdc rfile:../../../MODS.srcs/constrs_1/new/my_basys3_constraints.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN W5   IOSTANDARD LVCMOS33 } [get_ports clk]
 set_property src_info {type:XDC file:1 line:12 export:INPUT save:INPUT read:READ} [current_design]
@@ -99,6 +99,16 @@ set_property src_info {type:XDC file:1 line:70 export:INPUT save:INPUT read:READ
 set_property -dict { PACKAGE_PIN T17   IOSTANDARD LVCMOS33 } [get_ports btnR]
 set_property src_info {type:XDC file:1 line:71 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN U17   IOSTANDARD LVCMOS33 } [get_ports btnD]
+set_property src_info {type:XDC file:1 line:75 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN J1   IOSTANDARD LVCMOS33 } [get_ports {JA[0]}];#Sch name = JA1
+set_property src_info {type:XDC file:1 line:76 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN L2   IOSTANDARD LVCMOS33 } [get_ports {JA[1]}];#Sch name = JA2
+set_property src_info {type:XDC file:1 line:77 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN J2   IOSTANDARD LVCMOS33 } [get_ports {JA[2]}];#Sch name = JA3
+set_property src_info {type:XDC file:1 line:78 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN G2   IOSTANDARD LVCMOS33 } [get_ports {JA[3]}];#Sch name = JA4
+set_property src_info {type:XDC file:1 line:79 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN H1   IOSTANDARD LVCMOS33 } [get_ports {JA[4]}];#Sch name = JA7
 set_property src_info {type:XDC file:1 line:85 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN A14   IOSTANDARD LVCMOS33 } [get_ports {JB[0]}];#Sch name = JB1
 set_property src_info {type:XDC file:1 line:86 export:INPUT save:INPUT read:READ} [current_design]
@@ -115,6 +125,16 @@ set_property src_info {type:XDC file:1 line:91 export:INPUT save:INPUT read:READ
 set_property -dict { PACKAGE_PIN C15   IOSTANDARD LVCMOS33 } [get_ports {JB[6]}];#Sch name = JB9
 set_property src_info {type:XDC file:1 line:92 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN C16   IOSTANDARD LVCMOS33 } [get_ports {JB[7]}];#Sch name = JB10
+set_property src_info {type:XDC file:1 line:95 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN K17   IOSTANDARD LVCMOS33 } [get_ports {JC[0]}];#Sch name = JC1
+set_property src_info {type:XDC file:1 line:96 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN M18   IOSTANDARD LVCMOS33 } [get_ports {JC[1]}];#Sch name = JC2
+set_property src_info {type:XDC file:1 line:97 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN N17   IOSTANDARD LVCMOS33 } [get_ports {JC[2]}];#Sch name = JC3
+set_property src_info {type:XDC file:1 line:98 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN P18   IOSTANDARD LVCMOS33 } [get_ports {JC[3]}];#Sch name = JC4
+set_property src_info {type:XDC file:1 line:99 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN L17   IOSTANDARD LVCMOS33 } [get_ports {JC[4]}];#Sch name = JC7
 set_property src_info {type:XDC file:1 line:138 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN C17   IOSTANDARD LVCMOS33   PULLUP true } [get_ports PS2Clk]
 set_property src_info {type:XDC file:1 line:139 export:INPUT save:INPUT read:READ} [current_design]

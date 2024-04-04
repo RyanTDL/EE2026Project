@@ -21,7 +21,8 @@
 
 
 module my_test_ballistic(input CLK_6p25M, CLK_1K, 
-                         BTNC, BTNU, BTND,
+                         BTNC, BTNU, BTND, 
+                         BTNC_p2, BTNU_p2, BTND_p2, 
                          PLAYER,
                          [7:0] P1_XPOS, P1_YPOS,
                          [7:0] P2_XPOS, P2_YPOS,
@@ -33,7 +34,7 @@ module my_test_ballistic(input CLK_6p25M, CLK_1K,
                          output [5:0] THETA1_EXT, THETA2_EXT,
                          output [7:0] GRAVITY_EXT,
                          output [2:0] POWER_EXT,
-                         output reg [2:0]hit_player = 0);
+                         output reg [2:0] hit_player = 0);
     
     parameter G = 100;
     

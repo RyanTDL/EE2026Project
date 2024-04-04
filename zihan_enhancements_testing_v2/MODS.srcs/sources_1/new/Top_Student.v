@@ -14,7 +14,9 @@
 module Top_Student (input clk, 
                     btnC, btnU, btnL, btnR, btnD,
                     [15:0] sw,
+                    [4:0] JA,
                     output [7:0] JB, 
+                    [4:0] JC,
                     [15:0] led, 
                     [7:0] seg, 
                     [3:0] an, 
@@ -73,15 +75,26 @@ module Top_Student (input clk,
     assign p2_xpos = 86;
     assign p2_ypos = 7;
     
-    wire [2:0] power_ext;
-    wire [5:0] theta1_ext;
-    wire [5:0] theta2_ext; 
+//    wire [2:0] power_ext;
+//    wire [5:0] theta1_ext;
+//    wire [5:0] theta2_ext; 
+//    wire [7:0] gravity_ext;
+    
+    wire btnC_p2, btnU_p2, btnD_p2, btnL_p2, btnR_p2;
+    Receive_data receive (.clk(clk1k), .data_in(JA), .btnC_p2(btnC_p2), .btnU_p2(btnU_p2),
+                 .btnD_p2(btnD_p2), .btnR_p2(btnR_p2), .btnL_p2(btnL_p2));
+    
+    wire btnC_master, btnU_master, btnD_master, btnL_master, btnR_master;
+    
+    Control_inputs ctl (.clk(clk1k), .player(player), .btnC_p1(btnC), .btnC_p2(btnC_p2), 
+        .btnU_p1(btnU), .btnU_p2(btnU_p2), .btnD_p1(btnD), .btnD_p2(btnD_p2),
+        .master_btnC(btnC_master), .master_btnU(btnU_master), .master_btnD(btnD_master));
     
     my_test_ballistic TEST_BALLISTIC(.CLK_6p25M(clk6p25m),
                                      .CLK_1K(clk1k),
-                                     .BTNC(btnC),
-                                     .BTNU(btnU),
-                                     .BTND(btnD),
+                                     .BTNC(btnC_master),
+                                     .BTNU(btnU_master),
+                                     .BTND(btnD_master),                                     
                                      .PLAYER(player),
                                      .P1_XPOS(p1_xpos),
                                      .P1_YPOS(p1_ypos),
@@ -91,11 +104,12 @@ module Top_Student (input clk,
                                      .PIXEL_DATA_INPUT(oled_data_background),
                                      .PIXEL_DATA(oled_data_final),
                                      .LD(led),
-                                     .PLAYER_NEW(player),
-                                     .THETA1_EXT(theta1_ext), 
-                                     .THETA2_EXT(theta2_ext),
-                                     .POWER_EXT(power_ext));
-    
+                                     .PLAYER_NEW(player)
+                                     );
+      
+      Transfer_data transmit (.clk(clk1k), .btnC(btnC), .btnR(btnR), .btnL(btnL), 
+                            .btnU(btnU), .btnD(btnD), .out_buttons(JC));
+      
 //    wire [3:0] outer_count_out;
 //    wire [3:0] inner_count_out;
 //    my_test_nested_loops TEST_NESTED(.clk(clk1),
