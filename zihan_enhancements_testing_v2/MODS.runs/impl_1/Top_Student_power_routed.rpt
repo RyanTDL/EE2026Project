@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Thu Apr  4 23:28:52 2024
+| Date             : Sat Apr  6 16:07:38 2024
 | Host             : Sean running 64-bit major release  (build 9200)
 | Command          : report_power -file Top_Student_power_routed.rpt -pb Top_Student_power_summary_routed.pb -rpx Top_Student_power_routed.rpx
 | Design           : Top_Student
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.080        |
+| Total On-Chip Power (W)  | 0.078        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.008        |
+| Dynamic (W)              | 0.006        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.6         |
@@ -53,18 +53,17 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |     1355 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      756 |     20800 |            3.63 |
-|   CARRY4       |    <0.001 |      124 |      8150 |            1.52 |
-|   Register     |    <0.001 |      281 |     41600 |            0.68 |
-|   F7/F8 Muxes  |    <0.001 |        2 |     32600 |           <0.01 |
-|   Others       |     0.000 |       21 |       --- |             --- |
+| Slice Logic    |    <0.001 |     2313 |       --- |             --- |
+|   LUT as Logic |    <0.001 |     1344 |     20800 |            6.46 |
+|   CARRY4       |    <0.001 |      270 |      8150 |            3.31 |
+|   Register     |    <0.001 |      364 |     41600 |            0.88 |
+|   Others       |     0.000 |       39 |       --- |             --- |
 |   BUFG         |     0.000 |        2 |        32 |            6.25 |
-| Signals        |    <0.001 |      969 |       --- |             --- |
+| Signals        |    <0.001 |     1422 |       --- |             --- |
 | DSPs           |     0.002 |        7 |        90 |            7.78 |
-| I/O            |     0.003 |       50 |       106 |           47.17 |
+| I/O            |    <0.001 |       50 |       106 |           47.17 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.080 |          |           |                 |
+| Total          |     0.078 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,7 +75,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Vccint    |       1.000 |     0.015 |       0.005 |      0.010 |
 | Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |
-| Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
+| Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -143,12 +142,21 @@ Table of Contents
 +-------------------+-----------+
 | Name              | Power (W) |
 +-------------------+-----------+
-| Top_Student       |     0.008 |
+| Top_Student       |     0.006 |
 |   CLK_1KHZ        |    <0.001 |
+|   CLK_2KHZ        |    <0.001 |
 |   CLK_6p25MHZ     |    <0.001 |
 |   TEST_BACKGROUND |     0.000 |
 |   TEST_BALLISTIC  |     0.003 |
 |   ctl             |    <0.001 |
+|   player1_hp      |     0.000 |
+|     heart1        |     0.000 |
+|     heart2        |     0.000 |
+|     heart3        |     0.000 |
+|   player2_hp      |     0.000 |
+|     heart1        |     0.000 |
+|     heart2        |     0.000 |
+|     heart3        |     0.000 |
 |   receive         |    <0.001 |
 |   transmit        |     0.000 |
 |   unit_oled       |    <0.001 |
