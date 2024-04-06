@@ -20,10 +20,10 @@ module AI_Module(
     reg [15:0] arcos [99:0];
         
     initial begin
-        $readmemh("arco_lut.mem",arcos);
+        $readmemb("arcos_lut.mem",arcos);
     end 
         
-    reg [2:0] random;
+    wire [2:0] random;
     
     reg stage = 0;
     
