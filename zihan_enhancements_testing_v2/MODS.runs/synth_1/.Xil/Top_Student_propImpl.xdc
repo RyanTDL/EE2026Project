@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/constrs_1/new/my_basys3_constraints.xdc rfile:../../../MODS.srcs/constrs_1/new/my_basys3_constraints.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:E:/EE2026_Verilog_Projects/EE2026_Project_Enhance/zihan_enhancements_testing_1player/MODS.srcs/constrs_1/new/my_basys3_constraints.xdc rfile:../../../MODS.srcs/constrs_1/new/my_basys3_constraints.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN W5   IOSTANDARD LVCMOS33 } [get_ports clk]
 set_property src_info {type:XDC file:1 line:12 export:INPUT save:INPUT read:READ} [current_design]
