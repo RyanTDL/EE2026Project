@@ -11,9 +11,9 @@ echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executi
 exit
 
 if [ -z "$PATH" ]; then
-  PATH=C:/SDK/2018.2/bin;C:/Vivado/2018.2/ids_lite/ISE/bin/nt64;C:/Vivado/2018.2/ids_lite/ISE/lib/nt64:C:/Vivado/2018.2/bin
+  PATH=C:/Xilinx/SDK/2018.2/bin;C:/Xilinx/Vivado/2018.2/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2018.2/ids_lite/ISE/lib/nt64:C:/Xilinx/Vivado/2018.2/bin
 else
-  PATH=C:/SDK/2018.2/bin;C:/Vivado/2018.2/ids_lite/ISE/bin/nt64;C:/Vivado/2018.2/ids_lite/ISE/lib/nt64:C:/Vivado/2018.2/bin:$PATH
+  PATH=C:/Xilinx/SDK/2018.2/bin;C:/Xilinx/Vivado/2018.2/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2018.2/ids_lite/ISE/lib/nt64:C:/Xilinx/Vivado/2018.2/bin:$PATH
 fi
 export PATH
 
@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='E:/EE2026_Verilog_Projects/EE2026_Project_Enhance/zihan_enhancements_testing_1player/MODS.runs/synth_1'
+HD_PWD='C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

@@ -21,7 +21,8 @@
 
 
 module my_test_ballistic(input CLK_6p25M, CLK_1K, 
-                         BTNC, BTNU, BTND,
+                         BTNC, BTNU, BTND, 
+                         BTNC_p2, BTNU_p2, BTND_p2, 
                          PLAYER,
                          [7:0] P1_XPOS, P1_YPOS,
                          [7:0] P2_XPOS, P2_YPOS,
@@ -30,11 +31,12 @@ module my_test_ballistic(input CLK_6p25M, CLK_1K,
                          output reg [15:0] PIXEL_DATA,
                          output reg [15:0] LD,
                          output reg PLAYER_NEW,
-                         output BULLET_FLYING,
                          output [5:0] THETA1_EXT, THETA2_EXT,
                          output [7:0] GRAVITY_EXT,
                          output [2:0] POWER_EXT,
-                         output reg [2:0] hit_player = 0);
+                         output reg [2:0] hit_player = 0,
+                         output reg [1:0] HEALTH_P1 = 3, 
+                         output reg [1:0] HEALTH_P2 = 3);
     
     parameter G = 100;
     
@@ -119,8 +121,8 @@ module my_test_ballistic(input CLK_6p25M, CLK_1K,
     hitbox_check check1(.bullet_xpos(bullet_xpos), .bullet_ypos(bullet_ypos), .player_xpos(P1_XPOS), .player_ypos(P1_YPOS), .hit(hit1));
     hitbox_check check2(.bullet_xpos(bullet_xpos), .bullet_ypos(bullet_ypos), .player_xpos(P2_XPOS), .player_ypos(P2_YPOS), .hit(hit2));
     
-    assign BULLET_FLYING = (STATE_INT == 2);
     
+
     always @ (posedge CLK_1K) begin
         
         // Debounce up and down
@@ -213,15 +215,17 @@ module my_test_ballistic(input CLK_6p25M, CLK_1K,
             end
             
             //check if bullet in hit box of player 1
-            if (hit1 && flight_time_ms > 500) begin
+            if (hit1 && flight_time_ms > 500)begin
                 STATE_INT <= 0;
                 hit_player <= 1;
                 PLAYER_NEW <= ~PLAYER;
+                HEALTH_P1 <= HEALTH_P1 - 1;
             end
-            if (hit2 && flight_time_ms > 500) begin
+            if (hit2 && flight_time_ms > 500)begin
                 STATE_INT <= 0;
                 hit_player <= 2;
                 PLAYER_NEW <= ~PLAYER;
+                HEALTH_P2 <= HEALTH_P2 - 1;
             end            
         end
         
@@ -237,10 +241,10 @@ module my_test_ballistic(input CLK_6p25M, CLK_1K,
             PIXEL_DATA <= 16'b11111_000000_00000;
         else if (x_coord == P2_BARREL_X && y_coord == P2_BARREL_Y)
             PIXEL_DATA <= 16'b00000_000000_11111;
-//        else if (x_coord >= P1_XPOS - 2 && x_coord <= P1_XPOS + 2 && y_coord >= P1_YPOS - 2 && y_coord <= P1_YPOS + 2)
-//            PIXEL_DATA <= 16'b11111_000000_00000;
-//        else if (x_coord >= P2_XPOS - 2 && x_coord <= P2_XPOS + 2 && y_coord >= P2_YPOS - 2 && y_coord <= P2_YPOS + 2)
-//            PIXEL_DATA <= 16'b00000_000000_11111;
+        else if (x_coord >= P1_XPOS - 2 && x_coord <= P1_XPOS + 2 && y_coord >= P1_YPOS - 2 && y_coord <= P1_YPOS + 2)
+            PIXEL_DATA <= 16'b11111_000000_00000;
+        else if (x_coord >= P2_XPOS - 2 && x_coord <= P2_XPOS + 2 && y_coord >= P2_YPOS - 2 && y_coord <= P2_YPOS + 2)
+            PIXEL_DATA <= 16'b00000_000000_11111;
         else
             PIXEL_DATA <= PIXEL_DATA_INPUT;
     end    

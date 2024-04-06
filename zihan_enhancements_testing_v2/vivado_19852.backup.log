@@ -2,40 +2,31 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Sat Apr  6 16:29:44 2024
-# Process ID: 60924
+# Start of session at: Fri Apr  5 19:41:55 2024
+# Process ID: 19852
 # Current directory: C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent50988 C:\Users\ngjoo\ee2026_lab\EE2026Project\zihan_enhancements_testing_v2\MODS.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent30496 C:\Users\ngjoo\ee2026_lab\EE2026Project\zihan_enhancements_testing_v2\MODS.xpr
 # Log file: C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/vivado.log
 # Journal file: C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.xpr
-INFO: [Project 1-313] Project file moved from 'C:/Users/user/Documents/GitHub/EE2026Project/zihan_enhancements_testing_v2' since last save.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
-open_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 803.824 ; gain = 102.449
+open_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 875.246 ; gain = 94.523
 update_compile_order -fileset sources_1
-reset_run synth_1
+WARNING: [Common 17-9] Error reading message records.
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Apr  5 19:46:21 2024...
+rs/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.runs/synth_1
+
 launch_runs impl_1 -to_step write_bitstream -jobs 10
-[Sat Apr  6 16:30:50 2024] Launched synth_1...
+[Fri Apr  5 19:43:38 2024] Launched synth_1...
 Run output will be captured here: C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.runs/synth_1/runme.log
-[Sat Apr  6 16:30:50 2024] Launched impl_1...
-Run output will be captured here: C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.runs/impl_1/runme.log
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 10
-[Sat Apr  6 16:32:38 2024] Launched synth_1...
-Run output will be captured here: C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.runs/synth_1/runme.log
-[Sat Apr  6 16:32:38 2024] Launched impl_1...
-Run output will be captured here: C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.runs/impl_1/runme.log
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 10
-[Sat Apr  6 16:34:36 2024] Launched synth_1...
-Run output will be captured here: C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.runs/synth_1/runme.log
-[Sat Apr  6 16:34:36 2024] Launched impl_1...
+[Fri Apr  5 19:43:38 2024] Launched impl_1...
 Run output will be captured here: C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.runs/impl_1/runme.log
 open_hw
 connect_hw_server
@@ -71,6 +62,38 @@ Resolution:
 1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
 2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
 For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
-ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183AA0C8FA
+close_hw_target {localhost:3121/xilinx_tcf/Digilent/210183AA0C8FA}
+INFO: [Labtoolstcl 44-464] Closing hw_target localhost:3121/xilinx_tcf/Digilent/210183AA0C8FA
+open_hw_target {localhost:3121/xilinx_tcf/Digilent/210183A75B7CA}
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A75B7CA
+set_property PROGRAM.FILE {C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.runs/impl_1/Top_Student.bit} [get_hw_devices xc7a35t_0_1]
+current_hw_device [get_hw_devices xc7a35t_0_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0_1] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0_1]
+set_property PROGRAM.FILE {C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.runs/impl_1/Top_Student.bit} [get_hw_devices xc7a35t_0_1]
+program_hw_devices [get_hw_devices xc7a35t_0_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0_1] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183A75B7CA
+close_hw
+close [ open C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/health.v w ]
+add_files C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/health.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
 exit
-INFO: [Common 17-206] Exiting Vivado at Sat Apr  6 16:48:12 2024...
+INFO: [Common 17-206] Exiting Vivado at Fri Apr  5 22:12:46 2024...
