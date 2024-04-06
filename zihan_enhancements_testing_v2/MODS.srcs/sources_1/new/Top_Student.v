@@ -27,12 +27,15 @@ module Top_Student (input clk,
     wire sample_pix;
     wire [12:0] pixel_index;
     wire [15:0] oled_data_background, oled_data_final;
+    wire [15:0] oled_data_final_1;
+    wire [15:0] oled_data_final_2; 
     // oled_data_a, oled_data_b, oled_data_c, oled_data_d;
     
     wire clk25m;
     wire clk12p5m;
     wire clk6p25m;
     wire clk10k;
+    wire clk2k;
     wire clk1k;
     wire clk1;
     
@@ -42,6 +45,7 @@ module Top_Student (input clk,
     flexible_clock_module CLK_10KHZ(.CLK_100MHZ(clk), .COUNT_M(4999), .FLEX_CLK_OUT(clk10k));
     flexible_clock_module CLK_1KHZ(.CLK_100MHZ(clk), .COUNT_M(49999), .FLEX_CLK_OUT(clk1k));
     flexible_clock_module CLK_1HZ(.CLK_100MHZ(clk), .COUNT_M(49999999), .FLEX_CLK_OUT(clk1));
+    flexible_clock_module CLK_2KHZ(.CLK_100MHZ(clk), .COUNT_M(24999), .FLEX_CLK_OUT(clk2k));
     
     Oled_Display unit_oled(.clk(clk6p25m), 
                            .reset(0), 
@@ -49,7 +53,7 @@ module Top_Student (input clk,
                            .sending_pixels(sending_pix),
                            .sample_pixel(sample_pix), 
                            .pixel_index(pixel_index), 
-                           .pixel_data(oled_data_final), 
+                           .pixel_data(oled_data_final_2), 
                            .cs(JB[0]), 
                            .sdin(JB[1]), 
                            .sclk(JB[3]), 
@@ -96,7 +100,7 @@ module Top_Student (input clk,
                   .centre(AI_CENTRE));
     
     wire btnC_p2, btnU_p2, btnD_p2, btnL_p2, btnR_p2;
-    
+
     Receive_data receive (.clk(clk1k), .data_in(JA), .btnC_p2(btnC_p2), .btnU_p2(btnU_p2),
                  .btnD_p2(btnD_p2), .btnR_p2(btnR_p2), .btnL_p2(btnL_p2));
     
@@ -119,10 +123,12 @@ module Top_Student (input clk,
     .btnR_p1(btnR), .btnR_p2(p2_R_output),
     .master_btnC(btnC_master), .master_btnU(btnU_master), .master_btnD(btnD_master), .master_btnL(btnL_master), .master_btnR(btnR_master));
     
-    
-    
-    
-    my_test_ballistic TEST_BALLISTIC(.CLK_6p25M(clk6p25m),
+        
+    wire [1:0] health_p1, health_p2;     
+    wire ending_1, ending_2;       
+    wire [2:0] hit_player;
+
+  my_test_ballistic TEST_BALLISTIC(.CLK_6p25M(clk6p25m),
                                      .CLK_1K(clk1k),
                                      .BTNC(btnC_master),
                                      .BTNU(btnU_master),
@@ -136,71 +142,25 @@ module Top_Student (input clk,
                                      .PIXEL_DATA_INPUT(oled_data_background),
                                      .PIXEL_DATA(oled_data_final),
                                      .LD(led),
-                                     .PLAYER_NEW(player)
+                                     .PLAYER_NEW(player),
+                                     .hit_player(hit_player), 
+                                     .HEALTH_P1(health_p1), 
+                                     .HEALTH_P2(health_p2)
                                      );
+     
+     
+//     wire [1:0] hit1, hit2;
+//     assign hit1 = (hit_player == 1) ? hit1 + 1 : hit1;
+//     assign hit2 = (hit_player == 2) ? hit2 + 1 : hit2;
+     health player1_hp (.clk(clk6p25m), .player(0), .health(health_p1), .end_game(ending_1), 
+                        .PIXEL_INDEX(pixel_index), .PIXEL_DATA_IN(oled_data_final), .PIXEL_DATA_OUT(oled_data_final_1));
+     health player2_hp (.clk(clk6p25m), .player(1), .health(health_p2), .end_game(ending_2),
+                        .PIXEL_INDEX(pixel_index), .PIXEL_DATA_IN(oled_data_final_1), .PIXEL_DATA_OUT(oled_data_final_2));     
+
       
-      Transfer_data transmit (.clk(clk1k), .btnC(btnC), .btnR(btnR), .btnL(btnL), 
+     Transfer_data transmit (.clk(clk1k), .btnC(btnC), .btnR(btnR), .btnL(btnL), 
                             .btnU(btnU), .btnD(btnD), .out_buttons(JC));
       
-//    wire [3:0] outer_count_out;
-//    wire [3:0] inner_count_out;
-//    my_test_nested_loops TEST_NESTED(.clk(clk1),
-//                                     .outer_count_out(outer_count_out),
-//                                     .inner_count_out(inner_count_out),
-//                                     .led(led));
-    
-//    my_test_direction TEST_DIRECTION(.CLK_6p25M(clk6p25m), 
-//                             .BTNU(btnU),
-//                             .BTND(btnD),
-//                             .PIXEL_INDEX(pixel_index), 
-//                             .PIXEL_DATA(oled_data_final));
-    
-//    my_final_oled FINAL_OLED(.CLK(clk6p25m), 
-//                             .PIXEL_INDEX(pixel_index), 
-//                             .PIXEL_DATA(oled_data_final));
-    
-//    wire [11:0] xpos;
-//    wire [11:0] ypos;
-//    wire [3:0] zpos;
-//    wire left;
-//    wire middle;
-//    wire right;
-//    wire new_event;
-    
-//    MouseCtl unit_mouse(.clk(clk),
-//                        .rst(0),
-//                        .xpos(xpos),
-//                        .ypos(ypos),
-//                        .zpos(zpos),
-//                        .left(left),
-//                        .middle(middle),
-//                        .right(right),
-//                        .new_event(new_event),
-//                        .value(0),
-//                        .setx(0),
-//                        .sety(0),
-//                        .setmax_x(0),
-//                        .setmax_y(0),
-//                        .ps2_clk(PS2Clk),
-//                        .ps2_data(PS2Data));
-    
-//    assign led [15:13] = {left, middle, right};
-    
-//    paint unit_paint(.clk_100M(clk),
-//                     .clk_25M(clk25m), 
-//                     .clk_12p5M(clk12p5m), 
-//                     .clk_6p25M(clk6p25m), 
-//                     .slow_clk(clk1),
-//                     .mouse_l(left), 
-//                     .reset(right), 
-//                     .enable(1),  
-//                     .mouse_x(xpos), 
-//                     .mouse_y(ypos),
-//                     .pixel_index(pixel_index),
-//                     .led(led),
-//                     .seg(seg[6:0]), 
-//                     .colour_chooser(oled_data));
-    
-//    assign an = 4'b1000;
+
 
 endmodule

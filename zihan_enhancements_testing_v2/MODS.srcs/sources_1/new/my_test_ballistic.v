@@ -33,8 +33,10 @@ module my_test_ballistic(input CLK_6p25M, CLK_1K,
                          output reg PLAYER_NEW,
                          output [5:0] THETA1_EXT, THETA2_EXT,
                          output [7:0] GRAVITY_EXT,
-                         output [3:0] POWER_EXT,
-                         output reg [2:0] hit_player = 0);
+                         output [2:0] POWER_EXT,
+                         output reg [2:0] hit_player = 0,
+                         output reg [1:0] HEALTH_P1 = 3, 
+                         output reg [1:0] HEALTH_P2 = 3);
     
     parameter G = 100;
     
@@ -120,6 +122,7 @@ module my_test_ballistic(input CLK_6p25M, CLK_1K,
     hitbox_check check2(.bullet_xpos(bullet_xpos), .bullet_ypos(bullet_ypos), .player_xpos(P2_XPOS), .player_ypos(P2_YPOS), .hit(hit2));
     
     
+
     always @ (posedge CLK_1K) begin
         
         // Debounce up and down
@@ -216,11 +219,13 @@ module my_test_ballistic(input CLK_6p25M, CLK_1K,
                 STATE_INT <= 0;
                 hit_player <= 1;
                 PLAYER_NEW <= ~PLAYER;
+                HEALTH_P1 <= HEALTH_P1 - 1;
             end
             if (hit2 && flight_time_ms > 500)begin
                 STATE_INT <= 0;
                 hit_player <= 2;
                 PLAYER_NEW <= ~PLAYER;
+                HEALTH_P2 <= HEALTH_P2 - 1;
             end            
         end
         
