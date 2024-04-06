@@ -60,6 +60,7 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {Common 17-41} -limit 10000000
 
 start_step init_design
 set ACTIVE_STEP init_design
@@ -69,12 +70,12 @@ set rc [catch {
   create_project -in_memory -part xc7a35tcpg236-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.cache/wt [current_project]
-  set_property parent.project_path C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.xpr [current_project]
-  set_property ip_output_repo C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.cache/ip [current_project]
+  set_property webtalk.parent_dir E:/EE2026_Verilog_Projects/EE2026_Project_Enhance/zihan_enhancements_testing_1player/MODS.cache/wt [current_project]
+  set_property parent.project_path E:/EE2026_Verilog_Projects/EE2026_Project_Enhance/zihan_enhancements_testing_1player/MODS.xpr [current_project]
+  set_property ip_output_repo E:/EE2026_Verilog_Projects/EE2026_Project_Enhance/zihan_enhancements_testing_1player/MODS.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.runs/synth_1/Top_Student.dcp
-  read_xdc C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/constrs_1/new/my_basys3_constraints.xdc
+  add_files -quiet E:/EE2026_Verilog_Projects/EE2026_Project_Enhance/zihan_enhancements_testing_1player/MODS.runs/synth_1/Top_Student.dcp
+  read_xdc E:/EE2026_Verilog_Projects/EE2026_Project_Enhance/zihan_enhancements_testing_1player/MODS.srcs/constrs_1/new/my_basys3_constraints.xdc
   link_design -top Top_Student -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb
 } RESULT]
