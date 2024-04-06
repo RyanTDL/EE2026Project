@@ -3,10 +3,10 @@
 //////////////////////////////////////////////////////////////////////////////////
 //
 //  FILL IN THE FOLLOWING INFORMATION:
-//  STUDENT A NAME: 
-//  STUDENT B NAME:
-//  STUDENT C NAME: 
-//  STUDENT D NAME:  
+//  STUDENT A NAME: Deepan
+//  STUDENT B NAME: Ryan
+//  STUDENT C NAME: Sean
+//  STUDENT D NAME: Zihan 
 //
 //////////////////////////////////////////////////////////////////////////////////
 
@@ -34,12 +34,17 @@ module Top_Student (input clk,
     wire clk1k;
     wire clk1;
     
-    flexible_clock_module CLK_25MHZ(.CLK_100MHZ(clk), .COUNT_M(1), .FLEX_CLK_OUT(clk25m));
-    flexible_clock_module CLK_12p5MHZ(.CLK_100MHZ(clk), .COUNT_M(3), .FLEX_CLK_OUT(clk12p5m));
+//    flexible_clock_module CLK_25MHZ(.CLK_100MHZ(clk), .COUNT_M(1), .FLEX_CLK_OUT(clk25m));
+//    flexible_clock_module CLK_12p5MHZ(.CLK_100MHZ(clk), .COUNT_M(3), .FLEX_CLK_OUT(clk12p5m));
     flexible_clock_module CLK_6p25MHZ(.CLK_100MHZ(clk), .COUNT_M(7), .FLEX_CLK_OUT(clk6p25m));
-    flexible_clock_module CLK_10KHZ(.CLK_100MHZ(clk), .COUNT_M(4999), .FLEX_CLK_OUT(clk10k));
+//    flexible_clock_module CLK_10KHZ(.CLK_100MHZ(clk), .COUNT_M(4999), .FLEX_CLK_OUT(clk10k));
     flexible_clock_module CLK_1KHZ(.CLK_100MHZ(clk), .COUNT_M(49999), .FLEX_CLK_OUT(clk1k));
+<<<<<<< Updated upstream
     flexible_clock_module CLK_1HZ(.CLK_100MHZ(clk), .COUNT_M(49999999), .FLEX_CLK_OUT(clk1));
+=======
+//    flexible_clock_module CLK_1HZ(.CLK_100MHZ(clk), .COUNT_M(49999999), .FLEX_CLK_OUT(clk1));
+    flexible_clock_module CLK_2KHZ(.CLK_100MHZ(clk), .COUNT_M(24999), .FLEX_CLK_OUT(clk2k));
+>>>>>>> Stashed changes
     
     Oled_Display unit_oled(.clk(clk6p25m), 
                            .reset(0), 
@@ -63,7 +68,13 @@ module Top_Student (input clk,
     // 0 for P1, 1 for P2
     wire player;
     
+<<<<<<< Updated upstream
     // 0 for no bullet, 1 for bullet in flight
+=======
+    //0 for Multiplayer, 1 for Singleplayer
+    wire singleplayer = 0;
+    
+>>>>>>> Stashed changes
     wire bullet_flying;
     
     wire [7:0] p1_xpos;
@@ -80,6 +91,7 @@ module Top_Student (input clk,
     wire [5:0] theta1_ext;
     wire [5:0] theta2_ext; 
     
+<<<<<<< Updated upstream
     battlefield multi_player (.clk_6p25MHz(clk6p25m), 
                               .P1_XPOS_EXT(p1_xpos),
                               .P1_YPOS_EXT(p1_ypos),
@@ -94,6 +106,69 @@ module Top_Student (input clk,
                               ); 
     
     my_test_ballistic TEST_BALLISTIC(.CLK_6p25M(clk6p25m),
+=======
+    
+    
+    
+    //CALLING AI MODULE :)
+    parameter AI_POWER = 4;
+    //NOTE: Try to keep AI_POWER > 3
+    wire AI_LEFT, AI_RIGHT, AI_UP, AI_DOWN, AI_CENTRE;
+    AI_Module ai (.xpos(p2_xpos), .ypos(p2_ypos), .current_angle(theta2_ext), 
+                  .xpos_opp(p1_xpos), .ypos_opp(p1_ypos), 
+                  .state((player & singleplayer)), .clk1k(clk1k),
+                  .gravity(100), .target_power(AI_POWER), .current_power(power_ext),
+                  .left(AI_LEFT), .right(AI_RIGHT), 
+                  .up(AI_UP), .down(AI_DOWN),
+                  .centre(AI_CENTRE));
+    
+    wire btnC_p2, btnU_p2, btnD_p2, btnL_p2, btnR_p2;
+
+    Receive_data receive (.clk(clk1k), .data_in(JA), .btnC_p2(btnC_p2), .btnU_p2(btnU_p2),
+                 .btnD_p2(btnD_p2), .btnR_p2(btnR_p2), .btnL_p2(btnL_p2));
+    
+    //Assignment of p2 outputs depending on single or multiplayer
+    wire p2_C_output, p2_U_output, p2_D_output, p2_L_output, p2_R_output;
+    
+    assign p2_C_output = (singleplayer) ? AI_CENTRE : btnC_p2;
+    assign p2_U_output = (singleplayer) ? AI_UP : btnU_p2;
+    assign p2_D_output = (singleplayer) ? AI_DOWN : btnD_p2;
+    assign p2_L_output = (singleplayer) ? AI_LEFT : btnL_p2;
+    assign p2_R_output = (singleplayer) ? AI_RIGHT : btnR_p2;
+    
+    wire btnC_master, btnU_master, btnD_master, btnL_master, btnR_master;
+    
+    Control_inputs ctl (.clk(clk1k), .player(player), 
+    .btnC_p1(btnC), .btnC_p2(p2_C_output), 
+    .btnU_p1(btnU), .btnU_p2(p2_U_output), 
+    .btnD_p1(btnD), .btnD_p2(p2_D_output),
+    .btnL_p1(btnL), .btnL_p2(p2_L_output),
+    .btnR_p1(btnR), .btnR_p2(p2_R_output),
+    .master_btnC(btnC_master), .master_btnU(btnU_master), .master_btnD(btnD_master), .master_btnL(btnL_master), .master_btnR(btnR_master));
+    
+    battlefield multi_player (.clk_6p25MHz(clk6p25m), 
+                              .P1_XPOS_EXT(p1_xpos),
+                              .P1_YPOS_EXT(p1_ypos),
+                              .P2_XPOS_EXT(p2_xpos),
+                              .P2_YPOS_EXT(p2_ypos),
+                              .pixel_index(pixel_index), 
+                              .btnL(btnL_master), 
+                              .btnR(btnR_master), 
+                              .btnC(btnC_master),
+                              .btnU(btnU_master), 
+                              .btnD(btnD_master), 
+                              .player(player),
+                              .bullet_flying(bullet_flying),
+                              .oled_data(oled_data_background)
+//                              .LD0(led[0])
+                              ); 
+        
+    wire [1:0] health_p1, health_p2;     
+    wire ending_1, ending_2;       
+    wire [2:0] hit_player;
+
+  my_test_ballistic TEST_BALLISTIC(.CLK_6p25M(clk6p25m),
+>>>>>>> Stashed changes
                                      .CLK_1K(clk1k),
                                      .BTNC(btnC),
                                      .BTNU(btnU),

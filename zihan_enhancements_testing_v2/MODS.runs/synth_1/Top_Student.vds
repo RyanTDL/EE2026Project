@@ -2,9 +2,15 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+<<<<<<< Updated upstream
 # Start of session at: Sat Apr  6 16:37:04 2024
 # Process ID: 18536
 # Current directory: E:/EE2026_Verilog_Projects/EE2026_Project_Enhance/zihan_enhancements_testing_1player/MODS.runs/synth_1
+=======
+# Start of session at: Sat Apr  6 17:35:08 2024
+# Process ID: 53232
+# Current directory: C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.runs/synth_1
+>>>>>>> Stashed changes
 # Command line: vivado.exe -log Top_Student.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top_Student.tcl
 # Log file: E:/EE2026_Verilog_Projects/EE2026_Project_Enhance/zihan_enhancements_testing_1player/MODS.runs/synth_1/Top_Student.vds
 # Journal file: E:/EE2026_Verilog_Projects/EE2026_Project_Enhance/zihan_enhancements_testing_1player/MODS.runs/synth_1\vivado.jou
@@ -15,9 +21,15 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
+<<<<<<< Updated upstream
 INFO: Helper process launched with PID 16784 
 ---------------------------------------------------------------------------------
 Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 356.410 ; gain = 99.633
+=======
+INFO: Helper process launched with PID 54536 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 356.312 ; gain = 99.641
+>>>>>>> Stashed changes
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Top_Student' [E:/EE2026_Verilog_Projects/EE2026_Project_Enhance/zihan_enhancements_testing_1player/MODS.srcs/sources_1/new/Top_Student.v:14]
 INFO: [Synth 8-6157] synthesizing module 'flexible_clock_module' [E:/EE2026_Verilog_Projects/EE2026_Project_Enhance/zihan_enhancements_testing_1player/MODS.srcs/sources_1/new/flexible_clock_module.v:23]
@@ -73,6 +85,7 @@ INFO: [Synth 8-6157] synthesizing module 'Oled_Display' [E:/EE2026_Verilog_Proje
 	Parameter SendPixel bound to: 5'b10000 
 	Parameter SpiCommandMaxWidth bound to: 40 - type: integer 
 	Parameter SpiCommandBitCountWidth bound to: 6 - type: integer 
+<<<<<<< Updated upstream
 INFO: [Synth 8-226] default block is never used [E:/EE2026_Verilog_Projects/EE2026_Project_Enhance/zihan_enhancements_testing_1player/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:123]
 INFO: [Synth 8-226] default block is never used [E:/EE2026_Verilog_Projects/EE2026_Project_Enhance/zihan_enhancements_testing_1player/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:198]
 WARNING: [Synth 8-693] zero replication count - replication ignored [E:/EE2026_Verilog_Projects/EE2026_Project_Enhance/zihan_enhancements_testing_1player/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:346]
@@ -102,10 +115,121 @@ WARNING: [Synth 8-350] instance 'TEST_BALLISTIC' of module 'my_test_ballistic' r
 WARNING: [Synth 8-3848] Net seg in module/entity Top_Student does not have driver. [E:/EE2026_Verilog_Projects/EE2026_Project_Enhance/zihan_enhancements_testing_1player/MODS.srcs/sources_1/new/Top_Student.v:19]
 WARNING: [Synth 8-3848] Net an in module/entity Top_Student does not have driver. [E:/EE2026_Verilog_Projects/EE2026_Project_Enhance/zihan_enhancements_testing_1player/MODS.srcs/sources_1/new/Top_Student.v:20]
 INFO: [Synth 8-6155] done synthesizing module 'Top_Student' (7#1) [E:/EE2026_Verilog_Projects/EE2026_Project_Enhance/zihan_enhancements_testing_1player/MODS.srcs/sources_1/new/Top_Student.v:14]
+=======
+INFO: [Synth 8-226] default block is never used [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:123]
+INFO: [Synth 8-226] default block is never used [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:198]
+WARNING: [Synth 8-693] zero replication count - replication ignored [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:346]
+INFO: [Synth 8-6155] done synthesizing module 'Oled_Display' (2#1) [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:36]
+INFO: [Synth 8-6157] synthesizing module 'AI_Module' [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/AI_Module.v:3]
+INFO: [Synth 8-3876] $readmem data file 'arcos_lut.mem' is read successfully [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/AI_Module.v:23]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/AI_Module.v:50]
+WARNING: [Synth 8-6014] Unused sequential element random_gg_reg was removed.  [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/AI_Module.v:50]
+INFO: [Synth 8-6155] done synthesizing module 'AI_Module' (3#1) [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/AI_Module.v:3]
+WARNING: [Synth 8-689] width (6) of port connection 'current_angle' does not match port width (7) of module 'AI_Module' [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/Top_Student.v:99]
+INFO: [Synth 8-6157] synthesizing module 'Receive_data' [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/Receive_data.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Receive_data' (4#1) [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/Receive_data.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Control_inputs' [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/Control_inputs.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'Control_inputs' (5#1) [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/Control_inputs.v:22]
+INFO: [Synth 8-6157] synthesizing module 'battlefield' [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/background.v:23]
+	Parameter DEBOUNCE_TIME bound to: 21'b001100001101010000000 
+WARNING: [Synth 8-3848] Net LD0 in module/entity battlefield does not have driver. [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/background.v:32]
+INFO: [Synth 8-6155] done synthesizing module 'battlefield' (6#1) [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/background.v:23]
+WARNING: [Synth 8-350] instance 'multi_player' of module 'battlefield' requires 15 connections, but only 14 given [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/Top_Student.v:131]
+INFO: [Synth 8-6157] synthesizing module 'my_test_ballistic' [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/my_test_ballistic.v:23]
+	Parameter G bound to: 100 - type: integer 
+	Parameter BARREL bound to: 6 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'my_test_trig' [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/my_test_trig.v:23]
+INFO: [Synth 8-3876] $readmem data file 'sine_lut.mem' is read successfully [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/my_test_trig.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'my_test_trig' (7#1) [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/my_test_trig.v:23]
+WARNING: [Synth 8-689] width (32) of port connection 'angle_in' does not match port width (8) of module 'my_test_trig' [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/my_test_ballistic.v:55]
+WARNING: [Synth 8-689] width (32) of port connection 'angle_in' does not match port width (8) of module 'my_test_trig' [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/my_test_ballistic.v:56]
+WARNING: [Synth 8-689] width (32) of port connection 'angle_in' does not match port width (8) of module 'my_test_trig' [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/my_test_ballistic.v:63]
+WARNING: [Synth 8-689] width (32) of port connection 'angle_in' does not match port width (8) of module 'my_test_trig' [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/my_test_ballistic.v:64]
+INFO: [Synth 8-6157] synthesizing module 'hitbox_check' [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/hitbox_check.v:3]
+WARNING: [Synth 8-567] referenced signal 'player_xpos' should be on the sensitivity list [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/hitbox_check.v:5]
+WARNING: [Synth 8-567] referenced signal 'player_ypos' should be on the sensitivity list [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/hitbox_check.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hitbox_check' (8#1) [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/hitbox_check.v:3]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/my_test_ballistic.v:192]
+INFO: [Synth 8-6155] done synthesizing module 'my_test_ballistic' (9#1) [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/my_test_ballistic.v:23]
+WARNING: [Synth 8-350] instance 'TEST_BALLISTIC' of module 'my_test_ballistic' requires 25 connections, but only 18 given [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/Top_Student.v:152]
+INFO: [Synth 8-6157] synthesizing module 'health' [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/health.v:23]
+INFO: [Synth 8-6157] synthesizing module 'draw_heart' [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/draw_heart.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'draw_heart' (10#1) [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/draw_heart.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'health' (11#1) [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/health.v:23]
+WARNING: [Synth 8-689] width (2) of port connection 'health' does not match port width (3) of module 'health' [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/Top_Student.v:176]
+WARNING: [Synth 8-689] width (2) of port connection 'health' does not match port width (3) of module 'health' [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/Top_Student.v:178]
+INFO: [Synth 8-6157] synthesizing module 'Transfer_data' [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/Transfer_data.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Transfer_data' (12#1) [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/Transfer_data.v:23]
+WARNING: [Synth 8-3848] Net seg in module/entity Top_Student does not have driver. [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/Top_Student.v:21]
+WARNING: [Synth 8-3848] Net an in module/entity Top_Student does not have driver. [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/Top_Student.v:22]
+WARNING: [Synth 8-3848] Net bullet_flying in module/entity Top_Student does not have driver. [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/Top_Student.v:75]
+WARNING: [Synth 8-3848] Net power_ext in module/entity Top_Student does not have driver. [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/Top_Student.v:87]
+WARNING: [Synth 8-3848] Net theta2_ext in module/entity Top_Student does not have driver. [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/Top_Student.v:89]
+INFO: [Synth 8-6155] done synthesizing module 'Top_Student' (13#1) [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/Top_Student.v:14]
+WARNING: [Synth 8-3331] design my_test_ballistic has unconnected port BTNC_p2
+WARNING: [Synth 8-3331] design my_test_ballistic has unconnected port BTNU_p2
+WARNING: [Synth 8-3331] design my_test_ballistic has unconnected port BTND_p2
+>>>>>>> Stashed changes
 WARNING: [Synth 8-3331] design battlefield has unconnected port LD0
 WARNING: [Synth 8-3331] design battlefield has unconnected port btnC
 WARNING: [Synth 8-3331] design battlefield has unconnected port btnU
 WARNING: [Synth 8-3331] design battlefield has unconnected port btnD
+<<<<<<< Updated upstream
+=======
+WARNING: [Synth 8-3331] design AI_Module has unconnected port xpos[7]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port xpos[6]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port xpos[5]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port xpos[4]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port xpos[3]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port xpos[2]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port xpos[1]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port xpos[0]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port ypos[7]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port ypos[6]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port ypos[5]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port ypos[4]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port ypos[3]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port ypos[2]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port ypos[1]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port ypos[0]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port current_angle[6]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port current_angle[5]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port current_angle[4]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port current_angle[3]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port current_angle[2]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port current_angle[1]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port current_angle[0]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port xpos_opp[7]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port xpos_opp[6]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port xpos_opp[5]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port xpos_opp[4]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port xpos_opp[3]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port xpos_opp[2]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port xpos_opp[1]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port xpos_opp[0]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port ypos_opp[7]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port ypos_opp[6]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port ypos_opp[5]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port ypos_opp[4]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port ypos_opp[3]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port ypos_opp[2]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port ypos_opp[1]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port ypos_opp[0]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port gravity[5]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port gravity[4]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port gravity[3]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port gravity[2]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port gravity[1]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port gravity[0]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port target_power[3]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port target_power[2]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port target_power[1]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port target_power[0]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port current_power[3]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port current_power[2]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port current_power[1]
+WARNING: [Synth 8-3331] design AI_Module has unconnected port current_power[0]
+>>>>>>> Stashed changes
 WARNING: [Synth 8-3331] design Top_Student has unconnected port JB[2]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[7]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[6]
@@ -138,7 +262,11 @@ WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[2]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[1]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[0]
 ---------------------------------------------------------------------------------
+<<<<<<< Updated upstream
 Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 411.188 ; gain = 154.410
+=======
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 411.297 ; gain = 154.625
+>>>>>>> Stashed changes
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -147,14 +275,22 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin multi_player:bullet_flying to constant 0 [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/Top_Student.v:131]
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< Updated upstream
 Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 411.188 ; gain = 154.410
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 411.188 ; gain = 154.410
+=======
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 411.297 ; gain = 154.625
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 411.297 ; gain = 154.625
+>>>>>>> Stashed changes
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -200,22 +336,36 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
+<<<<<<< Updated upstream
 Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 756.059 ; gain = 0.000
 ---------------------------------------------------------------------------------
 Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 756.059 ; gain = 499.281
+=======
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 757.016 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:18 . Memory (MB): peak = 757.016 ; gain = 500.344
+>>>>>>> Stashed changes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
+<<<<<<< Updated upstream
 Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 756.059 ; gain = 499.281
+=======
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:18 . Memory (MB): peak = 757.016 ; gain = 500.344
+>>>>>>> Stashed changes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< Updated upstream
 Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 756.059 ; gain = 499.281
+=======
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:18 . Memory (MB): peak = 757.016 ; gain = 500.344
+>>>>>>> Stashed changes
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "FLEX_CLK_OUT0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Oled_Display'
@@ -224,10 +374,17 @@ INFO: [Synth 8-5544] ROM "fsm_next_state0" won't be mapped to Block RAM because 
 INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "P1_XPOS0" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "P2_XPOS0" won't be mapped to RAM because it is too sparse
+<<<<<<< Updated upstream
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/EE2026_Verilog_Projects/EE2026_Project_Enhance/zihan_enhancements_testing_1player/MODS.srcs/sources_1/new/my_test_ballistic.v:53]
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/EE2026_Verilog_Projects/EE2026_Project_Enhance/zihan_enhancements_testing_1player/MODS.srcs/sources_1/new/my_test_ballistic.v:206]
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/EE2026_Verilog_Projects/EE2026_Project_Enhance/zihan_enhancements_testing_1player/MODS.srcs/sources_1/new/my_test_ballistic.v:205]
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/EE2026_Verilog_Projects/EE2026_Project_Enhance/zihan_enhancements_testing_1player/MODS.srcs/sources_1/new/my_test_ballistic.v:61]
+=======
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/my_test_ballistic.v:55]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/my_test_ballistic.v:208]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/my_test_ballistic.v:207]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/my_test_ballistic.v:63]
+>>>>>>> Stashed changes
 INFO: [Synth 8-5546] ROM "POWER_EXT3" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "flight_time_ms" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "POWER_COUNT_UP" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
@@ -291,7 +448,11 @@ WARNING: [Synth 8-327] inferring latch for variable 'trig_out_reg' [E:/EE2026_Ve
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'STATE_INT_reg' using encoding 'one-hot' in module 'my_test_ballistic'
 ---------------------------------------------------------------------------------
+<<<<<<< Updated upstream
 Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 756.059 ; gain = 499.281
+=======
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 757.016 ; gain = 500.344
+>>>>>>> Stashed changes
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -304,26 +465,48 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
+<<<<<<< Updated upstream
 	   2 Input     32 Bit       Adders := 12    
+=======
+	   2 Input     32 Bit       Adders := 34    
+>>>>>>> Stashed changes
 	   2 Input     17 Bit       Adders := 1     
 	   2 Input     16 Bit       Adders := 1     
 	   3 Input     10 Bit       Adders := 2     
 	   2 Input     10 Bit       Adders := 1     
+<<<<<<< Updated upstream
 	   2 Input      9 Bit       Adders := 6     
 	   2 Input      8 Bit       Adders := 19    
+=======
+	   2 Input      9 Bit       Adders := 34    
+	   2 Input      8 Bit       Adders := 20    
+>>>>>>> Stashed changes
 	   3 Input      8 Bit       Adders := 2     
 	   4 Input      8 Bit       Adders := 1     
 	   2 Input      7 Bit       Adders := 10    
 	   2 Input      6 Bit       Adders := 3     
+<<<<<<< Updated upstream
+=======
+	   2 Input      2 Bit       Adders := 2     
+>>>>>>> Stashed changes
 +---Registers : 
 	               40 Bit    Registers := 1     
 	               17 Bit    Registers := 1     
 	               16 Bit    Registers := 6     
 	               10 Bit    Registers := 1     
+<<<<<<< Updated upstream
 	                8 Bit    Registers := 6     
 	                6 Bit    Registers := 3     
 	                3 Bit    Registers := 1     
 	                1 Bit    Registers := 10    
+=======
+	                8 Bit    Registers := 7     
+	                6 Bit    Registers := 3     
+	                5 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 27    
+>>>>>>> Stashed changes
 +---Multipliers : 
 	                 7x32  Multipliers := 1     
 +---Muxes : 
@@ -332,8 +515,15 @@ Detailed RTL Component Info :
 	   2 Input     32 Bit        Muxes := 2     
 	  32 Input     20 Bit        Muxes := 1     
 	   2 Input     17 Bit        Muxes := 3     
+<<<<<<< Updated upstream
 	   2 Input     16 Bit        Muxes := 24    
 	   6 Input     16 Bit        Muxes := 1     
+=======
+	   2 Input     16 Bit        Muxes := 33    
+	   6 Input     16 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 6     
+	   2 Input      9 Bit        Muxes := 12    
+>>>>>>> Stashed changes
 	   2 Input      8 Bit        Muxes := 11    
 	   5 Input      8 Bit        Muxes := 1     
 	  32 Input      6 Bit        Muxes := 1     
@@ -347,7 +537,11 @@ Detailed RTL Component Info :
 	   2 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 4     
 	   3 Input      2 Bit        Muxes := 1     
+<<<<<<< Updated upstream
 	   2 Input      1 Bit        Muxes := 48    
+=======
+	   2 Input      1 Bit        Muxes := 63    
+>>>>>>> Stashed changes
 	   5 Input      1 Bit        Muxes := 2     
 	   6 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
@@ -383,6 +577,33 @@ Detailed RTL Component Info :
 	   2 Input      5 Bit        Muxes := 2     
 	  32 Input      5 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 2     
+<<<<<<< Updated upstream
+Module battlefield 
+=======
+Module AI_Module 
+>>>>>>> Stashed changes
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   3 Input     10 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 8     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
++---Muxes : 
+<<<<<<< Updated upstream
+=======
+	   2 Input      1 Bit        Muxes := 5     
+Module Receive_data 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 5     
+Module Control_inputs 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 5     
 Module battlefield 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -393,6 +614,7 @@ Detailed RTL Component Info :
 	               16 Bit    Registers := 1     
 	                8 Bit    Registers := 2     
 +---Muxes : 
+>>>>>>> Stashed changes
 	   2 Input     16 Bit        Muxes := 3     
 	   2 Input      8 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 7     
@@ -464,10 +686,14 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
+<<<<<<< Updated upstream
 WARNING: [Synth 8-6014] Unused sequential element CLK_25MHZ/FLEX_CLK_OUT_reg was removed.  [E:/EE2026_Verilog_Projects/EE2026_Project_Enhance/zihan_enhancements_testing_1player/MODS.srcs/sources_1/new/flexible_clock_module.v:29]
 WARNING: [Synth 8-6014] Unused sequential element CLK_12p5MHZ/FLEX_CLK_OUT_reg was removed.  [E:/EE2026_Verilog_Projects/EE2026_Project_Enhance/zihan_enhancements_testing_1player/MODS.srcs/sources_1/new/flexible_clock_module.v:29]
 WARNING: [Synth 8-6014] Unused sequential element CLK_10KHZ/FLEX_CLK_OUT_reg was removed.  [E:/EE2026_Verilog_Projects/EE2026_Project_Enhance/zihan_enhancements_testing_1player/MODS.srcs/sources_1/new/flexible_clock_module.v:29]
 WARNING: [Synth 8-6014] Unused sequential element CLK_1HZ/FLEX_CLK_OUT_reg was removed.  [E:/EE2026_Verilog_Projects/EE2026_Project_Enhance/zihan_enhancements_testing_1player/MODS.srcs/sources_1/new/flexible_clock_module.v:29]
+=======
+WARNING: [Synth 8-6014] Unused sequential element CLK_2KHZ/FLEX_CLK_OUT_reg was removed.  [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/flexible_clock_module.v:29]
+>>>>>>> Stashed changes
 INFO: [Synth 8-5545] ROM "CLK_6p25MHZ/FLEX_CLK_OUT0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "CLK_1KHZ/FLEX_CLK_OUT0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-4471] merging register 'flight_time_ms_reg[15:0]' into 'flight_time_ms_reg[15:0]' [E:/EE2026_Verilog_Projects/EE2026_Project_Enhance/zihan_enhancements_testing_1player/MODS.srcs/sources_1/new/my_test_ballistic.v:68]
@@ -489,6 +715,7 @@ DSP Report: operator POWER_Y1 is absorbed into DSP POWER_Y1.
 DSP Report: Generating DSP DIST_Y0, operation Mode is: A2*B.
 DSP Report: register flight_time_ms_reg is absorbed into DSP DIST_Y0.
 DSP Report: operator DIST_Y0 is absorbed into DSP DIST_Y0.
+<<<<<<< Updated upstream
 DSP Report: Generating DSP POWER_X1, operation Mode is: A*B.
 DSP Report: operator POWER_X1 is absorbed into DSP POWER_X1.
 DSP Report: Generating DSP POWER_X1, operation Mode is: A*B.
@@ -496,6 +723,16 @@ DSP Report: operator POWER_X1 is absorbed into DSP POWER_X1.
 DSP Report: Generating DSP DIST_X0, operation Mode is: A2*B.
 DSP Report: register flight_time_ms_reg is absorbed into DSP DIST_X0.
 DSP Report: operator DIST_X0 is absorbed into DSP DIST_X0.
+=======
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element ai/left_reg was removed.  [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/AI_Module.v:62]
+WARNING: [Synth 8-6014] Unused sequential element ai/right_reg was removed.  [C:/Users/ngjoo/ee2026_lab/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/AI_Module.v:67]
+>>>>>>> Stashed changes
 INFO: [Synth 8-5546] ROM "unit_oled/fsm_next_state0" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "unit_oled/fsm_next_state0" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "multi_player/P1_XPOS0" won't be mapped to RAM because it is too sparse
@@ -509,6 +746,7 @@ WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[6]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[5]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[4]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[3]
+<<<<<<< Updated upstream
 WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[2]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[1]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[0]
@@ -534,6 +772,9 @@ WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[3]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[2]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[1]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[0]
+=======
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+>>>>>>> Stashed changes
 INFO: [Synth 8-3886] merging instance 'multi_player/oled_data_reg[0]' (FD) to 'multi_player/oled_data_reg[1]'
 INFO: [Synth 8-3886] merging instance 'multi_player/oled_data_reg[1]' (FD) to 'multi_player/oled_data_reg[2]'
 INFO: [Synth 8-3886] merging instance 'multi_player/oled_data_reg[3]' (FD) to 'multi_player/oled_data_reg[4]'
@@ -564,6 +805,84 @@ WARNING: [Synth 8-3332] Sequential element (LD_reg[10]) is unused and will be re
 WARNING: [Synth 8-3332] Sequential element (hit_player_reg[2]) is unused and will be removed from module my_test_ballistic.
 WARNING: [Synth 8-3332] Sequential element (hit_player_reg[1]) is unused and will be removed from module my_test_ballistic.
 WARNING: [Synth 8-3332] Sequential element (hit_player_reg[0]) is unused and will be removed from module my_test_ballistic.
+<<<<<<< Updated upstream
+=======
+WARNING: [Synth 8-3332] Sequential element (ai/stage_reg) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (ai/direction_reg) is unused and will be removed from module Top_Student.
+INFO: [Synth 8-3886] merging instance 'player1_hp/heart1/pixel_data_out_reg[0]' (FD) to 'player1_hp/heart1/pixel_data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'player1_hp/heart1/pixel_data_out_reg[1]' (FD) to 'player1_hp/heart1/pixel_data_out_reg[2]'
+INFO: [Synth 8-3886] merging instance 'player1_hp/heart1/pixel_data_out_reg[3]' (FD) to 'player1_hp/heart1/pixel_data_out_reg[4]'
+INFO: [Synth 8-3886] merging instance 'player1_hp/heart1/pixel_data_out_reg[6]' (FD) to 'player1_hp/heart1/pixel_data_out_reg[7]'
+INFO: [Synth 8-3886] merging instance 'player1_hp/heart1/pixel_data_out_reg[7]' (FD) to 'player1_hp/heart1/pixel_data_out_reg[8]'
+INFO: [Synth 8-3886] merging instance 'player1_hp/heart1/pixel_data_out_reg[9]' (FD) to 'player1_hp/heart1/pixel_data_out_reg[10]'
+INFO: [Synth 8-3886] merging instance 'player1_hp/heart1/pixel_data_out_reg[11]' (FD) to 'player1_hp/heart1/pixel_data_out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'player1_hp/heart1/pixel_data_out_reg[12]' (FD) to 'player1_hp/heart1/pixel_data_out_reg[13]'
+INFO: [Synth 8-3886] merging instance 'player1_hp/heart1/pixel_data_out_reg[14]' (FD) to 'player1_hp/heart1/pixel_data_out_reg[15]'
+INFO: [Synth 8-3886] merging instance 'player1_hp/heart2/pixel_data_out_reg[0]' (FD) to 'player1_hp/heart2/pixel_data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'player1_hp/heart2/pixel_data_out_reg[1]' (FD) to 'player1_hp/heart2/pixel_data_out_reg[2]'
+INFO: [Synth 8-3886] merging instance 'player1_hp/heart2/pixel_data_out_reg[3]' (FD) to 'player1_hp/heart2/pixel_data_out_reg[4]'
+INFO: [Synth 8-3886] merging instance 'player1_hp/heart2/pixel_data_out_reg[6]' (FD) to 'player1_hp/heart2/pixel_data_out_reg[7]'
+INFO: [Synth 8-3886] merging instance 'player1_hp/heart2/pixel_data_out_reg[7]' (FD) to 'player1_hp/heart2/pixel_data_out_reg[8]'
+INFO: [Synth 8-3886] merging instance 'player1_hp/heart2/pixel_data_out_reg[9]' (FD) to 'player1_hp/heart2/pixel_data_out_reg[10]'
+INFO: [Synth 8-3886] merging instance 'player1_hp/heart2/pixel_data_out_reg[11]' (FD) to 'player1_hp/heart2/pixel_data_out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'player1_hp/heart2/pixel_data_out_reg[12]' (FD) to 'player1_hp/heart2/pixel_data_out_reg[13]'
+INFO: [Synth 8-3886] merging instance 'player1_hp/heart2/pixel_data_out_reg[14]' (FD) to 'player1_hp/heart2/pixel_data_out_reg[15]'
+INFO: [Synth 8-3886] merging instance 'player1_hp/heart3/pixel_data_out_reg[0]' (FD) to 'player1_hp/heart3/pixel_data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'player1_hp/PIXEL_DATA_OUT_reg[0]' (FD) to 'player1_hp/PIXEL_DATA_OUT_reg[1]'
+INFO: [Synth 8-3886] merging instance 'player1_hp/heart3/pixel_data_out_reg[1]' (FD) to 'player1_hp/heart3/pixel_data_out_reg[2]'
+INFO: [Synth 8-3886] merging instance 'player1_hp/PIXEL_DATA_OUT_reg[1]' (FD) to 'player1_hp/PIXEL_DATA_OUT_reg[2]'
+INFO: [Synth 8-3886] merging instance 'player1_hp/heart3/pixel_data_out_reg[3]' (FD) to 'player1_hp/heart3/pixel_data_out_reg[4]'
+INFO: [Synth 8-3886] merging instance 'player1_hp/PIXEL_DATA_OUT_reg[3]' (FD) to 'player1_hp/PIXEL_DATA_OUT_reg[4]'
+INFO: [Synth 8-3886] merging instance 'player1_hp/heart3/pixel_data_out_reg[6]' (FD) to 'player1_hp/heart3/pixel_data_out_reg[7]'
+INFO: [Synth 8-3886] merging instance 'player1_hp/PIXEL_DATA_OUT_reg[6]' (FD) to 'player1_hp/PIXEL_DATA_OUT_reg[7]'
+INFO: [Synth 8-3886] merging instance 'player1_hp/heart3/pixel_data_out_reg[7]' (FD) to 'player1_hp/heart3/pixel_data_out_reg[8]'
+INFO: [Synth 8-3886] merging instance 'player1_hp/PIXEL_DATA_OUT_reg[7]' (FD) to 'player1_hp/PIXEL_DATA_OUT_reg[8]'
+INFO: [Synth 8-3886] merging instance 'player1_hp/heart3/pixel_data_out_reg[9]' (FD) to 'player1_hp/heart3/pixel_data_out_reg[10]'
+INFO: [Synth 8-3886] merging instance 'player1_hp/PIXEL_DATA_OUT_reg[9]' (FD) to 'player1_hp/PIXEL_DATA_OUT_reg[10]'
+INFO: [Synth 8-3886] merging instance 'player1_hp/heart3/pixel_data_out_reg[11]' (FD) to 'player1_hp/heart3/pixel_data_out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'player1_hp/PIXEL_DATA_OUT_reg[11]' (FD) to 'player1_hp/PIXEL_DATA_OUT_reg[12]'
+INFO: [Synth 8-3886] merging instance 'player1_hp/heart3/pixel_data_out_reg[12]' (FD) to 'player1_hp/heart3/pixel_data_out_reg[13]'
+INFO: [Synth 8-3886] merging instance 'player1_hp/PIXEL_DATA_OUT_reg[12]' (FD) to 'player1_hp/PIXEL_DATA_OUT_reg[13]'
+INFO: [Synth 8-3886] merging instance 'player1_hp/heart3/pixel_data_out_reg[14]' (FD) to 'player1_hp/heart3/pixel_data_out_reg[15]'
+INFO: [Synth 8-3886] merging instance 'player1_hp/PIXEL_DATA_OUT_reg[14]' (FD) to 'player1_hp/PIXEL_DATA_OUT_reg[15]'
+INFO: [Synth 8-3886] merging instance 'player2_hp/heart1/pixel_data_out_reg[0]' (FD) to 'player2_hp/heart1/pixel_data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'player2_hp/heart1/pixel_data_out_reg[1]' (FD) to 'player2_hp/heart1/pixel_data_out_reg[2]'
+INFO: [Synth 8-3886] merging instance 'player2_hp/heart1/pixel_data_out_reg[3]' (FD) to 'player2_hp/heart1/pixel_data_out_reg[4]'
+INFO: [Synth 8-3886] merging instance 'player2_hp/heart1/pixel_data_out_reg[6]' (FD) to 'player2_hp/heart1/pixel_data_out_reg[7]'
+INFO: [Synth 8-3886] merging instance 'player2_hp/heart1/pixel_data_out_reg[7]' (FD) to 'player2_hp/heart1/pixel_data_out_reg[8]'
+INFO: [Synth 8-3886] merging instance 'player2_hp/heart1/pixel_data_out_reg[9]' (FD) to 'player2_hp/heart1/pixel_data_out_reg[10]'
+INFO: [Synth 8-3886] merging instance 'player2_hp/heart1/pixel_data_out_reg[11]' (FD) to 'player2_hp/heart1/pixel_data_out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'player2_hp/heart1/pixel_data_out_reg[12]' (FD) to 'player2_hp/heart1/pixel_data_out_reg[13]'
+INFO: [Synth 8-3886] merging instance 'player2_hp/heart1/pixel_data_out_reg[14]' (FD) to 'player2_hp/heart1/pixel_data_out_reg[15]'
+INFO: [Synth 8-3886] merging instance 'player2_hp/heart2/pixel_data_out_reg[0]' (FD) to 'player2_hp/heart2/pixel_data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'player2_hp/heart2/pixel_data_out_reg[1]' (FD) to 'player2_hp/heart2/pixel_data_out_reg[2]'
+INFO: [Synth 8-3886] merging instance 'player2_hp/heart2/pixel_data_out_reg[3]' (FD) to 'player2_hp/heart2/pixel_data_out_reg[4]'
+INFO: [Synth 8-3886] merging instance 'player2_hp/heart2/pixel_data_out_reg[6]' (FD) to 'player2_hp/heart2/pixel_data_out_reg[7]'
+INFO: [Synth 8-3886] merging instance 'player2_hp/heart2/pixel_data_out_reg[7]' (FD) to 'player2_hp/heart2/pixel_data_out_reg[8]'
+INFO: [Synth 8-3886] merging instance 'player2_hp/heart2/pixel_data_out_reg[9]' (FD) to 'player2_hp/heart2/pixel_data_out_reg[10]'
+INFO: [Synth 8-3886] merging instance 'player2_hp/heart2/pixel_data_out_reg[11]' (FD) to 'player2_hp/heart2/pixel_data_out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'player2_hp/heart2/pixel_data_out_reg[12]' (FD) to 'player2_hp/heart2/pixel_data_out_reg[13]'
+INFO: [Synth 8-3886] merging instance 'player2_hp/heart2/pixel_data_out_reg[14]' (FD) to 'player2_hp/heart2/pixel_data_out_reg[15]'
+INFO: [Synth 8-3886] merging instance 'player2_hp/heart3/pixel_data_out_reg[0]' (FD) to 'player2_hp/heart3/pixel_data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'player2_hp/PIXEL_DATA_OUT_reg[0]' (FD) to 'player2_hp/PIXEL_DATA_OUT_reg[1]'
+INFO: [Synth 8-3886] merging instance 'player2_hp/heart3/pixel_data_out_reg[1]' (FD) to 'player2_hp/heart3/pixel_data_out_reg[2]'
+INFO: [Synth 8-3886] merging instance 'player2_hp/PIXEL_DATA_OUT_reg[1]' (FD) to 'player2_hp/PIXEL_DATA_OUT_reg[2]'
+INFO: [Synth 8-3886] merging instance 'player2_hp/heart3/pixel_data_out_reg[3]' (FD) to 'player2_hp/heart3/pixel_data_out_reg[4]'
+INFO: [Synth 8-3886] merging instance 'player2_hp/PIXEL_DATA_OUT_reg[3]' (FD) to 'player2_hp/PIXEL_DATA_OUT_reg[4]'
+INFO: [Synth 8-3886] merging instance 'player2_hp/heart3/pixel_data_out_reg[6]' (FD) to 'player2_hp/heart3/pixel_data_out_reg[7]'
+INFO: [Synth 8-3886] merging instance 'player2_hp/PIXEL_DATA_OUT_reg[6]' (FD) to 'player2_hp/PIXEL_DATA_OUT_reg[7]'
+INFO: [Synth 8-3886] merging instance 'player2_hp/heart3/pixel_data_out_reg[7]' (FD) to 'player2_hp/heart3/pixel_data_out_reg[8]'
+INFO: [Synth 8-3886] merging instance 'player2_hp/PIXEL_DATA_OUT_reg[7]' (FD) to 'player2_hp/PIXEL_DATA_OUT_reg[8]'
+INFO: [Synth 8-3886] merging instance 'player2_hp/heart3/pixel_data_out_reg[9]' (FD) to 'player2_hp/heart3/pixel_data_out_reg[10]'
+INFO: [Synth 8-3886] merging instance 'player2_hp/PIXEL_DATA_OUT_reg[9]' (FD) to 'player2_hp/PIXEL_DATA_OUT_reg[10]'
+INFO: [Synth 8-3886] merging instance 'player2_hp/heart3/pixel_data_out_reg[11]' (FD) to 'player2_hp/heart3/pixel_data_out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'player2_hp/PIXEL_DATA_OUT_reg[11]' (FD) to 'player2_hp/PIXEL_DATA_OUT_reg[12]'
+INFO: [Synth 8-3886] merging instance 'player2_hp/heart3/pixel_data_out_reg[12]' (FD) to 'player2_hp/heart3/pixel_data_out_reg[13]'
+INFO: [Synth 8-3886] merging instance 'player2_hp/PIXEL_DATA_OUT_reg[12]' (FD) to 'player2_hp/PIXEL_DATA_OUT_reg[13]'
+INFO: [Synth 8-3886] merging instance 'player2_hp/heart3/pixel_data_out_reg[14]' (FD) to 'player2_hp/heart3/pixel_data_out_reg[15]'
+INFO: [Synth 8-3886] merging instance 'player2_hp/PIXEL_DATA_OUT_reg[14]' (FD) to 'player2_hp/PIXEL_DATA_OUT_reg[15]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (TEST_BALLISTIC/sin_2/\trig_out_reg[15] )
+>>>>>>> Stashed changes
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (TEST_BALLISTIC/sin_1/\trig_out_reg[15] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (TEST_BALLISTIC/sin_2/\trig_out_reg[15] )
 WARNING: [Synth 8-3332] Sequential element (trig_out_reg[15]) is unused and will be removed from module my_test_trig__1.
@@ -631,7 +950,11 @@ WARNING: [Synth 8-3332] Sequential element (trig_out_reg[2]) is unused and will 
 WARNING: [Synth 8-3332] Sequential element (trig_out_reg[1]) is unused and will be removed from module my_test_trig.
 WARNING: [Synth 8-3332] Sequential element (trig_out_reg[0]) is unused and will be removed from module my_test_trig.
 ---------------------------------------------------------------------------------
+<<<<<<< Updated upstream
 Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 756.059 ; gain = 499.281
+=======
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:34 . Memory (MB): peak = 757.016 ; gain = 500.344
+>>>>>>> Stashed changes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -684,13 +1007,21 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< Updated upstream
 Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 804.215 ; gain = 547.438
+=======
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:52 . Memory (MB): peak = 801.523 ; gain = 544.852
+>>>>>>> Stashed changes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< Updated upstream
 Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:42 . Memory (MB): peak = 826.855 ; gain = 570.078
+=======
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:53 . Memory (MB): peak = 824.703 ; gain = 568.031
+>>>>>>> Stashed changes
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -703,7 +1034,11 @@ Start Technology Mapping
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-3332] Sequential element (TEST_BALLISTIC/POWER_INPUT_reg[0]) is unused and will be removed from module Top_Student.
 ---------------------------------------------------------------------------------
+<<<<<<< Updated upstream
 Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 1004.426 ; gain = 747.648
+=======
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:56 . Memory (MB): peak = 1011.020 ; gain = 754.348
+>>>>>>> Stashed changes
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -727,7 +1062,11 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< Updated upstream
 Finished IO Insertion : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 1004.426 ; gain = 747.648
+=======
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:57 . Memory (MB): peak = 1011.020 ; gain = 754.348
+>>>>>>> Stashed changes
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -740,7 +1079,11 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< Updated upstream
 Finished Renaming Generated Instances : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 1004.426 ; gain = 747.648
+=======
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:57 . Memory (MB): peak = 1011.020 ; gain = 754.348
+>>>>>>> Stashed changes
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -752,25 +1095,41 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< Updated upstream
 Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 1004.426 ; gain = 747.648
+=======
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:57 . Memory (MB): peak = 1011.020 ; gain = 754.348
+>>>>>>> Stashed changes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< Updated upstream
 Finished Renaming Generated Ports : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 1004.426 ; gain = 747.648
+=======
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:57 . Memory (MB): peak = 1011.020 ; gain = 754.348
+>>>>>>> Stashed changes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< Updated upstream
 Finished Handling Custom Attributes : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 1004.426 ; gain = 747.648
+=======
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:57 . Memory (MB): peak = 1011.020 ; gain = 754.348
+>>>>>>> Stashed changes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< Updated upstream
 Finished Renaming Generated Nets : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 1004.426 ; gain = 747.648
+=======
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:57 . Memory (MB): peak = 1011.020 ; gain = 754.348
+>>>>>>> Stashed changes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -787,6 +1146,7 @@ Report Cell Usage:
 |      |Cell      |Count |
 +------+----------+------+
 |1     |BUFG      |     3|
+<<<<<<< Updated upstream
 |2     |CARRY4    |   159|
 |3     |DSP48E1   |     1|
 |4     |DSP48E1_1 |     4|
@@ -803,6 +1163,24 @@ Report Cell Usage:
 |15    |FDSE      |     6|
 |16    |IBUF      |     6|
 |17    |OBUF      |    23|
+=======
+|2     |CARRY4    |   313|
+|3     |DSP48E1   |     4|
+|4     |DSP48E1_1 |     2|
+|5     |DSP48E1_2 |     1|
+|6     |LUT1      |    89|
+|7     |LUT2      |   384|
+|8     |LUT3      |   256|
+|9     |LUT4      |   252|
+|10    |LUT5      |   279|
+|11    |LUT6      |   770|
+|12    |MUXF7     |     2|
+|13    |FDE_1     |    32|
+|14    |FDRE      |   355|
+|15    |FDSE      |     9|
+|16    |IBUF      |    11|
+|17    |OBUF      |    28|
+>>>>>>> Stashed changes
 |18    |OBUFT     |    13|
 +------+----------+------+
 
@@ -810,6 +1188,7 @@ Report Instance Areas:
 +------+-----------------+------------------------+------+
 |      |Instance         |Module                  |Cells |
 +------+-----------------+------------------------+------+
+<<<<<<< Updated upstream
 |1     |top              |                        |  1739|
 |2     |  CLK_1KHZ       |flexible_clock_module   |    54|
 |3     |  CLK_6p25MHZ    |flexible_clock_module_0 |    51|
@@ -825,6 +1204,34 @@ Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:37 .
 Synthesis Optimization Complete : Time (s): cpu = 00:00:42 ; elapsed = 00:00:46 . Memory (MB): peak = 1004.426 ; gain = 747.648
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 205 Unisim elements for replacement
+=======
+|1     |top              |                        |  2803|
+|2     |  CLK_1KHZ       |flexible_clock_module   |    54|
+|3     |  CLK_6p25MHZ    |flexible_clock_module_0 |    51|
+|4     |  TEST_BALLISTIC |my_test_ballistic       |   631|
+|5     |  ctl            |Control_inputs          |    11|
+|6     |  multi_player   |battlefield             |   480|
+|7     |  player1_hp     |health                  |   186|
+|8     |    heart1       |draw_heart_4            |    58|
+|9     |    heart2       |draw_heart_5            |    60|
+|10    |    heart3       |draw_heart_6            |    61|
+|11    |  player2_hp     |health_1                |   186|
+|12    |    heart1       |draw_heart              |    59|
+|13    |    heart2       |draw_heart_2            |    61|
+|14    |    heart3       |draw_heart_3            |    59|
+|15    |  receive        |Receive_data            |    10|
+|16    |  transmit       |Transfer_data           |     5|
+|17    |  unit_oled      |Oled_Display            |  1123|
++------+-----------------+------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:57 . Memory (MB): peak = 1011.020 ; gain = 754.348
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 114 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:48 . Memory (MB): peak = 1011.020 ; gain = 408.629
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:58 . Memory (MB): peak = 1011.020 ; gain = 754.348
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 365 Unisim elements for replacement
+>>>>>>> Stashed changes
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -833,11 +1240,22 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   FDE_1 => FDRE (inverted pins: C): 32 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
+<<<<<<< Updated upstream
 99 Infos, 166 Warnings, 10 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
 synth_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 1004.426 ; gain = 760.430
+=======
+192 Infos, 201 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:01:01 . Memory (MB): peak = 1011.020 ; gain = 767.180
+>>>>>>> Stashed changes
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'E:/EE2026_Verilog_Projects/EE2026_Project_Enhance/zihan_enhancements_testing_1player/MODS.runs/synth_1/Top_Student.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Top_Student_utilization_synth.rpt -pb Top_Student_utilization_synth.pb
+<<<<<<< Updated upstream
 report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 1004.426 ; gain = 0.000
 INFO: [Common 17-206] Exiting Vivado at Sat Apr  6 16:37:57 2024...
+=======
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 1011.020 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Apr  6 17:36:15 2024...
+>>>>>>> Stashed changes

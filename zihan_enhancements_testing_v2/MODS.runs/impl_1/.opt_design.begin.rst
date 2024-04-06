@@ -1,5 +1,9 @@
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
+<<<<<<< Updated upstream
     <Process Command=".planAhead." Owner="jinzi" Host="DESKTOP-CDQO724" Pid="8012">
+=======
+    <Process Command=".planAhead." Owner="ngjoo" Host="SEAN" Pid="76244">
+>>>>>>> Stashed changes
     </Process>
 </ProcessHandle>

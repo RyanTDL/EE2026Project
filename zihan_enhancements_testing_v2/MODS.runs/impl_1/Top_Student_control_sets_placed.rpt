@@ -1,8 +1,13 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+<<<<<<< Updated upstream
 | Date         : Sat Apr  6 16:38:50 2024
 | Host         : DESKTOP-CDQO724 running 64-bit major release  (build 9200)
+=======
+| Date         : Sat Apr  6 17:37:12 2024
+| Host         : Sean running 64-bit major release  (build 9200)
+>>>>>>> Stashed changes
 | Command      : report_control_sets -verbose -file Top_Student_control_sets_placed.rpt
 | Design       : Top_Student
 | Device       : xc7a35t
@@ -23,7 +28,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
+<<<<<<< Updated upstream
 | Number of unique control sets                            |    22 |
+=======
+| Number of unique control sets                            |    23 |
+>>>>>>> Stashed changes
 | Unused register locations in slices containing registers |    48 |
 +----------------------------------------------------------+-------+
 
@@ -35,9 +44,14 @@ Table of Contents
 | Fanout | Control Sets |
 +--------+--------------+
 |      4 |            2 |
+<<<<<<< Updated upstream
 |      8 |            1 |
 |     10 |            1 |
 |     12 |            2 |
+=======
+|      8 |            2 |
+|     12 |            3 |
+>>>>>>> Stashed changes
 |    16+ |           16 |
 +--------+--------------+
 
@@ -48,12 +62,21 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
+<<<<<<< Updated upstream
 | No           | No                    | No                     |              48 |           15 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |             290 |           48 |
 | Yes          | No                    | No                     |             182 |           33 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |             112 |           20 |
+=======
+| No           | No                    | No                     |             208 |           45 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             290 |           47 |
+| Yes          | No                    | No                     |             184 |           30 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             110 |           17 |
+>>>>>>> Stashed changes
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -65,6 +88,7 @@ Table of Contents
 +----------------+----------------------------------------+---------------------------------------------+------------------+----------------+
 | ~clk6p25m_BUFG |                                        |                                             |                2 |              4 |
 |  clk_IBUF_BUFG |                                        |                                             |                2 |              4 |
+<<<<<<< Updated upstream
 |  clk1k_BUFG    | TEST_BALLISTIC/POWER_INPUT[7]_i_2_n_0  | TEST_BALLISTIC/POWER_INPUT[7]_i_1_n_0       |                2 |              8 |
 |  clk1k_BUFG    | TEST_BALLISTIC/bullet_ypos[2]_i_1_n_0  | TEST_BALLISTIC/flight_time_ms               |                2 |             10 |
 |  clk1k_BUFG    | TEST_BALLISTIC/THETA1                  |                                             |                2 |             12 |
@@ -85,6 +109,29 @@ Table of Contents
 |  clk_IBUF_BUFG |                                        | CLK_1KHZ/COUNT[0]_i_1__0_n_0                |                8 |             64 |
 |  clk_IBUF_BUFG |                                        | CLK_6p25MHZ/clear                           |                8 |             64 |
 | ~clk6p25m_BUFG |                                        | unit_oled/spi_word[39]_i_1_n_0              |               20 |             90 |
+=======
+|  clk1k_BUFG    | TEST_BALLISTIC/LD[12]_i_1_n_0          |                                             |                2 |              8 |
+|  clk1k_BUFG    | TEST_BALLISTIC/POWER_INPUT[7]_i_2_n_0  | TEST_BALLISTIC/POWER_INPUT[7]_i_1_n_0       |                2 |              8 |
+|  clk1k_BUFG    | TEST_BALLISTIC/LD[12]_i_1_n_0          | TEST_BALLISTIC/LD[15]_i_1_n_0               |                3 |             12 |
+|  clk1k_BUFG    | TEST_BALLISTIC/THETA1                  |                                             |                3 |             12 |
+|  clk1k_BUFG    | TEST_BALLISTIC/THETA2                  |                                             |                2 |             12 |
+|  clk6p25m_BUFG | multi_player/P1_XPOS[7]_i_1_n_0        |                                             |                3 |             16 |
+|  clk6p25m_BUFG | multi_player/P2_XPOS[7]_i_1_n_0        |                                             |                3 |             16 |
+|  clk1k_BUFG    | TEST_BALLISTIC/bullet_xpos[7]_i_1_n_0  |                                             |                4 |             16 |
+|  clk1k_BUFG    | TEST_BALLISTIC/bullet_xpos[7]_i_1_n_0  | TEST_BALLISTIC/DIST_X0_i_1_n_0              |                2 |             16 |
+|  clk1k_BUFG    |                                        | TEST_BALLISTIC/debounceactive034_out        |                4 |             18 |
+|  clk1k_BUFG    |                                        | TEST_BALLISTIC/debounceactive_centre031_out |                5 |             22 |
+| ~clk6p25m_BUFG |                                        | unit_oled/frame_counter[16]_i_1_n_0         |                4 |             32 |
+|  clk1k_BUFG    | TEST_BALLISTIC/p_4_in                  | TEST_BALLISTIC/DIST_X0_i_1_n_0              |                4 |             32 |
+| ~clk6p25m_BUFG | unit_oled/delay[0]_i_1_n_0             |                                             |                5 |             40 |
+|  clk6p25m_BUFG | multi_player/debouncer_timer_reg[0]_0  | ctl/debouncer_timer_reg[20]                 |                6 |             42 |
+|  clk1k_BUFG    |                                        |                                             |               13 |             52 |
+| ~clk6p25m_BUFG | unit_oled/FSM_onehot_state[31]_i_1_n_0 |                                             |                8 |             64 |
+|  clk_IBUF_BUFG |                                        | CLK_6p25MHZ/clear                           |                8 |             64 |
+|  clk_IBUF_BUFG |                                        | CLK_1KHZ/COUNT[0]_i_1__0_n_0                |                8 |             64 |
+| ~clk6p25m_BUFG |                                        | unit_oled/spi_word[39]_i_1_n_0              |               18 |             90 |
+|  clk6p25m_BUFG |                                        |                                             |               28 |            148 |
+>>>>>>> Stashed changes
 +----------------+----------------------------------------+---------------------------------------------+------------------+----------------+
 
 
