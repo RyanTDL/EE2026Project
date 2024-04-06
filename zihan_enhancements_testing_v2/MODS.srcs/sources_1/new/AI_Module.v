@@ -18,7 +18,11 @@ module AI_Module(
     output reg done = 0
     );
     
-    
+    reg [15:0] arcos [99:0];
+        
+    initial begin
+        $readmemh("arco_lut.mem",arcos);
+    end 
         
     reg [2:0] random;
     
