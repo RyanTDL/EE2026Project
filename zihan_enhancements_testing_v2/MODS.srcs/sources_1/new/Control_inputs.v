@@ -20,9 +20,9 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module Control_inputs(input clk, player, btnC_p1, btnC_p2, btnU_p1, btnU_p2, btnD_p1, btnD_p2,
-    output reg master_btnC, master_btnU, master_btnD);
-    
+module Control_inputs(input clk, player, btnC_p1, btnC_p2, btnU_p1, btnU_p2, btnD_p1, btnD_p2, btnR_p2, btnR_p1,
+    btnL_p1, btnL_p2,
+    output reg master_btnC, master_btnU, master_btnD, master_btnR, master_btnL);    
     
     //player == 0, P1
     always @ (posedge clk) begin
@@ -30,11 +30,15 @@ module Control_inputs(input clk, player, btnC_p1, btnC_p2, btnU_p1, btnU_p2, btn
             master_btnC <= btnC_p2;
             master_btnU <= btnU_p2;
             master_btnD <= btnD_p2;
+            master_btnR <= btnR_p2;
+            master_btnL <= btnL_p2;
         end 
         else begin
             master_btnC <= btnC_p1;
             master_btnU <= btnU_p1;
             master_btnD <= btnD_p1;
+            master_btnR <= btnR_p1;
+            master_btnL <= btnL_p1;
         end
     end    
     
