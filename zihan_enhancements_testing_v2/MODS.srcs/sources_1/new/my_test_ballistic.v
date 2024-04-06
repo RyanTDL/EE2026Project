@@ -33,7 +33,7 @@ module my_test_ballistic(input CLK_6p25M, CLK_1K,
                          output reg PLAYER_NEW,
                          output [5:0] THETA1_EXT, THETA2_EXT,
                          output [7:0] GRAVITY_EXT,
-                         output [2:0] POWER_EXT,
+                         output [3:0] POWER_EXT,
                          output reg [2:0] hit_player = 0);
     
     parameter G = 100;
@@ -118,6 +118,7 @@ module my_test_ballistic(input CLK_6p25M, CLK_1K,
     wire hit2;
     hitbox_check check1(.bullet_xpos(bullet_xpos), .bullet_ypos(bullet_ypos), .player_xpos(P1_XPOS), .player_ypos(P1_YPOS), .hit(hit1));
     hitbox_check check2(.bullet_xpos(bullet_xpos), .bullet_ypos(bullet_ypos), .player_xpos(P2_XPOS), .player_ypos(P2_YPOS), .hit(hit2));
+    
     
     always @ (posedge CLK_1K) begin
         

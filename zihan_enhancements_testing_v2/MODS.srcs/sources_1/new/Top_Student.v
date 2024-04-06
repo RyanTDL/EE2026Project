@@ -65,6 +65,9 @@ module Top_Student (input clk,
     // 0 for P1, 1 for P2
     wire player;
     
+    //0 for Multiplayer, 1 for Singleplayer
+    wire singleplayer;
+    
     wire [7:0] p1_xpos;
     wire [7:0] p1_ypos;
     assign p1_xpos = 9;
@@ -75,20 +78,49 @@ module Top_Student (input clk,
     assign p2_xpos = 86;
     assign p2_ypos = 7;
     
-//    wire [2:0] power_ext;
+    wire [3:0] power_ext;
 //    wire [5:0] theta1_ext;
-//    wire [5:0] theta2_ext; 
+    wire [5:0] theta2_ext; 
 //    wire [7:0] gravity_ext;
     
+    //CALLING AI MODULE :)
+    parameter AI_POWER = 4;
+    //NOTE: Try to keep AI_POWER > 3
+    wire AI_LEFT, AI_RIGHT, AI_UP, AI_DOWN, AI_CENTRE;
+    AI_Module ai (.xpos(p2_xpos), .ypos(p2_ypos), .current_angle(theta2_ext), 
+                  .xpos_opp(p1_xpos), .ypos_opp(p1_ypos), 
+                  .state((player & singleplayer)), .clk1k(clk1k),
+                  .gravity(100), .target_power(AI_POWER), .current_power(power_ext),
+                  .left(AI_LEFT), .right(AI_RIGHT), 
+                  .up(AI_UP), .down(AI_DOWN),
+                  .centre(AI_CENTRE));
+    
     wire btnC_p2, btnU_p2, btnD_p2, btnL_p2, btnR_p2;
+    
     Receive_data receive (.clk(clk1k), .data_in(JA), .btnC_p2(btnC_p2), .btnU_p2(btnU_p2),
                  .btnD_p2(btnD_p2), .btnR_p2(btnR_p2), .btnL_p2(btnL_p2));
     
+    //Assignment of p2 outputs depending on single or multiplayer
+    wire p2_C_output, p2_U_output, p2_D_output, p2_L_output, p2_R_output;
+    
+    assign p2_C_output = (singleplayer) ? AI_CENTRE : btnC_p2;
+    assign p2_U_output = (singleplayer) ? AI_UP : btnU_p2;
+    assign p2_D_output = (singleplayer) ? AI_DOWN : btnD_p2;
+    assign p2_L_output = (singleplayer) ? AI_LEFT : btnL_p2;
+    assign p2_R_output = (singleplayer) ? AI_RIGHT : btnR_p2;
+    
     wire btnC_master, btnU_master, btnD_master, btnL_master, btnR_master;
     
-    Control_inputs ctl (.clk(clk1k), .player(player), .btnC_p1(btnC), .btnC_p2(btnC_p2), 
-        .btnU_p1(btnU), .btnU_p2(btnU_p2), .btnD_p1(btnD), .btnD_p2(btnD_p2),
-        .master_btnC(btnC_master), .master_btnU(btnU_master), .master_btnD(btnD_master));
+    Control_inputs ctl (.clk(clk1k), .player(player), 
+    .btnC_p1(btnC), .btnC_p2(p2_C_output), 
+    .btnU_p1(btnU), .btnU_p2(p2_U_output), 
+    .btnD_p1(btnD), .btnD_p2(p2_D_output),
+    .btnL_p1(btnL), .btnL_p2(p2_L_output),
+    .btnR_p1(btnR), .btnR_p2(p2_R_output),
+    .master_btnC(btnC_master), .master_btnU(btnU_master), .master_btnD(btnD_master), .master_btnL(btnL_master), .master_btnR(btnR_master));
+    
+    
+    
     
     my_test_ballistic TEST_BALLISTIC(.CLK_6p25M(clk6p25m),
                                      .CLK_1K(clk1k),
