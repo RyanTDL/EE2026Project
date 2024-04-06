@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Sat Apr  6 19:02:57 2024
+| Date         : Sat Apr  6 20:02:43 2024
 | Host         : DESKTOP-CDQO724 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Top_Student_control_sets_placed.rpt
 | Design       : Top_Student
@@ -50,10 +50,10 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | No           | No                    | No                     |             210 |           44 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |             354 |           57 |
+| No           | Yes                   | No                     |             354 |           56 |
 | Yes          | No                    | No                     |             184 |           31 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |             110 |           17 |
+| Yes          | Yes                   | No                     |             110 |           16 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -67,26 +67,26 @@ Table of Contents
 |  clk_IBUF_BUFG               |                                        |                                             |                3 |              6 |
 |  clk1k_BUFG                  | TEST_BALLISTIC/LD[12]_i_1_n_0          |                                             |                1 |              8 |
 |  clk1k_BUFG                  | TEST_BALLISTIC/POWER_INPUT[7]_i_2_n_0  | TEST_BALLISTIC/POWER_INPUT[7]_i_1_n_0       |                2 |              8 |
-|  clk1k_BUFG                  | TEST_BALLISTIC/LD[12]_i_1_n_0          | TEST_BALLISTIC/LD[15]_i_1_n_0               |                3 |             12 |
+|  clk1k_BUFG                  | TEST_BALLISTIC/LD[12]_i_1_n_0          | TEST_BALLISTIC/LD[15]_i_1_n_0               |                2 |             12 |
 |  clk1k_BUFG                  | TEST_BALLISTIC/THETA1                  |                                             |                2 |             12 |
 |  clk1k_BUFG                  | TEST_BALLISTIC/THETA2                  |                                             |                3 |             12 |
-|  clk6p25m_BUFG               | multi_player/P2_XPOS                   |                                             |                3 |             16 |
-|  clk6p25m_BUFG               | multi_player/P1_XPOS                   |                                             |                4 |             16 |
-|  clk1k_BUFG                  | TEST_BALLISTIC/bullet_ypos[7]_i_1_n_0  |                                             |                3 |             16 |
+|  clk1k_BUFG                  | TEST_BALLISTIC/bullet_ypos[7]_i_1_n_0  |                                             |                4 |             16 |
 |  clk1k_BUFG                  | TEST_BALLISTIC/bullet_ypos[7]_i_1_n_0  | TEST_BALLISTIC/flight_time_squared_i_1_n_0  |                2 |             16 |
-|  clk1k_BUFG                  |                                        | TEST_BALLISTIC/debounceactive027_out        |                5 |             18 |
+|  clk6p25m_BUFG               | multi_player/P1_XPOS                   |                                             |                4 |             16 |
+|  clk6p25m_BUFG               | multi_player/P2_XPOS                   |                                             |                3 |             16 |
+|  clk1k_BUFG                  |                                        | TEST_BALLISTIC/debounceactive027_out        |                3 |             18 |
 |  clk1k_BUFG                  |                                        |                                             |                6 |             22 |
 |  clk1k_BUFG                  |                                        | TEST_BALLISTIC/debounceactive_centre024_out |                4 |             22 |
 |  CLK_2KHZ/out_buttons_reg[0] |                                        |                                             |                5 |             30 |
-| ~clk6p25m_BUFG               |                                        | unit_oled/frame_counter[16]_i_1_n_0         |                4 |             32 |
 |  clk1k_BUFG                  | TEST_BALLISTIC/out[0]                  | TEST_BALLISTIC/flight_time_squared_i_1_n_0  |                4 |             32 |
+| ~clk6p25m_BUFG               |                                        | unit_oled/frame_counter[16]_i_1_n_0         |                4 |             32 |
 | ~clk6p25m_BUFG               | unit_oled/delay[0]_i_1_n_0             |                                             |                5 |             40 |
 |  clk6p25m_BUFG               | multi_player/debouncer_timer           | ctl/debouncer_timer_reg[20]                 |                6 |             42 |
-| ~clk6p25m_BUFG               | unit_oled/FSM_onehot_state[31]_i_1_n_0 |                                             |               10 |             64 |
+| ~clk6p25m_BUFG               | unit_oled/FSM_onehot_state[31]_i_1_n_0 |                                             |                9 |             64 |
 |  clk_IBUF_BUFG               |                                        | CLK_1KHZ/COUNT[0]_i_1__0_n_0                |                8 |             64 |
 |  clk_IBUF_BUFG               |                                        | CLK_2KHZ/COUNT[0]_i_1__1_n_0                |                8 |             64 |
 |  clk_IBUF_BUFG               |                                        | CLK_6p25MHZ/clear                           |                8 |             64 |
-| ~clk6p25m_BUFG               |                                        | unit_oled/spi_word[39]_i_1_n_0              |               20 |             90 |
+| ~clk6p25m_BUFG               |                                        | unit_oled/spi_word[39]_i_1_n_0              |               21 |             90 |
 |  clk6p25m_BUFG               |                                        |                                             |               28 |            148 |
 +------------------------------+----------------------------------------+---------------------------------------------+------------------+----------------+
 

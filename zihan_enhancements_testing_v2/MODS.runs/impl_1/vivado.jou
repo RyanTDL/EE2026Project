@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Sat Apr  6 19:02:13 2024
-# Process ID: 17388
+# Start of session at: Sat Apr  6 20:02:02 2024
+# Process ID: 14376
 # Current directory: E:/EE2026_Verilog_Projects/EE2026Project/zihan_enhancements_testing_v2/MODS.runs/impl_1
 # Command line: vivado.exe -log Top_Student.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Top_Student.tcl -notrace
 # Log file: E:/EE2026_Verilog_Projects/EE2026Project/zihan_enhancements_testing_v2/MODS.runs/impl_1/Top_Student.vdi

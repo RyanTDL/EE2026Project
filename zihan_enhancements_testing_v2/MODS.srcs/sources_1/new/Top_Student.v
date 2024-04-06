@@ -167,17 +167,16 @@ module Top_Student (input clk,
                                      .HEALTH_P2(health_p2));
 
      
-//     wire [1:0] hit1, hit2;
-//     assign hit1 = (hit_player == 1) ? hit1 + 1 : hit1;
-//     assign hit2 = (hit_player == 2) ? hit2 + 1 : hit2;
+     
+
      health player1_hp (.clk(clk6p25m), .player(0), .health(health_p1), .end_game(ending_1), 
                         .PIXEL_INDEX(pixel_index), .PIXEL_DATA_IN(oled_data_final), .PIXEL_DATA_OUT(oled_data_final_1));
      health player2_hp (.clk(clk6p25m), .player(1), .health(health_p2), .end_game(ending_2),
                         .PIXEL_INDEX(pixel_index), .PIXEL_DATA_IN(oled_data_final_1), .PIXEL_DATA_OUT(oled_data_final_2));     
 
       
-     Transfer_data transmit (.clk(clk2k), .btnC(btnC), .btnR(btnR), .btnL(btnL), 
-                            .btnU(btnU), .btnD(btnD), .out_buttons(JC));
+     Transfer_data transmit (.clk(clk2k), .btnC(btnC_master), .btnR(btnR_master), .btnL(btnL_master), 
+                            .btnU(btnU_master), .btnD(btnD_master), .out_buttons(JC));
       
 
 

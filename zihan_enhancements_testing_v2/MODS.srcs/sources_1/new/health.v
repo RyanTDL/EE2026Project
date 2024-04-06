@@ -43,8 +43,7 @@ module health(input clk, input [2:0] health, input player, output reg end_game =
     draw_heart heart3 (.clk(clk), .pixel_index_input(PIXEL_INDEX), .pixel_data_input(oled_data_2),
                    .heart_x(x3), .heart_y(3), .pixel_data_out(oled_data_3), .state(state3));
     
-    always @ (posedge clk) begin           
-        
+    always @ (posedge clk) begin       
         PIXEL_DATA_OUT <= oled_data_3;
     end
 

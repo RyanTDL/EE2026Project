@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Sat Apr  6 19:03:28 2024
+| Date             : Sat Apr  6 20:03:14 2024
 | Host             : DESKTOP-CDQO724 running 64-bit major release  (build 9200)
 | Command          : report_power -file Top_Student_power_routed.rpt -pb Top_Student_power_summary_routed.pb -rpx Top_Student_power_routed.rpx
 | Design           : Top_Student
@@ -52,15 +52,15 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.001 |        3 |       --- |             --- |
+| Clocks         |     0.002 |        3 |       --- |             --- |
 | Slice Logic    |    <0.001 |     2730 |       --- |             --- |
-|   LUT as Logic |    <0.001 |     1605 |     20800 |            7.72 |
+|   LUT as Logic |    <0.001 |     1602 |     20800 |            7.70 |
 |   CARRY4       |    <0.001 |      305 |      8150 |            3.74 |
 |   Register     |    <0.001 |      429 |     41600 |            1.03 |
 |   F7/F8 Muxes  |    <0.001 |        1 |     32600 |           <0.01 |
 |   Others       |     0.000 |       39 |       --- |             --- |
 |   BUFG         |     0.000 |        2 |        32 |            6.25 |
-| Signals        |    <0.001 |     1663 |       --- |             --- |
+| Signals        |    <0.001 |     1671 |       --- |             --- |
 | DSPs           |     0.002 |        7 |        90 |            7.78 |
 | I/O            |     0.003 |       52 |       106 |           49.06 |
 | Static Power   |     0.072 |          |           |                 |

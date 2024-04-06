@@ -14,9 +14,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 19692 
+INFO: Helper process launched with PID 11212 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 357.004 ; gain = 99.781
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 356.609 ; gain = 100.332
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Top_Student' [E:/EE2026_Verilog_Projects/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/Top_Student.v:14]
 	Parameter AI_POWER bound to: 4 - type: integer 
@@ -114,8 +114,8 @@ INFO: [Synth 8-6157] synthesizing module 'health' [E:/EE2026_Verilog_Projects/EE
 INFO: [Synth 8-6157] synthesizing module 'draw_heart' [E:/EE2026_Verilog_Projects/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/draw_heart.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'draw_heart' (11#1) [E:/EE2026_Verilog_Projects/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/draw_heart.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'health' (12#1) [E:/EE2026_Verilog_Projects/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/health.v:23]
-WARNING: [Synth 8-689] width (2) of port connection 'health' does not match port width (3) of module 'health' [E:/EE2026_Verilog_Projects/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/Top_Student.v:173]
-WARNING: [Synth 8-689] width (2) of port connection 'health' does not match port width (3) of module 'health' [E:/EE2026_Verilog_Projects/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/Top_Student.v:175]
+WARNING: [Synth 8-689] width (2) of port connection 'health' does not match port width (3) of module 'health' [E:/EE2026_Verilog_Projects/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/Top_Student.v:172]
+WARNING: [Synth 8-689] width (2) of port connection 'health' does not match port width (3) of module 'health' [E:/EE2026_Verilog_Projects/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/Top_Student.v:174]
 INFO: [Synth 8-6157] synthesizing module 'Transfer_data' [E:/EE2026_Verilog_Projects/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/Transfer_data.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'Transfer_data' (13#1) [E:/EE2026_Verilog_Projects/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/Transfer_data.v:23]
 WARNING: [Synth 8-3848] Net seg in module/entity Top_Student does not have driver. [E:/EE2026_Verilog_Projects/EE2026Project/zihan_enhancements_testing_v2/MODS.srcs/sources_1/new/Top_Student.v:21]
@@ -210,7 +210,7 @@ WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[2]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[1]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 411.969 ; gain = 154.746
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 411.238 ; gain = 154.961
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -223,10 +223,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 411.969 ; gain = 154.746
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 411.238 ; gain = 154.961
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 411.969 ; gain = 154.746
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 411.238 ; gain = 154.961
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -242,22 +242,22 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 757.773 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 757.605 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 757.773 ; gain = 500.551
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 757.605 ; gain = 501.328
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 757.773 ; gain = 500.551
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 757.605 ; gain = 501.328
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 757.773 ; gain = 500.551
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 757.605 ; gain = 501.328
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "FLEX_CLK_OUT0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Oled_Display'
@@ -334,7 +334,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'trig_out_reg' [E:/EE2026_Ve
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'STATE_INT_reg' using encoding 'one-hot' in module 'my_test_ballistic'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 757.773 ; gain = 500.551
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 757.605 ; gain = 501.328
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -801,7 +801,7 @@ WARNING: [Synth 8-3332] Sequential element (trig_out_reg[2]) is unused and will 
 WARNING: [Synth 8-3332] Sequential element (trig_out_reg[1]) is unused and will be removed from module my_test_trig.
 WARNING: [Synth 8-3332] Sequential element (trig_out_reg[0]) is unused and will be removed from module my_test_trig.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 757.773 ; gain = 500.551
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 757.605 ; gain = 501.328
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -853,13 +853,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:43 ; elapsed = 00:00:47 . Memory (MB): peak = 806.102 ; gain = 548.879
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:42 . Memory (MB): peak = 803.922 ; gain = 547.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 829.484 ; gain = 572.262
+Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:42 . Memory (MB): peak = 827.375 ; gain = 571.098
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -873,7 +873,7 @@ Start Technology Mapping
 WARNING: [Synth 8-3332] Sequential element (TEST_BALLISTIC/POWER_INPUT_reg[1]) is unused and will be removed from module Top_Student.
 WARNING: [Synth 8-3332] Sequential element (TEST_BALLISTIC/POWER_INPUT_reg[0]) is unused and will be removed from module Top_Student.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 1037.961 ; gain = 780.738
+Finished Technology Mapping : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 1035.734 ; gain = 779.457
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -897,7 +897,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:49 ; elapsed = 00:00:53 . Memory (MB): peak = 1037.961 ; gain = 780.738
+Finished IO Insertion : Time (s): cpu = 00:00:42 ; elapsed = 00:00:46 . Memory (MB): peak = 1035.734 ; gain = 779.457
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -910,7 +910,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:49 ; elapsed = 00:00:53 . Memory (MB): peak = 1037.961 ; gain = 780.738
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:42 ; elapsed = 00:00:46 . Memory (MB): peak = 1035.734 ; gain = 779.457
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -922,25 +922,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:49 ; elapsed = 00:00:53 . Memory (MB): peak = 1037.961 ; gain = 780.738
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 1035.734 ; gain = 779.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:49 ; elapsed = 00:00:53 . Memory (MB): peak = 1037.961 ; gain = 780.738
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:43 ; elapsed = 00:00:47 . Memory (MB): peak = 1035.734 ; gain = 779.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:49 ; elapsed = 00:00:53 . Memory (MB): peak = 1037.961 ; gain = 780.738
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:43 ; elapsed = 00:00:47 . Memory (MB): peak = 1035.734 ; gain = 779.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:49 ; elapsed = 00:00:53 . Memory (MB): peak = 1037.961 ; gain = 780.738
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:43 ; elapsed = 00:00:47 . Memory (MB): peak = 1035.734 ; gain = 779.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1000,11 +1000,11 @@ Report Instance Areas:
 |18    |  unit_oled      |Oled_Display            |  1111|
 +------+-----------------+------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:49 ; elapsed = 00:00:53 . Memory (MB): peak = 1037.961 ; gain = 780.738
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:43 ; elapsed = 00:00:47 . Memory (MB): peak = 1035.734 ; gain = 779.457
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 117 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:38 ; elapsed = 00:00:45 . Memory (MB): peak = 1037.961 ; gain = 434.934
-Synthesis Optimization Complete : Time (s): cpu = 00:00:49 ; elapsed = 00:00:53 . Memory (MB): peak = 1037.961 ; gain = 780.738
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 1035.734 ; gain = 433.090
+Synthesis Optimization Complete : Time (s): cpu = 00:00:43 ; elapsed = 00:00:47 . Memory (MB): peak = 1035.734 ; gain = 779.457
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 356 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -1017,9 +1017,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 196 Infos, 202 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:53 ; elapsed = 00:00:57 . Memory (MB): peak = 1037.961 ; gain = 793.621
+synth_design: Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 1035.734 ; gain = 792.508
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'E:/EE2026_Verilog_Projects/EE2026Project/zihan_enhancements_testing_v2/MODS.runs/synth_1/Top_Student.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Top_Student_utilization_synth.rpt -pb Top_Student_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 1037.961 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sat Apr  6 19:02:06 2024...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 1035.734 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Apr  6 20:01:55 2024...

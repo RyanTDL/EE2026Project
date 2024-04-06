@@ -25,7 +25,7 @@ module Control_inputs(input clk, player, btnC_p1, btnC_p2, btnU_p1, btnU_p2, btn
     
     //player == 0, P1
     always @ (posedge clk) begin
-        if (player) begin
+        if (player == 1) begin
             master_btnC <= btnC_p2;
             master_btnU <= btnU_p2;
             master_btnD <= btnD_p2;
