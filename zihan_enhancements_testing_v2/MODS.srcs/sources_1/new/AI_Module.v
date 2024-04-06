@@ -9,16 +9,19 @@ module AI_Module(
     input state,
     input clk1k,
     input [5:0] gravity,
+    input [3:0] target_power,
+    input [3:0] current_power,
     output reg left = 0,
     output reg right = 0,
     output reg up = 0,
     output reg down = 0,
-//    output reg [6:0] target_angle,
-    output reg fire = 0,
-    output reg done = 0
-    );
+    output reg centre = 0);
     
-    
+    reg [15:0] arcos [99:0];
+        
+    initial begin
+        $readmemh("arco_lut.mem",arcos);
+    end 
         
     reg [2:0] random;
     
@@ -35,7 +38,7 @@ module AI_Module(
     integer pre_arcos;
     
     reg direction;
-    reg [7:0] dist_travel = 0;;
+    reg [7:0] dist_travel = 0;
     reg [6:0] target_angle = 0;
     reg [6:0] angle_travel = 0;
     reg angle_dir;
@@ -72,7 +75,7 @@ module AI_Module(
             end
             if (stage == 2) begin
                 //calculate firing arcs
-                pre_arcos = (100 * (gravity * dist_to_opp)/(110*110));
+                pre_arcos = (100 * (gravity * dist_to_opp)/(target_power*target_power));
                 target_angle = 45 + arcos[pre_arcos];
                 if (current_angle <= target_angle) begin
                 //move up
@@ -105,11 +108,19 @@ module AI_Module(
                 end
             end
             if (stage == 4) begin
-            //fire
-                fire = 1;
-                done = 1;
-                stage = 0;
+                //firing
+                if (current_power != target_power) centre = 1;
+                else begin
+                    centre = 0;
+                    stage = 0;
+                end
             end
+//            if (stage == 5) begin
+//            //fire
+//                fire = 1;
+//                done = 1;
+//                stage = 0;
+//            end
         end
         
     end

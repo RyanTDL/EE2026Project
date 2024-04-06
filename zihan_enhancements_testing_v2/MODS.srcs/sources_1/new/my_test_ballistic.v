@@ -122,8 +122,7 @@ module my_test_ballistic(input CLK_6p25M, CLK_1K,
     hitbox_check check2(.bullet_xpos(bullet_xpos), .bullet_ypos(bullet_ypos), .player_xpos(P2_XPOS), .player_ypos(P2_YPOS), .hit(hit2));
     
     
-    
-    
+
     always @ (posedge CLK_1K) begin
         
         // Debounce up and down

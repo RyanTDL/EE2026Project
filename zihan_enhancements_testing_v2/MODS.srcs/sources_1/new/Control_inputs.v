@@ -19,7 +19,6 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-
 module Control_inputs(input clk, player, btnC_p1, btnC_p2, btnU_p1, btnU_p2, btnD_p1, btnD_p2, btnR_p2, btnR_p1,
     btnL_p1, btnL_p2,
     output reg master_btnC, master_btnU, master_btnD, master_btnR, master_btnL);    
